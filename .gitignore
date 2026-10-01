@@ -1,0 +1,21 @@
+# Archivos generados por Visual Studio y .NET
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+TestResults/
+artifacts/
+
+# Configuración privada y credenciales locales
+.env
+.env.*
+!.env.example
+**/appsettings.Local.json
+**/secrets.json
+*.pfx
+*.p12
+sql-credential.xml
+
+# Dependencias futuras de la interfaz
+node_modules/

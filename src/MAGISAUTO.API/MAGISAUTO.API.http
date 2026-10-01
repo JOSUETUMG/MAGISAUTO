@@ -1,0 +1,9 @@
+@MAGISAUTO_API = http://localhost:5164
+
+### Comprobar que la API responde
+GET {{MAGISAUTO_API}}/api/salud
+Accept: application/json
+
+### Consultar el contrato OpenAPI (solo en desarrollo)
+GET {{MAGISAUTO_API}}/openapi/v1.json
+Accept: application/json
