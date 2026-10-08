@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MAGIS AUTOMOTIZ - Venta de Vehículos</title>
+
+  <!-- Fuentes e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <div style="display:flex;align-items:flex-end;gap:6px">
+          <span class="brand-auto">AUTO</span>
+          <span class="brand-colis">COLIS</span>
+        </div>
+        <small class="brand-sub">VEHÍCULOS</small>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#home">INICIO</a></li>
+          <li><a href="#vehicles">VEHÍCULOS</a></li>
+          <li><a href="#about">NOSOTROS</a></li>
+          <li><a href="#finance">FINANCIAMIENTO</a></li>
+          <li><a href="#services">SERVICIOS</a></li>
+          <li><a href="#contact">CONTACTO</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-whatsapp" id="btnHeaderWhats" href="https://wa.me/50249579692?text=Hola%20Auto%20Colis%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> ESCRÍBENOS
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home" class="mobile-link">INICIO</a></li>
+        <li><a href="#vehicles" class="mobile-link">VEHÍCULOS</a></li>
+        <li><a href="#about" class="mobile-link">NOSOTROS</a></li>
+        <li><a href="#finance" class="mobile-link">FINANCIAMIENTO</a></li>
+        <li><a href="#services" class="mobile-link">SERVICIOS</a></li>
+        <li><a href="#contact" class="mobile-link">CONTACTO</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Portada">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-title">VENTA DE <span class="accent-red">VEHÍCULOS</span></h1>
+        <p class="hero-sub">NUEVOS Y SEMINUEVOS</p>
+
+        <ul class="hero-features">
+          <li><i class="fa-solid fa-circle-check"></i> CARROS</li>
+          <li><i class="fa-solid fa-circle-check"></i> PICK UPS</li>
+          <li><i class="fa-solid fa-circle-check"></i> SUV</li>
+          <li><i class="fa-solid fa-circle-check"></i> MOTOS</li>
+        </ul>
+
+        <h2 class="hero-cta">¡TU PRÓXIMO VEHÍCULO<br>TE ESPERA!</h2>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#vehicles">VER VEHÍCULOS</a>
+          <a class="btn btn-ghost" id="btnContactHero" href="https://wa.me/50249579692?text=Hola%20estoy%20interesado%20en%20sus%20veh%C3%ADculos" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> CONTACTAR POR WHATSAPP
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-cars">
+          <!-- imágenes superpuestas -->
+          <img src="https://images.unsplash.com/photo-1618190598318-1c8a2ea3f1d7?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9d7b5e0b2a7b7f7d2c9c33d8b2f3a9d9" alt="Hilux" class="hero-car hero-car-1">
+          <img src="https://images.unsplash.com/photo-1601924928361-1a9f3c6b8c3d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a1cf8d0b2a1f1c9d2a2f1c7b4a2f9c0" alt="RAV4" class="hero-car hero-car-2">
+          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d0f4a8f3b3c2b6a8c7e2b1d8a9f2b7c" alt="Corolla" class="hero-car hero-car-3">
+          <img src="https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7d4f3a0b2d6a8e1c9b2d3a4f5c6b7a8d" alt="Fortuner" class="hero-car hero-car-4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSCADOR -->
+  <section class="search-bar container" id="searchBar">
+    <div class="search-inner">
+      <select id="filterType" class="select">
+        <option value="">TIPO DE VEHÍCULO - Todos</option>
+        <option value="Carro">Carro</option>
+        <option value="Pickup">Pickup</option>
+        <option value="SUV">SUV</option>
+        <option value="Moto">Moto</option>
+      </select>
+
+      <select id="filterBrand" class="select"></select>
+
+      <select id="filterModel" class="select">
+        <option value="">MODELO - Todos</option>
+      </select>
+
+      <select id="filterPrice" class="select">
+        <option value="">PRECIO - Todos</option>
+        <option value="0-200000">Hasta Q200,000</option>
+        <option value="200001-350000">Q200,001 - Q350,000</option>
+        <option value="350001-10000000">Más de Q350,000</option>
+      </select>
+
+      <button class="btn btn-primary" id="btnSearch">BUSCAR VEHÍCULOS</button>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="benefits" id="services">
+    <div class="container">
+      <h3 class="section-title light">BENEFICIOS</h3>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-icon"><i class="fa-solid fa-car-side"></i></div>
+          <p>VEHÍCULOS EN EXCELENTE ESTADO</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><i class="fa-solid fa-file-contract"></i></div>
+          <p>DOCUMENTACIÓN EN REGLA</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <p>FINANCIAMIENTO DISPONIBLE</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><i class="fa-solid fa-road"></i></div>
+          <p>PRUEBA DE MANEJO</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><i class="fa-solid fa-tags"></i></div>
+          <p>LOS MEJORES PRECIOS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHÍCULOS DESTACADOS -->
+  <section class="featured container" id="vehicles">
+    <h3 class="section-title">VEHÍCULOS DESTACADOS</h3>
+    <div class="vehicles-grid" id="vehiclesGrid">
+      <!-- Tarjetas generadas por JS -->
+    </div>
+  </section>
+
+  <!-- DETALLE VEHÍCULO (MODAL) -->
+  <div id="vehicleModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <img id="modalMainImage" src="" alt="Imagen principal">
+          <div id="modalThumbs" class="modal-thumbs"></div>
+        </div>
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p class="meta" id="modalMeta"></p>
+          <p class="price" id="modalPrice"></p>
+          <p id="modalDesc"></p>
+
+          <ul class="specs">
+            <li><strong>Año:</strong> <span id="specYear"></span></li>
+            <li><strong>Kilometraje:</strong> <span id="specKm"></span></li>
+            <li><strong>Motor:</strong> <span id="specMotor"></span></li>
+            <li><strong>Combustible:</strong> <span id="specFuel"></span></li>
+            <li><strong>Transmisión:</strong> <span id="specTrans"></span></li>
+            <li><strong>Color:</strong> <span id="specColor"></span></li>
+          </ul>
+
+          <div class="modal-actions">
+            <a id="modalWhats" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> CONSULTAR POR WHATSAPP</a>
+            <button class="btn btn-outline" id="modalSimulate">SIMULAR FINANCIAMIENTO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINANCIAMIENTO -->
+  <section class="finance container" id="finance">
+    <h3 class="section-title">COTIZA TU FINANCIAMIENTO</h3>
+    <p>Encuentra un plan de financiamiento que se adapte a tu presupuesto.</p>
+
+    <div class="finance-grid">
+      <div class="finance-form">
+        <label>Precio del vehículo (Q)</label>
+        <input type="number" id="finPrice" placeholder="Ej. 385000" min="0">
+
+        <label>Enganche (Q)</label>
+        <input type="number" id="finDown" placeholder="Ej. 77000" min="0">
+
+        <label>Meses</label>
+        <select id="finMonths">
+          <option value="12">12 meses</option>
+          <option value="24">24 meses</option>
+          <option value="36">36 meses</option>
+          <option value="48">48 meses</option>
+          <option value="60">60 meses</option>
+        </select>
+
+        <label>Interés anual (%)</label>
+        <input type="number" id="finRate" value="12" min="0" step="0.1">
+
+        <button class="btn btn-primary" id="btnCalc">CALCULAR CUOTA</button>
+      </div>
+
+      <div class="finance-result" id="financeResult">
+        <h4>CUOTA MENSUAL APROXIMADA</h4>
+        <div class="result-value" id="resultValue">Q 0.00</div>
+        <p class="result-note">Esta cifra es una estimación y puede variar según condiciones reales del financiamiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSCAS ALGO ESPECÍFICO -->
+  <section class="search-specific">
+    <div class="container spec-inner">
+      <div>
+        <h3>¿BUSCAS ALGO ESPECÍFICO?</h3>
+        <p>Contáctanos y te ayudamos a encontrar el vehículo que necesitas.</p>
+      </div>
+      <div>
+        <a class="btn btn-primary" href="https://wa.me/50249579692?text=Hola%20Auto%20Colis%2C%20busco%20un%20veh%C3%ADculo" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> ESCRÍBENOS POR WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="about container" id="about">
+    <h3 class="section-title">SOBRE AUTO COLIS</h3>
+    <p class="about-text">En Auto Colis Vehículos nos especializamos en ofrecer vehículos seleccionados, confiables y en excelentes condiciones. Nuestro objetivo es ayudarte a encontrar el vehículo ideal de forma rápida, segura y transparente.</p>
+
+    <ul class="about-list">
+      <li>✓ Atención personalizada</li>
+      <li>✓ Vehículos seleccionados</li>
+      <li>✓ Compra segura</li>
+      <li>✓ Financiamiento</li>
+      <li>✓ Asesoría</li>
+    </ul>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact container" id="contact">
+    <h3 class="section-title">CONTÁCTANOS</h3>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/50249579692">4957-9692</a></p>
+        <p><i class="fa-solid fa-phone"></i> Teléfono: 2424-2424</p>
+        <p><i class="fa-solid fa-location-dot"></i> Ubicación: Ciudad de Guatemala (mapa abajo)</p>
+        <p><i class="fa-regular fa-clock"></i> Horario: Lun-Vie 9:00 - 18:00</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="cname" placeholder="Nombre" required>
+        <input type="tel" id="cphone" placeholder="Teléfono" required>
+        <input type="email" id="cemail" placeholder="Correo" required>
+        <textarea id="cmessage" placeholder="Mensaje" rows="4"></textarea>
+        <button class="btn btn-primary" type="submit">ENVIAR MENSAJE</button>
+      </form>
+    </div>
+
+    <div class="map-placeholder">
+      <!-- espacio para insertar mapa real -->
+      <iframe title="Mapa Guatemala" src="https://www.google.com/maps/embed?pb=!1m18!... (placeholder)" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a class="whatsapp-float" id="whatsappFloat" href="https://wa.me/50249579692?text=Hola%20Auto%20Colis%2C%20estoy%20interesado%20en%20informaci%C3%B3n%20sobre%20sus%20veh%C3%ADculos" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- VOLVER ARRIBA -->
+  <button id="backTop" class="back-top" title="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h4>AUTO COLIS VEHÍCULOS</h4>
+        <p>Tu próximo vehículo te espera.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#home">Inicio</a>
+        <a href="#vehicles">Vehículos</a>
+        <a href="#finance">Financiamiento</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contact">Contacto</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://wa.me/50249579692"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Auto Colis Vehículos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
