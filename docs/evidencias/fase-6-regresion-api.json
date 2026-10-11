@@ -1,0 +1,130 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-08T22:35:45.3587080-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Salud de API disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consulta real de base de datos disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cinco marcas reales en orden",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contrato JSON de marcas sin columnas internas adicionales",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar por descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar por código",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recortar espacios del criterio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Sin coincidencias devuelve lista vacía",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Criterio inválido de longitud 0 devuelve 400",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Criterio inválido de longitud 6 devuelve 400",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Criterio inválido de longitud 201 devuelve 400",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Caracteres SQL se tratan como parámetro de búsqueda",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "OpenAPI documenta las rutas y errores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración ausente devuelve 503",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración ausente no expone credenciales ni detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración ausente mantiene activa la API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración ausente también falla en salud de base de datos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración inválida devuelve 503",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración inválida no expone credenciales ni detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración inválida mantiene activa la API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración inválida también falla en salud de base de datos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Servidor inaccesible devuelve 503",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Servidor inaccesible no expone credenciales ni detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Servidor inaccesible mantiene activa la API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Servidor inaccesible también falla en salud de base de datos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Permiso de procedimientos insuficiente devuelve 503",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Permiso de procedimientos insuficiente no expone credenciales ni detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Permiso de procedimientos insuficiente mantiene activa la API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Permiso de procedimientos insuficiente también falla en salud de base de datos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta limitada a procedimientos, sin administración ni acceso directo a tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lectura directa de tabla rechazada por SQL Server",
+      "Resultado": "Correcto"
+    }
+  ]
+}

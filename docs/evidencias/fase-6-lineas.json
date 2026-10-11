@@ -1,0 +1,174 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-10T21:50:26.7250995-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado accesible con nombre de marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Códigos de ensayo libres",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /lineas.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /lineas.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca temporal creada: 338251056",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Línea 1 creada bajo marca 338251056",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca temporal creada: 338251057",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Línea 1 creada bajo marca 338251057",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar nombre devuelve líneas homónimas de ambas marcas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro combinado devuelve solo la marca elegida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por código de marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Misma marca y código devuelve 409 sin SQL interno",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca inexistente devuelve 409 comprensible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido rechazado: criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido rechazado: criterio=%20%20",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido rechazado: criterio=xxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido rechazado: codigoMarca=0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido rechazado: codigoMarca=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido rechazado: codigoMarca=texto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre inválido longitud 0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre inválido longitud 3",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre inválido longitud 129",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código de línea inválido: 0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código de línea inválido: 1.5",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código de línea inválido: 2147483648",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca ausente rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Actualizar con identidad compuesta",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar no afecta la línea del mismo código en otra marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre editado y Unicode persistidos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vehículo asociado impide eliminar con 409",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Borrado bloqueado conserva la línea",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar sin dependencias devuelve 204",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar no afecta la otra marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "DELETE de línea inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PUT de línea inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Texto SQL es tratado como parámetro",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Sin coincidencias devuelve lista vacía",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "OpenAPI documenta las cuatro rutas HTTP",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo de líneas original conservado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo de marcas original conservado",
+      "Resultado": "Correcto"
+    }
+  ]
+}

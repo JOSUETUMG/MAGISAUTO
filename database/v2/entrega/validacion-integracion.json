@@ -1,0 +1,197 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Fecha": "2026-10-08T16:40:47.4698420-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado y operaciones vacias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Inventario 26 tablas, 4 vistas, 150 procedimientos, 20 reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "12 cuotas, capital Q80000 y vencimiento desde el dia original",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Desglose fijo del contrato",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen coincide exactamente con el plan",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota base francesa fija salvo ajuste final",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Enganche menor al 20 por ciento",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51104
+    },
+    {
+      "Prueba": "Plazo fuera de los acordados",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51100
+    },
+    {
+      "Prueba": "Vehiculo con otro credito activo",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51112
+    },
+    {
+      "Prueba": "Rechazo de aprobacion no deja plan parcial",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No volver a aprobar",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51111
+    },
+    {
+      "Prueba": "No editar condiciones aprobadas",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51106
+    },
+    {
+      "Prueba": "No borrar credito aprobado",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51108
+    },
+    {
+      "Prueba": "No sobrepagar una cuota",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51209
+    },
+    {
+      "Prueba": "Referencia bancaria obligatoria",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51207
+    },
+    {
+      "Prueba": "Rechazar monto cero",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51200
+    },
+    {
+      "Prueba": "Monto depositado igual al desglose y comision Q2.00",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Mora desde el dia posterior al vencimiento",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambiar parametros no altera contrato aprobado ni seguros ni comision",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular conserva comprobante y saldo historico anterior",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No anular dos veces",
+      "Resultado": "Rechazo esperado",
+      "Codigo": 51218
+    },
+    {
+      "Prueba": "Liquidacion total y recibos unicos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago reabre credito liquidado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "api.Reporte01_CreditosEmitidos",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte02_CarteraMora",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte03_PagosPorMedio",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte04_VentasVendedor",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte05_Cumpleaneros",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte06_EstadoCuenta",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte07_PlanPagos",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte08_Comisiones",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte09_CapitalPendiente",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte10_Intereses",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte11_ProximosVencimientos",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte12_AbonosParciales",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte13_CreditosMarcaLinea",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte14_CarteraAgenciaRegion",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte15_MoraRangos",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte16_GarantiaContraCapital",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte17_DepreciacionCostoFinanciamiento",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte18_CreditosFiador",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte19_RecaudacionComponentes",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "api.Reporte20_PagosAnulados",
+      "Resultado": "Ejecutado"
+    },
+    {
+      "Prueba": "No hay FK deshabilitadas ni no confiables",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Dos pagos simultaneos no sobrepagan",
+      "Resultado": "Correcto"
+    }
+  ]
+}

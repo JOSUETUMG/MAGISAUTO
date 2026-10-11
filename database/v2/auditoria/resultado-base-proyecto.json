@@ -1,0 +1,16 @@
+[
+  {
+    "BaseVerificada": "MAGISAUTO_Proyecto_V2",
+    "Tablas": 26,
+    "Vistas": 4,
+    "Procedimientos": 150,
+    "Reportes": 20,
+    "Resultado": "Estructura y ausencia de operaciones verificadas."
+  },
+  {
+    "BaseVerificada": "MAGISAUTO_Proyecto_V2",
+    "ElementosComparados": 460,
+    "CatalogosYParametros": 11,
+    "Resultado": "VERIFICACION COMPLETA CORRECTA: estructura, modulos, permisos del rol, catalogos y ausencia de operaciones."
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Prueba": "test-formula-plan.sql",
+    "Casos": 75,
+    "Estado": "Correcto"
+  },
+  {
+    "Prueba": "test-formula-abono.sql",
+    "Casos": 1000,
+    "Estado": "Correcto"
+  }
+]

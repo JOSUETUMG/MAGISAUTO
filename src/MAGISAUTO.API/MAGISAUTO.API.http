@@ -7,3 +7,48 @@ Accept: application/json
 ### Consultar el contrato OpenAPI (solo en desarrollo)
 GET {{MAGISAUTO_API}}/openapi/v1.json
 Accept: application/json
+
+### Comprobar la base de datos mediante un procedimiento almacenado
+GET {{MAGISAUTO_API}}/api/salud/base-datos
+Accept: application/json
+
+### Listar las marcas reales
+GET {{MAGISAUTO_API}}/api/catalogos/marcas
+Accept: application/json
+
+### Buscar por nombre o código
+GET {{MAGISAUTO_API}}/api/catalogos/marcas?criterio=Toyota
+Accept: application/json
+
+### Un criterio vacío debe devolver 400
+GET {{MAGISAUTO_API}}/api/catalogos/marcas?criterio=
+Accept: application/json
+
+### Listar líneas con nombre de marca
+GET {{MAGISAUTO_API}}/api/catalogos/lineas
+Accept: application/json
+
+### Filtrar por marca y buscar nombre de línea
+GET {{MAGISAUTO_API}}/api/catalogos/lineas?codigoMarca=1&criterio=Corolla
+Accept: application/json
+
+### Crear una línea de prueba (verificar que el código esté libre en la marca)
+POST {{MAGISAUTO_API}}/api/catalogos/lineas
+Content-Type: application/json
+
+{
+  "codigoMarca": 1,
+  "codigoLinea": 900001,
+  "descripcion": "Prueba Diego"
+}
+
+### Editar exclusivamente la línea de prueba creada arriba
+PUT {{MAGISAUTO_API}}/api/catalogos/lineas/1/900001
+Content-Type: application/json
+
+{
+  "descripcion": "Prueba Diego editada"
+}
+
+### Eliminar exclusivamente la línea de prueba creada arriba
+DELETE {{MAGISAUTO_API}}/api/catalogos/lineas/1/900001

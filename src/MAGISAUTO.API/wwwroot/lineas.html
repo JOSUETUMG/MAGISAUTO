@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Líneas | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css"><script src="/lineas.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Catálogos"><a href="/">Marcas</a><a href="/lineas.html" aria-current="page">Líneas de vehículos</a></nav>
+    <p class="ruta">CATÁLOGOS <span aria-hidden="true">/</span> LÍNEAS</p>
+    <section class="encabezado" aria-labelledby="titulo">
+      <div><h1 id="titulo">Líneas de vehículos</h1><p>Administra las líneas y la marca a la que pertenece cada una.</p></div>
+      <button id="nueva" class="primario" type="button" disabled>＋ Agregar línea</button>
+    </section>
+    <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+    <section class="panel" aria-label="Catálogo de líneas">
+      <form id="busqueda" class="busqueda busqueda-lineas" role="search">
+        <div class="campo-marca"><label for="filtro-marca">Marca</label><select id="filtro-marca" disabled><option value="">Todas las marcas</option></select></div>
+        <div class="campo-busqueda"><label for="criterio">Buscar por código o nombre de línea</label><input id="criterio" type="search" maxlength="200" placeholder="Por ejemplo, Corolla o 1" autocomplete="off"></div>
+        <button class="primario" type="submit">Buscar</button><button id="todas" class="secundario" type="button">Ver todas</button>
+      </form>
+      <div class="resumen"><h2>Catálogo de líneas</h2><span id="contador" aria-live="polite">Cargando…</span></div>
+      <div class="tabla-contenedor" id="resultados" aria-busy="true">
+        <table class="tabla-lineas"><caption class="solo-lector">Líneas, marcas y acciones para cada registro</caption><thead><tr><th scope="col">Marca</th><th scope="col">Código de línea</th><th scope="col">Nombre de la línea</th><th scope="col" class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table>
+        <p id="vacio" class="vacio" role="status">Cargando líneas…</p>
+      </div>
+      <p class="nota">El código de línea es único dentro de cada marca. Una línea con vehículos asociados no se puede eliminar.</p>
+    </section>
+    <footer>MAGIS-AUTO <span aria-hidden="true">·</span> Administración de catálogos</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor">
+    <form id="formulario">
+      <p class="etiqueta">CATÁLOGO DE LÍNEAS</p><h2 id="titulo-editor">Agregar línea</h2>
+      <p id="ayuda-editor">Selecciona una marca y completa los datos de la línea.</p>
+      <div id="error-editor" class="aviso error" role="alert" hidden></div>
+      <label for="marca">Marca <span>(obligatoria)</span></label><select id="marca" required><option value="">Selecciona una marca</option></select>
+      <label for="codigo">Código de línea <span>(obligatorio)</span></label><input id="codigo" type="number" min="1" max="2147483647" step="1" required aria-describedby="ayuda-codigo">
+      <small id="ayuda-codigo">Usa un código entero que no exista dentro de esta marca.</small>
+      <label for="nombre">Nombre de la línea <span>(obligatorio)</span></label><input id="nombre" type="text" maxlength="128" required autocomplete="off">
+      <div class="botones-dialogo"><button id="cancelar" class="secundario" type="button">Cancelar</button><button id="guardar" class="primario" type="submit">Guardar línea</button></div>
+    </form>
+  </dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar">
+    <p class="etiqueta">ELIMINAR LÍNEA</p><h2 id="titulo-eliminar">¿Eliminar esta línea?</h2><p id="detalle-eliminar"></p><p>Esta acción elimina el registro del catálogo.</p>
+    <div id="error-eliminar" class="aviso error" role="alert" hidden></div>
+    <div class="botones-dialogo"><button id="conservar" type="button" class="secundario">Conservar línea</button><button id="eliminar" type="button" class="peligro">Eliminar línea</button></div>
+  </dialog>
+</body>
+</html>

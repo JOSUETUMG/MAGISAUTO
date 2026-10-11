@@ -1,0 +1,11 @@
+{
+  "Base": "MAGISAUTO_Proyecto_V2",
+  "AdministradorServidor": 0,
+  "PropietarioBase": 0,
+  "Lectura": 1,
+  "VerEstructura": 1,
+  "Insercion": 0,
+  "Actualizacion": 0,
+  "Borrado": 0,
+  "EjecutarProcedimientos": 0
+}

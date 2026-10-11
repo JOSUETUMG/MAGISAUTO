@@ -1,0 +1,116 @@
+// Requiere Playwright instalado; MAGISAUTO_URL apunta al servidor local de ensayo.
+const { chromium, expect } = require('playwright/test');
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const output = path.join(__dirname, '..', 'artifacts', 'verificacion-marcas');
+fs.mkdirSync(output, { recursive: true });
+const url = process.env.MAGISAUTO_URL || 'http://localhost:5164';
+const results = [];
+const code = 800000000 + Math.floor(Math.random() * 100000000);
+const name = `Ensayo interfaz ${code}`;
+const record = label => results.push({ Prueba: label, Resultado: 'Correcto' });
+
+(async () => {
+  const context = await chromium.launchPersistentContext(path.join(output, 'perfil-navegador'), {
+    channel: 'msedge', headless: true, viewport: { width: 1365, height: 900 }
+  });
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  let created = false;
+  try {
+    const before = await (await context.request.get(`${url}/api/catalogos/marcas`)).json();
+    assert(!before.some(m => m.codigoMarca === code));
+    await page.goto(url);
+    await expect(page.locator('#filas tr')).toHaveCount(before.length);
+    record('Listado cargado en navegador');
+    await page.screenshot({ path: path.join(output, 'marcas-escritorio.png'), fullPage: true });
+    await page.getByLabel('Buscar por código o nombre').fill('Toyota');
+    await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+    await expect(page.locator('#filas tr')).toHaveCount(1);
+    await expect(page.locator('#filas')).toContainText('Toyota');
+    record('Búsqueda desde la pantalla');
+    await page.getByLabel('Buscar por código o nombre').fill('zzz-sin-marca-ensayo');
+    await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+    await expect(page.locator('#vacio')).toContainText('No hay marcas');
+    record('Estado vacío comprensible');
+    await page.getByRole('button', { name: 'Ver todas' }).click();
+    await expect(page.locator('#filas tr')).toHaveCount(before.length);
+    await page.getByRole('button', { name: 'Agregar marca' }).click();
+    await page.locator('#codigo').fill(String(code));
+    await page.locator('#nombre').fill('   ');
+    await page.getByRole('button', { name: 'Guardar marca' }).click();
+    assert(await page.locator('#nombre').evaluate(el => !el.checkValidity()));
+    record('Formulario rechaza nombre de espacios');
+    await page.locator('#nombre').fill(name);
+    await page.screenshot({ path: path.join(output, 'marcas-formulario.png'), fullPage: true });
+    const insertResponse = page.waitForResponse(r => r.request().method() === 'POST' && r.url().endsWith('/api/catalogos/marcas'));
+    await page.getByRole('button', { name: 'Guardar marca' }).click();
+    const inserted = await insertResponse;
+    created = inserted.status() === 201;
+    assert(created);
+    await expect(page.locator('#editor')).not.toBeVisible();
+    await expect(page.locator('#filas')).toContainText(name);
+    record('Alta real desde el formulario');
+    await page.getByRole('button', { name: 'Agregar marca' }).click();
+    await page.locator('#codigo').fill(String(code));
+    await page.locator('#nombre').fill('Duplicada');
+    await page.getByRole('button', { name: 'Guardar marca' }).click();
+    await expect(page.locator('#error-editor')).toContainText('Ya existe');
+    await expect(page.locator('#nombre')).toHaveValue('Duplicada');
+    record('Duplicado muestra mensaje y conserva formulario');
+    await page.getByRole('button', { name: 'Cancelar', exact: true }).click();
+    await page.getByRole('button', { name: `Editar ${name}, código ${code}`, exact: true }).click();
+    assert(await page.locator('#codigo').evaluate(el => el.readOnly));
+    const edited = `${name} <img src=x onerror=alert(1)>`;
+    await page.locator('#nombre').fill(edited);
+    await page.getByRole('button', { name: 'Guardar marca' }).click();
+    await expect(page.locator('#editor')).not.toBeVisible();
+    await expect(page.locator('#filas')).toContainText(edited);
+    await expect(page.locator('#filas img')).toHaveCount(0);
+    record('Edición conserva código y muestra texto sin interpretar HTML');
+    await page.getByRole('button', { name: `Eliminar ${edited}, código ${code}`, exact: true }).click();
+    await expect(page.locator('#detalle-eliminar')).toContainText(edited);
+    await page.getByRole('button', { name: 'Conservar marca' }).click();
+    await expect(page.locator('#filas')).toContainText(edited);
+    record('Cancelación del borrado conserva registro');
+    await page.getByRole('button', { name: `Eliminar ${edited}, código ${code}`, exact: true }).click();
+    await page.getByRole('button', { name: 'Eliminar marca', exact: true }).click();
+    await expect(page.locator('#confirmacion')).not.toBeVisible();
+    await expect(page.locator('#filas tr')).toHaveCount(before.length);
+    created = false;
+    record('Eliminación confirmada desde la pantalla');
+    await page.route('**/api/catalogos/marcas*', route => route.fulfill({ status: 503, contentType: 'application/problem+json', body: JSON.stringify({ detail: 'No fue posible consultar la base de datos.' }) }));
+    await page.getByRole('button', { name: 'Ver todas' }).click();
+    await expect(page.locator('#aviso')).toContainText('No fue posible');
+    await expect(page.locator('#filas tr')).toHaveCount(0);
+    record('Fallo de conexión visible, sin datos obsoletos');
+    await page.unroute('**/api/catalogos/marcas*');
+    await page.getByRole('button', { name: 'Ver todas' }).click();
+    await expect(page.locator('#filas tr')).toHaveCount(before.length);
+    await expect(page.locator('#aviso')).not.toBeVisible();
+    record('Recuperación mediante Ver todas');
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.screenshot({ path: path.join(output, 'marcas-movil.png'), fullPage: true });
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.getByRole('button', { name: 'Agregar marca' }).click();
+    await expect(page.locator('#editor')).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(page.locator('#editor')).not.toBeVisible();
+    record('Pantalla móvil sin desbordamiento y diálogo accesible con Escape');
+    assert.deepEqual(errors, []);
+    record('Sin errores JavaScript');
+    const after = await (await context.request.get(`${url}/api/catalogos/marcas`)).json();
+    assert.deepEqual(after, before);
+    record('Catálogo original restaurado');
+    fs.writeFileSync(path.join(output, 'interfaz-resultado.json'), JSON.stringify({ Estado: 'Correcto', Pruebas: results }, null, 2));
+    console.log(`${results.length} comprobaciones de navegador correctas.`);
+  } finally {
+    if (created) {
+      const response = await context.request.delete(`${url}/api/catalogos/marcas/${code}`);
+      if (response.status() !== 204) console.error(`Limpieza pendiente de marca temporal ${code}`);
+    }
+    await context.close();
+  }
+})().catch(error => { console.error(error); process.exitCode = 1; });

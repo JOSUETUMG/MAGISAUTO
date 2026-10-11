@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcas | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css">
+  <script src="/marcas.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Catálogos"><a href="/" aria-current="page">Marcas</a><a href="/lineas.html">Líneas de vehículos</a></nav>
+    <p class="ruta">CATÁLOGOS <span aria-hidden="true">/</span> MARCAS</p>
+    <section class="encabezado" aria-labelledby="titulo">
+      <div><h1 id="titulo">Marcas de vehículos</h1><p>Organiza las marcas que se utilizan en las líneas de vehículos.</p></div>
+      <button id="nueva" class="primario" type="button"><span aria-hidden="true">＋</span> Agregar marca</button>
+    </section>
+    <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+    <section class="panel" aria-label="Catálogo de marcas">
+      <form id="busqueda" class="busqueda" role="search">
+        <div class="campo-busqueda"><label for="criterio">Buscar por código o nombre</label><input id="criterio" name="criterio" type="search" maxlength="200" placeholder="Por ejemplo, Toyota o 1" autocomplete="off"></div>
+        <button class="primario" type="submit">Buscar</button><button id="todas" class="secundario" type="button">Ver todas</button>
+      </form>
+      <div class="resumen"><h2>Catálogo de marcas</h2><span id="contador" aria-live="polite">Cargando…</span></div>
+      <div class="tabla-contenedor" id="resultados" aria-busy="true">
+        <table><caption class="solo-lector">Marcas disponibles y acciones para cada registro</caption><thead><tr><th scope="col">Código</th><th scope="col">Nombre de la marca</th><th scope="col" class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table>
+        <p id="vacio" class="vacio" role="status">Cargando marcas…</p>
+      </div>
+      <p class="nota">Una marca con líneas asociadas se conserva para proteger sus relaciones.</p>
+    </section>
+    <footer>MAGIS-AUTO <span aria-hidden="true">·</span> Administración de catálogos</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor">
+    <form id="formulario">
+      <p class="etiqueta">CATÁLOGO DE MARCAS</p><h2 id="titulo-editor">Agregar marca</h2>
+      <p id="ayuda-editor">Completa los dos campos para registrar una marca.</p>
+      <div id="error-editor" class="aviso error" role="alert" hidden></div>
+      <label for="codigo">Código <span>(obligatorio)</span></label><input id="codigo" name="codigo" type="number" min="1" max="2147483647" step="1" required aria-describedby="ayuda-codigo">
+      <small id="ayuda-codigo">Usa un código entero que todavía no exista.</small>
+      <label for="nombre">Nombre de la marca <span>(obligatorio)</span></label><input id="nombre" name="nombre" type="text" maxlength="128" required autocomplete="off">
+      <div class="botones-dialogo"><button id="cancelar" class="secundario" type="button">Cancelar</button><button id="guardar" class="primario" type="submit">Guardar marca</button></div>
+    </form>
+  </dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar">
+    <p class="etiqueta">ELIMINAR MARCA</p><h2 id="titulo-eliminar">¿Eliminar esta marca?</h2><p id="detalle-eliminar"></p><p>Esta acción elimina el registro del catálogo.</p>
+    <div id="error-eliminar" class="aviso error" role="alert" hidden></div>
+    <div class="botones-dialogo"><button id="conservar" type="button" class="secundario">Conservar marca</button><button id="eliminar" type="button" class="peligro">Eliminar marca</button></div>
+  </dialog>
+</body>
+</html>
