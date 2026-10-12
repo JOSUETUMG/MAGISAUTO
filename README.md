@@ -2,6 +2,10 @@
 
 Proyecto universitario de financiamiento de vehículos. Trabajo individual de Diego en **pruebas-diego**, conservando los acuerdos del equipo.
 
+Documentación por fases: [índice y orden de lectura](docs/README.md), desde los requisitos y preparación inicial hasta los módulos implementados.
+
+Decisiones vigentes de la revisión del enunciado: [total recaudable, anulaciones, código del vehículo y referencias](docs/DECISIONES_REVISION_PDF.md). Incluye qué está implementado y qué falta en el recorrido de solicitudes.
+
 API en C# / ASP.NET Core .NET 10 y SQL Server, con interfaz HTML/CSS/JavaScript. Los módulos de marcas y líneas permiten listar, buscar, agregar, editar y eliminar mediante procedimientos almacenados. Los módulos de clientes, créditos y pagos todavía no tienen endpoints ni pantallas.
 
 ## Abrir y ejecutar
