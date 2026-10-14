@@ -1,4 +1,4 @@
-# Verificacion reproducible del paquete en el destino aislado instalado por el administrador.
+﻿# Verificacion reproducible del paquete en el destino aislado instalado por el administrador.
 # No modifica la configuracion local ni escribe datos de negocio en la fuente.
 param(
  [Parameter(Mandatory=$true)][string]$Credencial,
@@ -56,4 +56,3 @@ try{
  $output|ConvertTo-Json -Depth 8|Set-Content (Join-Path $repo 'docs/evidencias/paquete-equipo.json') -Encoding utf8
  Write-Output "Paquete del equipo: $($checks.Count) comprobaciones correctas."
 }finally{if($process -and -not $process.HasExited){Stop-Process -Id $process.Id};if($c){$c.Dispose()}}
-
