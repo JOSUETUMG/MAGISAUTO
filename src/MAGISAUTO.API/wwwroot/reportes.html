@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consultas y reportes | MAGIS-AUTO</title>
+<link rel="stylesheet" href="/estilos.css"><link rel="stylesheet" href="/reportes.css">
+<script src="/reportes-formato.js" defer></script><script src="/reportes.js" defer></script>
+</head>
+<body>
+<header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+<main>
+<nav class="catalogos" aria-label="Módulos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html">Créditos</a><a href="/pagos.html">Pagos y abonos</a><a href="/reportes.html" aria-current="page">Consultas y reportes</a></nav>
+<p class="ruta">INFORMACIÓN / CONSULTAS Y REPORTES</p>
+<section class="encabezado"><div><h1>Consultas y reportes</h1><p>Consulta la cartera, los cobros y las garantías con el período que necesitas.</p></div><span class="cantidad">20 consultas</span></section>
+<div id="mensaje" class="aviso" role="status" aria-live="polite" hidden></div>
+<div id="aviso-catalogos" class="aviso error" hidden>Los selectores de clientes y créditos no están disponibles. Las demás consultas pueden ejecutarse. <button id="reintentar" class="secundario" type="button">Reintentar selectores</button></div>
+<form id="consulta" class="panel formulario">
+<label for="reporte">Consulta</label><select id="reporte" required disabled><option>Cargando consultas…</option></select>
+<p id="utilidad" class="descripcion"></p><p id="nota" class="aclaracion"></p>
+<div id="filtros" class="filtros"></div>
+<div class="pie-formulario"><p>Las fechas de corte incluyen el día completo en Guatemala. Consultar no modifica los registros.</p><button id="ejecutar" class="primario" disabled>Consultar</button></div>
+</form>
+<section id="resultados" aria-live="polite" aria-busy="false" hidden></section>
+<p id="inicio" class="vacio">Selecciona una consulta, revisa sus filtros y pulsa Consultar.</p>
+</main>
+<footer>MAGIS-AUTO · Consultas y reportes</footer>
+<dialog id="carta-dialogo" aria-labelledby="carta-titulo">
+<article id="carta"><p class="etiqueta">MAGIS-AUTO</p><h2 id="carta-titulo">Felicitación de cumpleaños</h2><p id="carta-periodo"></p><p id="carta-cliente"></p><p id="carta-texto"></p><p class="aclaracion">Carta preparada para el cliente. No se ha enviado por correo.</p></article>
+<div class="botones-dialogo"><button id="cerrar-carta" class="secundario" type="button">Cerrar</button><button id="imprimir-carta" class="primario" type="button">Imprimir carta</button></div>
+</dialog>
+</body></html>

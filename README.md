@@ -145,7 +145,8 @@ El ensayo de navegador scripts/Verificar-InterfazMarcas.cjs requiere Node.js, el
 - Fase 6: CRUD y pantalla de marcas implementados, API verificada y recorrido manual probado con Diego; docs/FASE_6_Marcas.md.
 - Avance de fase 6: Marcas y Líneas probadas manualmente con Diego; 42 pruebas nuevas de Líneas aprobadas, más 59 de regresión. Ver docs/FASE_6_Lineas.md.
 - Avance actual: Agencias, Vendedores, Clientes, Fiadores, Vehículos, Créditos y Pagos cuentan con implementación y evidencia específica en sus documentos.
-- Pendiente: consultas/reportes en la aplicación, configuración y cobertura restante de entidades, autenticación si se incorpora y aceptación completa según PDF.
+- Consultas y reportes: las 20 consultas SQL están integradas en API/pantalla y verificadas por HTTP/SQL; su recorrido manual está pendiente.
+- Pendiente: revisión de catálogos y cobertura restante de entidades, configuración, autenticación si se incorpora y aceptación completa según PDF.
 - Siguen pendientes las interpretaciones del ingeniero sobre total neto recaudable y borrado financiero.
 
 Trabajar en pruebas-diego y compilar antes de compartir. SQL e instrucciones sí se versionan; base instalada, usuarios, datos y credenciales no. La publicación requiere verificar el commit en la rama remota; los ensayos no mezclan ramas ni publican por sí mismos.
@@ -170,3 +171,10 @@ La API expone GET/POST `/api/creditos`, GET/PUT/DELETE `/api/creditos/{numero}`,
 [Informe detallado y capturas](docs/PRUEBAS_MANUALES_PAGOS_2026-10-13.md): abonos, cuota completa, sobrepago bloqueado, observación, anulación, referencia ACH, búsqueda, Ver todos y vista previa de impresión. El historial conserva tres recibos (uno anulado); el crédito de prueba tiene Q1500 efectivos y Q86239.56 pendientes en la última captura. Las 126 comprobaciones automáticas previas se ejecutaron en la base aislada, no sobre ese crédito.
 
 La fase 6 sigue abierta. Próximo trabajo: consultas y reportes mediante SP, conforme al énfasis del ingeniero. La vista previa fue revisada; no se declara una impresión física ni un PDF guardado.
+
+
+### Consultas y reportes — fase 6
+
+[Consultas y reportes](docs/FASE_6_Reportes.md) integra las 20 consultas SQL existentes con filtros, propósito y secciones de resultados. Abrir `/reportes.html` tras reiniciar la API. Incluye estado de cuenta, cortes históricos, planes, comisiones, recaudo, mora y cartas de cumpleaños con vista previa de impresión. No requiere otro parche SQL ni envía correos.
+
+Rutas de solo lectura: `GET /api/reportes`, `GET /api/reportes/catalogos` y `GET /api/reportes/{id}?filtros`. Las consultas conservan todas las tablas de cada SP; no permiten nombres de procedimientos proporcionados por el usuario. Verificadas 134 comprobaciones HTTP/SQL en la base aislada y 15 de formato. Revisión visual y pruebas manuales pendientes. Tener estas consultas no sustituye la auditoría de Listar/Buscar/CRUD de las demás entidades ni cierra la fase 6.

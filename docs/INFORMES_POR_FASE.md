@@ -43,3 +43,9 @@ Pagos superó **126 comprobaciones HTTP/SQL** en la base aislada, incluyendo con
 [Informe completo de pruebas](PRUEBAS_MANUALES_PAGOS_2026-10-13.md): 15 casos, 16 capturas originales, conciliación de los tres recibos y límites de la evidencia. Incluye abonos, rechazo de sobrepago, cuota pagada, observación, anulación y restauración, ACH con referencia, búsqueda, Ver todos y vista previa de impresión. «Ver todos» tiene confirmación textual; no se afirma que se guardó un PDF ni que se imprimió en papel.
 
 El crédito de prueba permanece VIGENTE con Q1500 efectivos y Q86239.56 por cobrar. La siguiente prioridad es el módulo de consultas/reportes. El ingeniero reforzó el uso de SP para todo SQL y un módulo amplio de consultas; no confirmó las interpretaciones financieras pendientes. La fase 6 continúa abierta; este avance no sustituye su PDF acumulado de cierre.
+
+## Avance de Consultas y reportes — 13 de octubre de 2026
+
+[Documentación del módulo](FASE_6_Reportes.md): 20 SP integrados, filtros tipados, resultados múltiples, nulos, cortes históricos y cartas individuales. Cuenta con 134 comprobaciones HTTP/SQL y 15 de formato; los registros previos de la base aislada se conservaron. No hay revisión visual automática aprobada: Edge no pudo abrir la página en el entorno restringido. Pendientes recorrido manual y el resto del alcance de fase 6; no se genera todavía su PDF de cierre.
+
+Acuerdo posterior con Diego: antes de la entrega se comentarán las funciones/procedimientos y líneas clave de SQL y código (propósito, parámetros, cálculos, validaciones, transacciones y decisiones), y se preparará al equipo para entender y defender el proyecto. Este trabajo general queda para el cierre, después de completar y probar los módulos.

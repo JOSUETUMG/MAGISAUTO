@@ -10,9 +10,11 @@ Orden recomendado para estudiar el proyecto. Las fases 0 y 1 se reconstruyeron e
 | 3 | [Modelo relacional y 3FN](FASE_3_Modelo_Relacional_3FN.md) | Claves, restricciones, normalización y ajustes del modelo. |
 | 4 | [SQL implementado](FASE_4_SQL_Implementado.md) | Versión V2 de 26 tablas, procedimientos, reportes y validaciones. |
 | 5 | [Conexión de la API](FASE_5_Conexion_API.md) | Acceso real a SQL, permisos de aplicación y pruebas. |
-| 6 | [Marcas](FASE_6_Marcas.md), [Líneas](FASE_6_Lineas.md), [Agencias](FASE_6_Agencias.md), [Vendedores](FASE_6_Vendedores.md), [Clientes](FASE_6_Clientes.md), [Fiadores](FASE_6_Fiadores.md) , [Vehículos](FASE_6_Vehiculos.md), [Créditos](FASE_6_Creditos.md) y [Pagos](FASE_6_Pagos.md) | Pantallas, operaciones, validaciones y pruebas de estos módulos. La fase continúa abierta. |
+| 6 | [Marcas](FASE_6_Marcas.md), [Líneas](FASE_6_Lineas.md), [Agencias](FASE_6_Agencias.md), [Vendedores](FASE_6_Vendedores.md), [Clientes](FASE_6_Clientes.md), [Fiadores](FASE_6_Fiadores.md) , [Vehículos](FASE_6_Vehiculos.md), [Créditos](FASE_6_Creditos.md) [Pagos](FASE_6_Pagos.md) y [Consultas y reportes](FASE_6_Reportes.md) | Pantallas, operaciones, validaciones y pruebas de estos módulos. La fase continúa abierta. |
 
 ## Decisiones vigentes y evidencias
+
+- [Pruebas manuales de Reportes del 13 de octubre](PRUEBAS_MANUALES_REPORTES_2026-10-13.md): 20 consultas, casos límite y capturas originales.
 
 - [Pruebas manuales de Pagos del 13 de octubre](PRUEBAS_MANUALES_PAGOS_2026-10-13.md): recorrido completo, capturas originales, importes conciliados y pendientes.
 

@@ -1,0 +1,242 @@
+[
+  {
+    "caso": "REP-01",
+    "archivo": "REP-01-01.png",
+    "origen": "codex-clipboard-e64e0b51-e86e-4dbc-bbae-2e0bb952f9bb.png",
+    "sha256": "d4c7b63cf8d0d6d6a5478d19c84ea63986e20e55a60d0af77f84cea95333dec6"
+  },
+  {
+    "caso": "REP-01",
+    "archivo": "REP-01-02.png",
+    "origen": "codex-clipboard-9bc582dc-9213-4ec2-a94e-801067e0f205.png",
+    "sha256": "0c6da167f68988050376fa9815a52f2439bac39159f12c4d2983fe7d5f106654"
+  },
+  {
+    "caso": "REP-01-invalido",
+    "archivo": "REP-01-invalido-01.png",
+    "origen": "codex-clipboard-999f5b26-99ce-47e7-b495-209b7d03723a.png",
+    "sha256": "df0dd05aba8962df0b58093bffd984b53eb3c94b5a07438b158108b61c81f6ab"
+  },
+  {
+    "caso": "REP-01-vacio",
+    "archivo": "REP-01-vacio-01.png",
+    "origen": "codex-clipboard-2e0fe0a7-aa03-4c7f-930f-62011100f9e2.png",
+    "sha256": "da404419e68937279e7fb3025fe5a418f8bb096155e5bb4e9da4a51b1cfa01d9"
+  },
+  {
+    "caso": "REP-01-vacio",
+    "archivo": "REP-01-vacio-02.png",
+    "origen": "codex-clipboard-ebe42605-e44b-41cb-8765-0c43858a0f54.png",
+    "sha256": "da404419e68937279e7fb3025fe5a418f8bb096155e5bb4e9da4a51b1cfa01d9"
+  },
+  {
+    "caso": "REP-02",
+    "archivo": "REP-02-01.png",
+    "origen": "codex-clipboard-6e27991e-3536-4304-be81-3d2b7505b0ff.png",
+    "sha256": "daaf045ee1c023b9d86590155b49979d3bd9fa38cf53510d2d7a4e4ad6a34461"
+  },
+  {
+    "caso": "REP-02-limite",
+    "archivo": "REP-02-limite-01.png",
+    "origen": "codex-clipboard-39281353-66a1-4ea6-8aa6-fcae449bafb0.png",
+    "sha256": "583ccd242d1cfedae6defad5ab4da45a46abd8addc8c4563ff49d3cc2517454c"
+  },
+  {
+    "caso": "REP-02-limite",
+    "archivo": "REP-02-limite-02.png",
+    "origen": "codex-clipboard-0d7de322-dfb6-4e60-b44b-815b6951ca27.png",
+    "sha256": "fef533077ea7bdee6d2bf5dbeb7874eb3cb62f380f55e80f15947d01a801bd39"
+  },
+  {
+    "caso": "REP-02-limite",
+    "archivo": "REP-02-limite-03.png",
+    "origen": "codex-clipboard-03cbb77e-5a00-4ae1-96ed-2ad3d12b4fc2.png",
+    "sha256": "386131cd3afeb75a3e22ae2e40619662da8855c7698bc07b22c9b8a49787b062"
+  },
+  {
+    "caso": "REP-03",
+    "archivo": "REP-03-01.png",
+    "origen": "codex-clipboard-324c07aa-a0cd-46a9-b790-4f05a8baadb5.png",
+    "sha256": "8493e65b79971e3d61a12345f1c1b432f37441bc135d1ccaef2d57e260537d43"
+  },
+  {
+    "caso": "REP-04",
+    "archivo": "REP-04-01.png",
+    "origen": "codex-clipboard-d46609a7-5c09-4324-85f6-acaaeb1df751.png",
+    "sha256": "640f32b64a3b5ac8af57afb1229ab0ae16ed37a0258b14a45bdf1b293db1cdd7"
+  },
+  {
+    "caso": "REP-05",
+    "archivo": "REP-05-01.png",
+    "origen": "codex-clipboard-6d894a01-b534-4c82-a4f2-6915ba846802.png",
+    "sha256": "42620e671b7a2621424e2cb62d5d83aba7763d75148866a75a1019cba83edc5d"
+  },
+  {
+    "caso": "REP-05",
+    "archivo": "REP-05-02.png",
+    "origen": "codex-clipboard-051608d6-34ce-4d66-a209-bdedabc4f035.png",
+    "sha256": "e6e42d520e61c0ad1ef86bb1d34da46ddd3c8c7252cb5191473618109cfcc9bf"
+  },
+  {
+    "caso": "REP-05",
+    "archivo": "REP-05-03.png",
+    "origen": "codex-clipboard-e9a54133-1023-491e-bac2-ab8edcac69bb.png",
+    "sha256": "825ee89fe91ea4a68952d3fd7a26d5b75c7acff1c7db1a1faeacfc212e4b2b34"
+  },
+  {
+    "caso": "REP-06",
+    "archivo": "REP-06-01.png",
+    "origen": "codex-clipboard-6882721f-9821-40bf-abc0-fa39ec4d0dce.png",
+    "sha256": "caeae4c8593ee6236525db3f4ffbc7de3644d96ac472167bd2831977354af815"
+  },
+  {
+    "caso": "REP-06",
+    "archivo": "REP-06-02.png",
+    "origen": "codex-clipboard-f5aa3206-b787-48cd-b391-ecdc8e873740.png",
+    "sha256": "d2bd76841d2582bb1cc5c983d87e1451b36b1919e37eadbc14acbcbbfff52600"
+  },
+  {
+    "caso": "REP-06",
+    "archivo": "REP-06-03.png",
+    "origen": "codex-clipboard-67d7fe3d-db30-4528-81fd-627b699fb8a4.png",
+    "sha256": "3605977963eb2340e6ae9867e8a29672714af66b890073f00e32043e5ebacb3b"
+  },
+  {
+    "caso": "REP-06",
+    "archivo": "REP-06-04.png",
+    "origen": "codex-clipboard-b661bd64-dbd2-4899-9bd0-955b8451d1c7.png",
+    "sha256": "3cf0f79f494a63e428ab6a223940b966fed1c11e487d66acc0b684b1d9515b6d"
+  },
+  {
+    "caso": "REP-06",
+    "archivo": "REP-06-05.png",
+    "origen": "codex-clipboard-2c30f3eb-85c0-46b1-a93c-4bcde86167d1.png",
+    "sha256": "2da01dca902f1818f1225b42449bf89fab59df0484738837670e8ab8488264af"
+  },
+  {
+    "caso": "REP-07",
+    "archivo": "REP-07-01.png",
+    "origen": "codex-clipboard-a6830fd6-b30f-4b28-84f4-ac871a7f3c4f.png",
+    "sha256": "95f6e112954f51696341f93fb031688b59315b467c8936f294de42086baba0c8"
+  },
+  {
+    "caso": "REP-07",
+    "archivo": "REP-07-02.png",
+    "origen": "codex-clipboard-c791e8f1-97fb-4e38-8da0-5e13a489ae26.png",
+    "sha256": "b5ae2ff2f566ace1ab265e9d20419f3ca563dd13b6d43499927c75969e457010"
+  },
+  {
+    "caso": "REP-07-anterior",
+    "archivo": "REP-07-anterior-01.png",
+    "origen": "codex-clipboard-79b43c1a-100b-4b75-accc-cf55c515bbb0.png",
+    "sha256": "e7440eb64d71eb8e196556368884824a851ac9dad46839bbe011f0291c0feac8"
+  },
+  {
+    "caso": "REP-07-anterior",
+    "archivo": "REP-07-anterior-02.png",
+    "origen": "codex-clipboard-7a9b5f04-2fed-45b0-893f-94f09ef90a03.png",
+    "sha256": "01557989fa6af072aa311fbf6d3ed14cfc919023a6eb2707bf26a6979e036d67"
+  },
+  {
+    "caso": "REP-08",
+    "archivo": "REP-08-01.png",
+    "origen": "codex-clipboard-03aca045-11ff-4edc-90e8-6d72c719ddeb.png",
+    "sha256": "972a183f39a5e95709f2d4a512f171dcc0346ea5f6be36e6b45b2c6d5963de05"
+  },
+  {
+    "caso": "REP-09",
+    "archivo": "REP-09-01.png",
+    "origen": "codex-clipboard-2422eeee-e15c-473b-97f5-50a8272308ed.png",
+    "sha256": "7a151c0bdafc6f423f82fd0b93ddaa9d203a1368b8e4e90c4ec9d41fc5c7f07f"
+  },
+  {
+    "caso": "REP-10",
+    "archivo": "REP-10-01.png",
+    "origen": "codex-clipboard-e3da12a4-c411-48f8-ac67-878289d16083.png",
+    "sha256": "f84fd3732ce5b3fb3f8ad583dfc8e048f4aba84b51c8433a015f155d87896291"
+  },
+  {
+    "caso": "REP-11",
+    "archivo": "REP-11-01.png",
+    "origen": "codex-clipboard-15b0ed1d-aa2a-4b7a-9a0e-598055a7678a.png",
+    "sha256": "da91533cdaab21324edc96b43f70b44c83dd4846af7041992a4b8068a8c2d8f6"
+  },
+  {
+    "caso": "REP-11",
+    "archivo": "REP-11-02.png",
+    "origen": "codex-clipboard-296a51df-1cde-4d82-bf8e-02f399520574.png",
+    "sha256": "22d3f73102a624487666a31450b5057a9bcc92138daa3ce00235d2a50b763065"
+  },
+  {
+    "caso": "REP-12",
+    "archivo": "REP-12-01.png",
+    "origen": "codex-clipboard-1b0274b5-715d-4fb8-ac48-f94e7c94a36c.png",
+    "sha256": "953ec8d337a49d2ec8fce5c0c4cb5c266ff9c7e54996b2fcbaa61872ddc562fb"
+  },
+  {
+    "caso": "REP-13",
+    "archivo": "REP-13-01.png",
+    "origen": "codex-clipboard-cefd014e-354d-4069-a7b2-8004a01faa9a.png",
+    "sha256": "da9378aefe8eff453800b388b3e99c8d2f65b8b84c0475fe93e856883fb74ecb"
+  },
+  {
+    "caso": "REP-14",
+    "archivo": "REP-14-01.png",
+    "origen": "codex-clipboard-f5162131-0d39-43e3-b0f9-4d085aeb5388.png",
+    "sha256": "c8872ef89db80f2a13856f2595abd4c5c1d9a22d6b8b2ad0bff6fd5227746311"
+  },
+  {
+    "caso": "REP-14",
+    "archivo": "REP-14-02.png",
+    "origen": "codex-clipboard-241e8d8d-feec-42ad-a935-a37df69d2c55.png",
+    "sha256": "54a05e7cae685d70dc3562aa2e0f63faa3f90aba505c134a34f88ec2fcd5440d"
+  },
+  {
+    "caso": "REP-15",
+    "archivo": "REP-15-01.png",
+    "origen": "codex-clipboard-89aec762-3f65-4ca6-9475-aa635c129716.png",
+    "sha256": "2d710ee897297c8be59da4f94ca1caf415f250f9d2520352288f11123eb41794"
+  },
+  {
+    "caso": "REP-16",
+    "archivo": "REP-16-01.png",
+    "origen": "codex-clipboard-f6462acd-4936-4ddd-865f-bb947d19eafc.png",
+    "sha256": "677012eabc8cd34f43e8b3609e82e268c6101807035978f6119bbcb7f195a8b4"
+  },
+  {
+    "caso": "REP-16",
+    "archivo": "REP-16-02.png",
+    "origen": "codex-clipboard-2117ebe1-cd40-4f1d-8ed8-cdbf48a1d265.png",
+    "sha256": "af810f8936b5cc93e0eb4b7555f2abc3cbffd7a236777f7999810ddeb8d24fd2"
+  },
+  {
+    "caso": "REP-17",
+    "archivo": "REP-17-01.png",
+    "origen": "codex-clipboard-4fd7163c-c50d-4fb3-88b2-d80b04600047.png",
+    "sha256": "ccb2f1fa8ca48e71e1594fcb92a03a16563e7bcf5b64472728e8e72ca4c358b3"
+  },
+  {
+    "caso": "REP-17",
+    "archivo": "REP-17-02.png",
+    "origen": "codex-clipboard-00027cbf-d463-44ab-8c04-6e5934ca28a6.png",
+    "sha256": "9c286bddf59c9d738c80d3c750a48d971130893859cff173920f4c3145f52460"
+  },
+  {
+    "caso": "REP-18",
+    "archivo": "REP-18-01.png",
+    "origen": "codex-clipboard-6caca288-a7b9-40a3-9d2b-e8b0344b9006.png",
+    "sha256": "240f4e34a01666bc7659f93f6f4f88b9d5f819e99ac30c19e54effa9885abf54"
+  },
+  {
+    "caso": "REP-19",
+    "archivo": "REP-19-01.png",
+    "origen": "codex-clipboard-7ba1c1ea-b6e4-4184-9d8f-839a4e6ba9f5.png",
+    "sha256": "7ac2d6830df75f41aa116e78ca1e61fc6eb06334efa6d5d2408391faa96dfbc2"
+  },
+  {
+    "caso": "REP-20",
+    "archivo": "REP-20-01.png",
+    "origen": "codex-clipboard-b9149b58-bc12-4075-9708-4514e9e1054b.png",
+    "sha256": "384e5538169be4d62c188ed710ccf73c9372fc9b0d1f41f80b341913a8a7fb28"
+  }
+]

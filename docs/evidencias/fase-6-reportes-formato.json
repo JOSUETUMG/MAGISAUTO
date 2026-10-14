@@ -1,0 +1,65 @@
+{
+  "Estado": "Correcto",
+  "Pruebas": [
+    {
+      "Prueba": "Monto mayor al entero seguro mantiene centavos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Total agregado de alta precisión conserva dígitos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reversión neta negativa",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Centavo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cero monetario",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Tasa anual fraccionaria",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Tasa de seguro pequeña",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión dos por ciento",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Tasa cero",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nulo no se convierte a dinero cero",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recibo bigint conserva todos sus dígitos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago histórico efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago histórico no efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fecha SQL no cambia de zona horaria",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Tasa recibe formato porcentual",
+      "Resultado": "Correcto"
+    }
+  ]
+}

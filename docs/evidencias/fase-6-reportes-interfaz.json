@@ -1,0 +1,13 @@
+{
+  "Estado": "Recorrido manual documentado; cobertura visual adicional pendiente",
+  "Fecha": "2026-10-13",
+  "IntentoAutomatico": "Edge mediante Playwright terminó antes de abrir una página por errores del entorno restringido.",
+  "AlcanceVerificado": "Capturas de Diego: 20 consultas, fechas invertidas, período vacío, corte anterior indicado, límite de mora y carta/vista previa. Ver informe manual para limitaciones.",
+  "Pendiente": [
+    "Teclado y móvil",
+    "Cambios rápidos de filtros y respuestas tardías",
+    "Mejora visual: espacio superior de carta impresa"
+  ],
+  "InformeManual": "../PRUEBAS_MANUALES_REPORTES_2026-10-13.md",
+  "Capturas": 40
+}

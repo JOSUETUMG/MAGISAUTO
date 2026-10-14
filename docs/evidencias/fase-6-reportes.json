@@ -1,0 +1,544 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "ConexionLocalSinCifrado": true,
+  "Fecha": "2026-10-13T20:47:52.3529003-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Procedimientos financieros disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta API sin lectura directa de tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /reportes.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /reportes.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /reportes.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /reportes-formato.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /pagos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Preparar borrador propio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo de consultas disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Veinte consultas identificadas, con utilidad y filtros",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Selectores mediante SP",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cliente y crédito propios presentes en selectores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Selectores no exponen DPI ni cadena de conexión",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 1 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 1 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 1 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 2 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 2 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 2 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 3 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 3 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 3 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 4 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 4 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 4 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 5 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 5 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 5 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 6 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 6 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 6 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 7 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 7 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 7 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 8 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 8 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 8 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 9 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 9 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 9 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 10 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 10 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 10 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 11 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 11 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 11 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 12 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 12 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 12 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 13 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 13 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 13 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 14 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 14 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 14 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 15 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 15 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 15 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 18 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 18 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 18 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 19 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 19 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 19 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 20 ejecutado por API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 20 conserva todas las tablas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 20 coincide con SP, incluidos importes, fechas y nulos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Estado de cuenta entrega resumen, cuotas y movimientos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Corte actual resta solo 500 efectivos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Estado de cuenta al corte anterior a la anulación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Al corte anterior el pago de 1000 era efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Plan previo a aprobar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Saldo previo a aprobación es nulo, no cero",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Mora identifica crédito propio vencido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Abonos parciales identifica cuota propia con 500",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Carta individual generada con nombre del cliente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anulación conserva auditoría y monto original",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Exposición del fiador conserva vínculo del crédito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fecha de corte predeterminada Guatemala",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fecha predeterminada coincide con SQL Guatemala",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Período sin operaciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/21",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/1",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/1?desde=2026-11-01&hasta=2026-01-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/1?desde=2026-02-30&hasta=2026-03-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/9?fechaCorte=9999-12-31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/9?fechaCorte=ayer",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/11?dias=0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/11?dias=366",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/2?diasMinimos=0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/5?mes=13&anio=2026",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/5?mes=1&anio=1899",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/6?codigoDeudor=0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/6?codigoDeudor=2147483647",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/7?numeroCredito=INEXISTENTE-ENSAYO",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/9?procedimiento=dbo.Credito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/9?fechaCorte=2026-01-01&fechaCorte=2026-01-02",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/6?codigoDeudor=1%20OR%201%3D1",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/7?numeroCredito=%27%3BDELETE%20dbo.Credito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación /api/reportes/1?desde=2026-01-01%27%20OR%201%3D1&hasta=2026-12-31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error no expone conexión ni mensajes internos SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reportes no admite escritura POST",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte vacío conserva columnas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Detalle vacío y agregado nulo preservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registros previos de validación conservados tras retirar solo el ensayo",
+      "Resultado": "Correcto"
+    }
+  ]
+}
