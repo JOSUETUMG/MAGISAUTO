@@ -1,0 +1,268 @@
+{
+  "Comprobaciones": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Agencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Credito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de CreditoFiador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Departamento",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Depreciacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de DetalleCuota",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de DetallePago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de DetalleReferencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Deudor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Direccion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Fiador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Garantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Linea",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Municipio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de ParametroCredito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Persona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de ResumenCredito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Telefono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de TipoDireccion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de TipoGarantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de TipoPago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de TipoReferencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de TipoTelefono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conteo de Vendedor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "151 procedimientos, 4 vistas y 2 funciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Restricciones activas y confiables",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Datos cumplen las restricciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Siguiente recibo es 4",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta API sin SELECT directo en tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API conecta con la copia mediante SP",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catalogo de 20 consultas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 1 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 2 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 3 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 4 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 5 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 6 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Estado de cuenta: tres secciones y saldos iniciales",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 7 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 8 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 9 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 10 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 11 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 12 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 13 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 14 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 15 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 18 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 19 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recaudacion neta Q1500 y capital Q1291.09",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 20 responde desde la copia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla / disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla /pagos.html disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla /reportes.html disponible",
+      "Resultado": "Correcto"
+    }
+  ],
+  "BaseEnsayo": "MAGISAUTO_EnsayoEquipo_20261013",
+  "Limitaciones": [
+    "Instalacion administrativa realizada por Diego en SSMS; la cuenta de revision no puede crear bases.",
+    "La prueba automatizada usa la cuenta API existente mapeada SOLO en el ensayo. No certifica una computadora distinta.",
+    "Si se indico ConexionLocalSinCifrado: solo loopback aislado por limitacion TLS del proceso de ensayo; los archivos entregados conservan Encrypt=True."
+  ],
+  "ScriptSha256": "3ffb46fe7a42c9bd468c7fb703c3a9476285afbcd2242d7de418e3ebdbc61a3a",
+  "Fecha": "2026-10-13T23:54:27.8293887-06:00",
+  "Estado": "Correcto",
+  "ComparacionCopia": {
+    "tablas": 26,
+    "filasIguales": 81,
+    "definicionesIguales": 157,
+    "normalizacion": "Columnas por nombre; encabezados CREATE/ALTER normalizados.",
+    "fuenteSinCambios": true
+  },
+  "PreparacionLocal": {
+    "WindowsPowerShell": "Correcto",
+    "RechazoSobrescritura": "Correcto",
+    "ComprobadorContraEnsayo": "Correcto",
+    "ConfigOriginalConservada": true,
+    "ReinstalacionRechazada": 52500,
+    "BloquesSqlAnalizados": 160
+  }
+}

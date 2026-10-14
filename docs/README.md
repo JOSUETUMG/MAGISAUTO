@@ -12,6 +12,12 @@ Orden recomendado para estudiar el proyecto. Las fases 0 y 1 se reconstruyeron e
 | 5 | [Conexión de la API](FASE_5_Conexion_API.md) | Acceso real a SQL, permisos de aplicación y pruebas. |
 | 6 | [Marcas](FASE_6_Marcas.md), [Líneas](FASE_6_Lineas.md), [Agencias](FASE_6_Agencias.md), [Vendedores](FASE_6_Vendedores.md), [Clientes](FASE_6_Clientes.md), [Fiadores](FASE_6_Fiadores.md) , [Vehículos](FASE_6_Vehiculos.md), [Créditos](FASE_6_Creditos.md) [Pagos](FASE_6_Pagos.md) y [Consultas y reportes](FASE_6_Reportes.md) | Pantallas, operaciones, validaciones y pruebas de estos módulos. La fase continúa abierta. |
 
+## Instalación para compañeros
+
+- [Instalar base con datos y conectar Visual Studio](INSTALACION_EQUIPO.md).
+- [Guía de tareas y Git (PDF)](equipo/MAGISAUTO_Guia_de_trabajo_equipo_y_Git.pdf).
+- [Verificación del paquete](PAQUETE_EQUIPO_2026-10-13.md).
+
 ## Decisiones vigentes y evidencias
 
 - [Pruebas manuales de Reportes del 13 de octubre](PRUEBAS_MANUALES_REPORTES_2026-10-13.md): 20 consultas, casos límite y capturas originales.

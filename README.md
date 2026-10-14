@@ -86,6 +86,10 @@ El código de una nueva marca es un entero positivo proporcionado por el usuario
 
 ## Otra máquina
 
+**Para los compañeros con los mismos datos de prueba:** seguir [Instalación del equipo](docs/INSTALACION_EQUIPO.md). El paquete [database/equipo](database/equipo/LEEME.md) incluye estructura y registros actuales; usarlo en lugar del instalador vacío descrito abajo. Cada equipo genera su propia cuenta y configuración. [Guía de tareas y Git en PDF](docs/equipo/MAGISAUTO_Guia_de_trabajo_equipo_y_Git.pdf).
+
+### Alternativa: instalación vacía sin operaciones de prueba
+
 Cada equipo necesita su propia base y credencial; Git no las instala.
 
 1. Instalar database/v2/entrega/MAGISAUTO_Proyecto_Completo.sql según su LEEME.md, con un nombre nuevo.
