@@ -1,4 +1,4 @@
-# Decisiones de la revisión del enunciado
+﻿# Decisiones de la revisión del enunciado
 
 Fecha: 11 de octubre de 2026. Aprobadas por Diego para continuar el proyecto en pruebas-diego.
 
@@ -38,6 +38,8 @@ El paso de presentar la solicitud deberá validar estas condiciones en un proced
 
 Estado actual: SQL exige las tres referencias completas al aprobar. Todavía no existe un paso independiente de presentación de solicitud en la API o interfaz. Su validación previa queda como requisito pendiente del módulo de clientes/créditos; este acuerdo no cambia automáticamente el comportamiento de la base instalada ni agrega estados nuevos.
 
+Avance posterior del 11 de octubre: [Clientes](FASE_6_Clientes.md) permite guardar el expediente por etapas y muestra contactos/referencias faltantes mediante la API. Ese indicador no sustituye la validación SQL de presentación, que sigue pendiente junto con el módulo Créditos. No se añadió un estado contractual nuevo.
+
 Casos de aceptación para ese módulo:
 
 - Un borrador con dos referencias se guarda, pero no se presenta como solicitud completa.
@@ -49,3 +51,17 @@ Casos de aceptación para ese módulo:
 ## Alcance de esta actualización
 
 Se documentan decisiones y criterios de aceptación. No se modifican datos, procedimientos, el instalador SQL ni el estado de los créditos. El informe PDF de cierre de fase deberá incluir estas decisiones y distinguir los pendientes de implementación.
+
+
+## Implementación de Créditos — 12 de octubre de 2026
+
+El acuerdo de presentación se implementó en el código SQL/API/interfaz de [Créditos](FASE_6_Creditos.md). `Credito_Presentar` verifica el expediente y guarda fecha/responsable; `Credito_Aprobar` exige ese hito y repite los requisitos. Editar condiciones o asignaciones invalida la presentación. Se conserva `BORRADOR` hasta aprobar; la presentación es un hito, no un estado contractual nuevo. Los párrafos anteriores describen el estado histórico de la revisión.
+
+La actualización aditiva está preparada para la base del proyecto y requiere ejecutarse allí con permisos de administración; la cuenta disponible no tiene ALTER. La implementación local no equivale a despliegue confirmado.
+
+
+Actualización del 13 de octubre: Diego confirmó mediante SSMS y el recorrido de la aplicación la instalación de presentación de créditos. La consulta del plan muestra el total contractual y su explicación. [Pagos](FASE_6_Pagos.md) expone abonos, saldos actuales y anulaciones conservando el historial; su recorrido manual principal y vista previa de impresión están documentados en [el informe de pruebas](PRUEBAS_MANUALES_PAGOS_2026-10-13.md). Los estados «pendiente» de secciones anteriores corresponden a la fecha original de esas decisiones.
+
+## Aclaración del ingeniero compartida durante las pruebas
+
+Según la captura aportada por Diego, el ingeniero enfatizó procedimientos almacenados para todo el trabajo SQL y un módulo de consultas con la mayor cantidad de consultas que puedan crear. Se prioriza integrar los reportes SQL en la aplicación después de validar Pagos, con filtros y resultados explicables. No se interpreta el mensaje como autorización de las decisiones pendientes de este documento ni como un nuevo número obligatorio de reportes. El enunciado sigue siendo la referencia del alcance mínimo.

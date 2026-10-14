@@ -1,0 +1,326 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-12T10:37:29.0814431-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado de vehículos disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogos de marca, línea y tipo disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /lineas.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /agencias.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /vendedores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /clientes.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /fiadores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y navegación: /vehiculos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /vehiculos.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /vehiculos.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear vehículo sin placa y código automático",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN normalizado, precio exacto, placa nula y condición nueva",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca y línea enriquecidas sin inventar historial",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN duplicado rechazado sin detalles SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: ",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: 12345",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: 123456789012345678",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: 1234567890123456I",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: 1234567890123456O",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: 1234567890123456Q",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "VIN inválido rechazado: 1234567890123456-",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Año fuera del esquema: 0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Año fuera del esquema: 1885",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Año fuera del esquema: 2101",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio inválido rechazado: 0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio inválido rechazado: -1",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio inválido rechazado: 1.001",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio inválido rechazado: 10000000000000000",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio inválido rechazado: no-numero",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Placa demasiado larga rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado: codigoMarca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo inexistente rechazado: codigoMarca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado: codigoLinea",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo inexistente rechazado: codigoLinea",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado: codigoTipoGarantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo inexistente rechazado: codigoTipoGarantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Línea de otra marca rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error de catálogo no altera el vehículo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio límite conserva centavos: 0.01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Precio límite conserva centavos: 9999999999999999.99",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar precio, año y placa",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Edición persiste con placa normalizada y mismo código",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Placa duplicada rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Segundo vehículo sin placa; API siempre registra nuevo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No se puede editar hacia un VIN ya registrado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No se puede editar hacia una placa ya registrada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por 7",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por ENSD8AF6A9E5B1647",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por E9D9977AB5",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por Ensayo automático 1672c2c53a",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por Línea de ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por 2025",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro por marca excluye la otra",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtros combinados respetan marca y criterio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido: criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido: criterio=%20%20",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido: codigoMarca=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido: codigoMarca=0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido: criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Texto SQL tratado literalmente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Quitar placa es válido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Varios vehículos pueden no tener placa",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Valoración vinculada bloquea eliminación con aviso específico",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta valoraciones sin afirmar historial contractual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito borrador vinculado bloquea eliminación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito borrador contado sin historial aprobado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Se permite editar antes de aprobación según SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar sin dependencias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar segundo vehículo sin valoración",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registro inexistente devuelve 404: GET",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registro inexistente devuelve 404: PUT",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registro inexistente devuelve 404: DELETE",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero no válido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vehículos iniciales intactos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogos iniciales intactos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Créditos iniciales intactos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Valoraciones iniciales intactas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Personas iniciales intactas",
+      "Resultado": "Correcto"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-11T21:03:40.2484195-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código temporal no pertenece a una marca existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página de marcas servida desde la API",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /estilos.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /marcas.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear marca y recortar espacios",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca creada persistida y buscable por código",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código duplicado devuelve conflicto claro",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre inválido de longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre inválido de longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre inválido de longitud 129 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código decimal rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código fuera del rango entero rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre ausente rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Errores no alteraron la marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar marca conserva código",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Edición persistida y Unicode conservado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca con línea asociada devuelve 409",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Borrado bloqueado conserva la marca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar marca sin relaciones devuelve 204",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Marca eliminada ya no aparece",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar una marca inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar una marca inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar con código inválido devuelve 400",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "OpenAPI incluye crear, editar y eliminar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo original conservado después del ensayo",
+      "Resultado": "Correcto"
+    }
+  ]
+}

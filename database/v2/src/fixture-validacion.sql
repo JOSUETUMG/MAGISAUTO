@@ -26,6 +26,7 @@ BEGIN TRY
  SELECT @garantia=CodigoGarantia FROM dbo.Garantia WHERE VIN='TEST0000000000001';
  EXEC api.Credito_Insertar @NumeroCredito='PRUEBA-01',@CodigoDeudor=@deudor,@CodigoGarantia=@garantia,@CodigoVendedor=@vendedor,@Enganche=20000,@Plazo=12;
  EXEC api.CreditoFiador_Insertar @NumeroCredito='PRUEBA-01',@CodigoFiador=@fiador;
+ EXEC api.Credito_Presentar @NumeroCredito='PRUEBA-01',@Responsable=N'Ensayo';
  EXEC api.Credito_Aprobar @NumeroCredito='PRUEBA-01',@Responsable=N'Comite ficticio de ensayo',@FechaAprobacion='20200131';
  COMMIT TRANSACTION;
 END TRY

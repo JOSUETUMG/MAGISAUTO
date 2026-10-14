@@ -1,0 +1,86 @@
+{
+  "fechaOperaciones": "2026-10-13",
+  "fuente": "Capturas aportadas por Diego en el chat; originales sin editar",
+  "capturas": [
+    {
+      "archivo": "01-inicio.png",
+      "origen": "codex-clipboard-db976505-976d-417f-b5d8-3514fcd9f905.png",
+      "sha256": "6eb62a5248e03154f6b88909fa79cee860eb63f673dbc27775e77b1fe08f986e"
+    },
+    {
+      "archivo": "02-recibo-1.png",
+      "origen": "codex-clipboard-23e3e82c-5af1-4e3b-a49d-dd40195458bc.png",
+      "sha256": "5964e16fd6b53fb16c3a52201b72997cc2548fa146e7c51565563f0708518050"
+    },
+    {
+      "archivo": "03-historial-1.png",
+      "origen": "codex-clipboard-38bf3b52-3085-432e-9309-4b805aaf3cd6.png",
+      "sha256": "f932910e859e5baa4f289370132fdb868c81eb36ebf62a7db5bc2d0f4945a989"
+    },
+    {
+      "archivo": "04-saldos-abono.png",
+      "origen": "codex-clipboard-68d5dbc7-a3df-4754-836d-6a3b302a0961.png",
+      "sha256": "b742e43360c2b340011468b37ea3fa99c465ed3188e3ef88713f04f47dcb2247"
+    },
+    {
+      "archivo": "05-sobrepago.png",
+      "origen": "codex-clipboard-a5a315a7-552f-43d5-8e19-6c18657bb880.png",
+      "sha256": "c6e0730c6d38583ce955d5f5b7343a5931adc0775468d455e2d6d57d1758e7a8"
+    },
+    {
+      "archivo": "06-recibo-2.png",
+      "origen": "codex-clipboard-44dd2446-909c-41d2-97d7-d57eded3b137.png",
+      "sha256": "ced7ab890d1f75261c07638f23b33280f86777fbee683ec8078dfc8ebdb835fb"
+    },
+    {
+      "archivo": "07-historial-2.png",
+      "origen": "codex-clipboard-e382b155-a3ce-44d0-995b-c46462ee4b3c.png",
+      "sha256": "6076e47f95990db0fcdffddfdaf9314b93a01478b6ed2e38cd3f38f09a266396"
+    },
+    {
+      "archivo": "08-cuota-pagada.png",
+      "origen": "codex-clipboard-35dcb60f-f272-4931-9137-f757911d551d.png",
+      "sha256": "890ea805d6a357ea1d82ddc7fa4400332fd315e0ecd7cef4066cb60f65f25495"
+    },
+    {
+      "archivo": "09-observacion.png",
+      "origen": "codex-clipboard-9ebf2320-2796-4e72-ac38-ebb83bcb3ecd.png",
+      "sha256": "164b0c769b612ff68ac303da520b7b954ba661008192b0dcaccdd3ace2800275"
+    },
+    {
+      "archivo": "10-recibo-anulado.png",
+      "origen": "codex-clipboard-0d8bebc6-edd6-4228-8eb2-a4a7225b2a56.png",
+      "sha256": "007c1f1110a638cf3f89dd3c4c55ac20ed4a72a4ba2f665b540a291c2f919212"
+    },
+    {
+      "archivo": "11-saldos-anulacion.png",
+      "origen": "codex-clipboard-7fefff09-50b9-44f0-ab6b-dc23cea82897.png",
+      "sha256": "864dfb38746f602e75c79e59bda970bcdef8e31709438922391a248bdce47ca1"
+    },
+    {
+      "archivo": "12-referencia-obligatoria.png",
+      "origen": "codex-clipboard-44e0ae2f-c4aa-4dd0-bd7b-12ba92f7c638.png",
+      "sha256": "fb5914a16b95483808ce565843cd6595e0dbbd5fa8d32ab105cf93981fe7dbda"
+    },
+    {
+      "archivo": "13-recibo-3.png",
+      "origen": "codex-clipboard-8d9261ac-8d3f-476f-a17b-0b8abc9b96b5.png",
+      "sha256": "83d3e8f91aa7cd116f2e7e306a9784b3ca9abd95be0428a1a26e3c97db71e68d"
+    },
+    {
+      "archivo": "14-saldos-transferencia.png",
+      "origen": "codex-clipboard-d5445b0f-59f2-42f5-8ac3-69627da1b942.png",
+      "sha256": "28820b9aadff4d7a358b5bd6614972071558abe7d94a69aa73ec38894d348922"
+    },
+    {
+      "archivo": "15-busqueda.png",
+      "origen": "codex-clipboard-50aa01e6-3046-4fa9-853a-bb826b1f615f.png",
+      "sha256": "56c3a31068c60950e0f2581f3340c40098c3d98caa06b876e2e99fdb94aceb29"
+    },
+    {
+      "archivo": "16-impresion.png",
+      "origen": "codex-clipboard-7fd57211-77c2-4f56-9c76-e28357b65adf.png",
+      "sha256": "0eda090c8fe5c4204559a31ab3b5d0629f2aaac3ed58db9e89b26674e790041d"
+    }
+  ]
+}

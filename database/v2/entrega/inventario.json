@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "tablas": [
     "Departamento",
     "Municipio",
@@ -165,6 +165,7 @@
     "DetallePago_Actualizar",
     "DetallePago_Anular",
     "DetallePago_Eliminar",
+    "Credito_Presentar",
     "Reporte01_CreditosEmitidos",
     "Reporte02_CarteraMora",
     "Reporte03_PagosPorMedio",

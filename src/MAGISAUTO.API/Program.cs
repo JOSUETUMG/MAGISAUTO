@@ -18,6 +18,13 @@ builder.Services.AddExceptionHandler<ErroresApiHandler>();
 builder.Services.AddSingleton<ConexionSqlFactory>();
 builder.Services.AddScoped<IMarcaRepositorio, MarcaRepositorio>();
 builder.Services.AddScoped<ILineaRepositorio, LineaRepositorio>();
+builder.Services.AddScoped<IAgenciaRepositorio, AgenciaRepositorio>();
+builder.Services.AddScoped<IVendedorRepositorio, VendedorRepositorio>();
+builder.Services.AddScoped<ClienteRepositorio>();
+builder.Services.AddScoped<FiadorRepositorio>();
+builder.Services.AddScoped<VehiculoRepositorio>();
+builder.Services.AddScoped<CreditoRepositorio>();
+builder.Services.AddScoped<PagoRepositorio>();
 
 var app = builder.Build();
 

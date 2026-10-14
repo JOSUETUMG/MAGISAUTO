@@ -2,7 +2,7 @@
 SET NOCOUNT ON;
 IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)<>26 THROW 52100,'Se esperaban 26 tablas.',1;
 IF (SELECT COUNT(*) FROM sys.views WHERE is_ms_shipped=0)<>4 THROW 52101,'Se esperaban 4 vistas.',1;
-IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api'))<>150 THROW 52102,'Se esperaban 150 procedimientos.',1;
+IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api'))<>151 THROW 52102,'Se esperaban 151 procedimientos.',1;
 IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api') AND name LIKE 'Reporte%')<>20 THROW 52103,'Se esperaban 20 reportes.',1;
 IF EXISTS(SELECT 1 FROM sys.foreign_keys WHERE is_disabled=1 OR is_not_trusted=1) THROW 52104,'Relaciones deshabilitadas o no confiables.',1;
 IF OBJECT_ID(N'dbo.Departamento',N'U') IS NULL THROW 52105,'Falta Departamento.',1;
@@ -46,4 +46,6 @@ IF OBJECT_ID(N'dbo.DetallePago',N'U') IS NULL THROW 52105,'Falta DetallePago.',1
 IF EXISTS(SELECT 1 FROM dbo.[DetallePago]) THROW 52106,'Ya hay operaciones en DetallePago; no es instalacion vacia.',1;
 IF OBJECT_ID(N'dbo.ResumenCredito',N'U') IS NULL THROW 52105,'Falta ResumenCredito.',1;
 IF EXISTS(SELECT 1 FROM dbo.[ResumenCredito]) THROW 52106,'Ya hay operaciones en ResumenCredito; no es instalacion vacia.',1;
-SELECT DB_NAME() BaseVerificada,26 Tablas,4 Vistas,150 Procedimientos,20 Reportes,N'Estructura y ausencia de operaciones verificadas.' Resultado;
+SELECT DB_NAME() BaseVerificada,26 Tablas,4 Vistas,151 Procedimientos,20 Reportes,N'Estructura y ausencia de operaciones verificadas.' Resultado;
+
+IF COL_LENGTH('dbo.Credito','FechaPresentacion') IS NULL OR OBJECT_ID('api.Credito_Presentar','P') IS NULL THROW 52107,'Falta presentacion de creditos 2.1.',1;

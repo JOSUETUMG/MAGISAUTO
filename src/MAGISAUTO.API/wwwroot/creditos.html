@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Créditos | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css"><link rel="stylesheet" href="/creditos.css">
+  <script src="/creditos.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Módulos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html" aria-current="page">Créditos</a><a href="/pagos.html">Pagos y abonos</a></nav>
+    <p class="ruta">FINANCIAMIENTO / CRÉDITOS</p>
+    <section class="encabezado"><div><h1>Créditos</h1><p>Prepara solicitudes, revisa los requisitos y consulta las cuotas aprobadas.</p></div><button id="nuevo" class="primario">＋ Agregar crédito</button></section>
+    <div id="aviso" class="aviso" role="status" hidden></div>
+    <section class="panel">
+      <form id="busqueda" class="busqueda"><div class="campo-busqueda"><label for="criterio">Buscar por número, cliente, VIN o estado</label><input id="criterio" type="search" maxlength="200"></div><button class="primario">Buscar</button><button id="todos" type="button" class="secundario">Ver todos</button></form>
+      <div class="resumen"><h2>Registro de créditos</h2><span id="contador"></span></div>
+      <div class="tabla-contenedor"><table><thead><tr><th>Número</th><th>Cliente / VIN</th><th>Estado</th><th>Monto financiado</th><th>Acciones</th></tr></thead><tbody id="filas"></tbody></table><p id="vacio" class="vacio">Cargando…</p></div>
+      <p class="nota">Guardar un borrador no aprueba el financiamiento. Presentar exige el expediente del cliente completo; aprobar revisa también los fiadores y genera las cuotas.</p>
+    </section><footer>MAGIS-AUTO · Solicitudes y créditos</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor">
+    <h2 id="titulo-editor">Crédito</h2><div id="error-editor" class="aviso error" role="alert" hidden></div>
+    <p id="estado" class="nota"></p>
+    <form id="formulario"><fieldset id="campos"><div class="datos-credito">
+      <div><label for="numero">Número de crédito *</label><input id="numero" required maxlength="20" pattern="[A-Za-z0-9_-]{1,20}" autocomplete="off"><small>Único, hasta 20 letras, números, guion o guion bajo. Se conserva después de guardar.</small></div>
+      <div><label for="cliente">Cliente *</label><select id="cliente" required></select></div>
+      <div><label for="vehiculo">Vehículo *</label><select id="vehiculo" required></select></div>
+      <div><label for="vendedor">Vendedor *</label><select id="vendedor" required></select></div>
+      <div><label for="enganche">Enganche en Q *</label><input id="enganche" required inputmode="decimal" pattern="[0-9]+([.][0-9]{1,2})?"><small id="precio"></small></div>
+      <div><label for="plazo">Plazo en meses *</label><select id="plazo"><option>12</option><option>24</option><option>36</option><option>48</option><option selected>60</option></select></div>
+      <div><label for="requeridos">Fiadores requeridos por el comité *</label><input id="requeridos" type="number" min="0" max="32767" step="1" value="1" required><small>Cero únicamente cuando el comité lo determine. Puedes completar las asignaciones después de guardar.</small></div>
+    </div><fieldset class="asignaciones"><legend>Fiadores asignados</legend><div id="fiadores"></div></fieldset></fieldset>
+    <div id="requisitos" class="nota" role="status"></div>
+    <p id="condiciones" class="nota"></p>
+    <div class="botones-dialogo"><button id="cerrar" type="button" class="secundario">Cerrar</button><button id="guardar" class="primario">Guardar borrador</button></div></form>
+    <section id="contrato" hidden><h3>Solicitud guardada</h3><p id="resumen"></p><p id="advertencia-cambios" class="nota" hidden>Hay cambios sin guardar. Guárdalos antes de presentar, aprobar o anular.</p>
+      <div class="acciones-credito"><button id="presentar" type="button" class="secundario">Presentar solicitud</button><button id="aprobar" type="button" class="primario">Aprobar y generar cuotas</button><button id="anular" type="button" class="peligro">Anular crédito</button><button id="borrar" type="button" class="secundario">Eliminar borrador</button></div>
+      <h3>Plan de cuotas</h3><p id="totales"></p><div class="tabla-contenedor"><table><thead><tr><th>Cuota</th><th>Vencimiento</th><th>Capital</th><th>Interés</th><th>Manejo</th><th>Seguro auto</th><th>Seguro vida</th><th>Total</th></tr></thead><tbody id="cuotas"></tbody></table></div>
+    </section>
+  </dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-accion"><form id="accion-form"><h2 id="titulo-accion"></h2><p id="detalle-accion"></p><div id="error-accion" class="aviso error" role="alert" hidden></div><div id="datos-accion"><label for="responsable">Responsable *</label><input id="responsable" maxlength="100" required autocomplete="off"><div id="motivo-campo"><label for="motivo">Motivo de anulación *</label><textarea id="motivo" maxlength="300"></textarea></div></div><div class="botones-dialogo"><button id="cancelar-accion" type="button" class="secundario">Conservar crédito</button><button id="confirmar-accion" class="primario">Confirmar</button></div></form></dialog>
+</body></html>

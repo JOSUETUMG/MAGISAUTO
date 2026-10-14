@@ -1,0 +1,142 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-11T21:03:07.4726115-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo de agencias accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla de agencias servida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /estilos.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible: /agencias.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación a agencias desde /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación a agencias desde /lineas.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "SQL asigna código y API recorta nombre y región",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agencia nueva persistida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "nombre inválido con longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "nombre inválido con longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "nombre inválido con longitud 129 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "nombre ausente rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "region inválido con longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "region inválido con longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "region inválido con longitud 129 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "region ausente rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido con longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido con longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido con longitud 201 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Texto de inyección tratado como criterio de búsqueda",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar conserva código y actualiza ambos campos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar por dato editado: Ensayo automático 22a4f9bf0d ñ <b>texto</b>",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar por dato editado: Región 8154425744",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agencia vinculada a vendedor devuelve 409 sin detalles SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Borrado bloqueado conserva los datos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agencia sin relaciones se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "La agencia eliminada ya no aparece",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código negativo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "OpenAPI documenta las cuatro operaciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogo inicial conservado",
+      "Resultado": "Correcto"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "ConexionLocalSinCifrado": true,
+  "Fecha": "2026-10-13T13:52:08.8584817-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Procedimientos financieros disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta API sin lectura directa de tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /pagos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /pagos.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /pagos.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /vehiculos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /creditos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /clientes.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /fiadores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /vendedores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /agencias.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /lineas.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Preparar borrador propio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No recibir pago de borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentar crédito de ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobar crédito de ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consultar plan y saldos iniciales",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Doce cuotas pendientes, sin pagos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Medios de pago disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cinco medios con regla de referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: monto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: monto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: monto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: monto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: cuota",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: cuota",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: responsable",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: observacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación HTTP: referenciaBancaria",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rechazar sobrepago de cuota",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rechazar cuota inexistente del plan",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rechazar medio inexistente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rechazar crédito inexistente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia bancaria obligatoria en SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Errores no registran pagos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar primer abono parcial",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Identificadores y montos preservados como texto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "SQL genera recibo, fecha y reparto, ignorando campos calculados del cliente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cinco componentes suman exactamente el abono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Leer comprobante por código",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comprobante incluye cliente, medio y estado efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión sobre abono efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota parcial con saldo exacto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda de pago: 16",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda encuentra recibo propio: 16",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda de pago: PG7FBA27E1CB-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda encuentra recibo propio: PG7FBA27E1CB-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda de pago: PG7FBA27E1CB",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda encuentra recibo propio: PG7FBA27E1CB",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda de pago: Efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda encuentra recibo propio: Efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar un centavo mediante Deposito bancario",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reparto exacto de centavo: Deposito bancario",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia normalizada sin perder contenido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar un centavo mediante Transferencia ACH",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reparto exacto de centavo: Transferencia ACH",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia normalizada sin perder contenido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar un centavo mediante Tarjeta de credito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reparto exacto de centavo: Tarjeta de credito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia normalizada sin perder contenido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar un centavo mediante Tarjeta de debito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reparto exacto de centavo: Tarjeta de debito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia normalizada sin perder contenido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar un centavo mediante Efectivo en ventanilla",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reparto exacto de centavo: Efectivo en ventanilla",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar referencia bancaria",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Segundo abono en la misma cuota",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recibos distintos para abonos de una cuota",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar saldo restante de cuota uno",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota uno pagada sin saldo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No registrar otro abono sobre cuota pagada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar únicamente observación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar conserva importe, fecha y comprobante",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Observación demasiado larga rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Dos pagos simultáneos: uno aceptado y uno rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Concurrencia no sobrepaga ni deja saldo negativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 3",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 4",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 5",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 6",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 7",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 8",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 9",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 10",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 11",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Liquidar cuota 12",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contrato liquidado al completar las doce cuotas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No recibir pagos en crédito liquidado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anulación requiere motivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anulación requiere responsable",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago conservando historial",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anulación reabre crédito y restaura Q1000 de saldo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comprobante anulado conserva importe, motivo, actor y fecha",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anulación repetida rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No exponer borrado físico de pago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago inexistente al consultar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago inexistente al editar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago inexistente al anular",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito inexistente al consultar saldos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro por crédito incluye el pago anulado y solo el crédito solicitado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular pago propio de cierre del ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular todos revierte pagos y comisiones efectivos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular crédito sin pagos efectivos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito anulado conserva plan, sin saldo por cobrar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No recibir pagos de crédito anulado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registros previos de validación conservados tras retirar solo el ensayo",
+      "Resultado": "Correcto"
+    }
+  ]
+}

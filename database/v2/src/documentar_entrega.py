@@ -1,3 +1,4 @@
+# Generador histórico de informes de v2.0; no reutilizar sus resultados como evidencia de v2.1.
 from pathlib import Path
 import json, hashlib, zipfile, re
 
@@ -8,6 +9,9 @@ inv=json.loads((out/'inventario.json').read_text(encoding='utf-8-sig'))
 tests=json.loads((out/'validacion-integracion.json').read_text(encoding='utf-8-sig'))
 assert tests['Estado']=='Correcto'
 test_count=len(tests['Pruebas'])
+if json.loads((out/'inventario.json').read_text(encoding='utf-8-sig')).get('version') != '2.0':
+    raise SystemExit('Este informe es historico de v2.0. Para v2.1 consulte docs/FASE_6_Creditos.md; no se sobrescribieron informes.')
+
 readme='''# MAGIS-AUTO — SQL versión 2.0
 
 Preparado el 8 de octubre de 2026, rama pruebas-diego.

@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vendedores | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css">
+  <script src="/vendedores.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Catálogos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html" aria-current="page">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html">Créditos</a><a href="/pagos.html">Pagos y abonos</a></nav>
+    <p class="ruta">CATÁLOGOS <span aria-hidden="true">/</span> VENDEDORES</p>
+    <section class="encabezado" aria-labelledby="titulo">
+      <div><h1 id="titulo">Vendedores</h1><p>Registra los vendedores y la agencia a la que pertenece cada uno.</p></div>
+      <button id="nueva" class="primario" type="button"><span aria-hidden="true">＋</span> Agregar vendedor</button>
+    </section>
+    <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+    <section class="panel" aria-label="Registro de vendedores">
+      <form id="busqueda" class="busqueda busqueda-lineas" role="search">
+        <div class="campo-marca"><label for="filtro-agencia">Agencia</label><select id="filtro-agencia"><option value="">Todas las agencias</option></select></div><div class="campo-busqueda"><label for="criterio">Buscar por código, DPI, nombre o agencia</label><input id="criterio" name="criterio" type="search" maxlength="200" placeholder="Por ejemplo, EMP-01 o un apellido" autocomplete="off"></div>
+        <button class="primario" type="submit">Buscar</button><button id="todas" class="secundario" type="button">Ver todas</button>
+      </form>
+      <div class="resumen"><h2>Registro de vendedores</h2><span id="contador" aria-live="polite">Cargando…</span></div>
+      <div class="tabla-contenedor" id="resultados" aria-busy="true">
+        <table class="tabla-lineas"><caption class="solo-lector">Vendedores registrados y acciones para cada registro</caption><thead><tr><th scope="col">Código</th><th scope="col">Código de empleado</th><th scope="col">Nombre completo</th><th scope="col">DPI</th><th scope="col">Agencia / región</th><th scope="col" class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table>
+        <p id="vacio" class="vacio" role="status">Cargando vendedores…</p>
+      </div>
+      <p class="nota">Un vendedor con créditos asociados no se puede eliminar. Al retirar un vendedor se conserva su ficha personal.</p>
+    </section>
+    <footer>MAGIS-AUTO <span aria-hidden="true">·</span> Administración de catálogos</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor">
+    <form id="formulario">
+      <p class="etiqueta">VENDEDORES</p><h2 id="titulo-editor">Agregar vendedor</h2>
+      <p id="ayuda-editor">El código interno se asigna automáticamente.</p>
+      <p class="nota">Si el DPI ya está registrado, usa sus nombres y apellidos existentes. Al editar nombres se actualiza la ficha personal compartida con sus otros roles.</p>
+      <div id="error-editor" class="aviso error" role="alert" hidden></div>
+      <label for="codigo">Código interno</label><input id="codigo" readonly placeholder="Se asigna al guardar">
+      <label for="empleado">Código de empleado (obligatorio)</label><input id="empleado" maxlength="30" required autocomplete="off">
+      <label for="dpi">DPI (13 dígitos, obligatorio)</label><input id="dpi" inputmode="numeric" pattern="[0-9]{13}" maxlength="13" required autocomplete="off">
+      <small>El DPI se conserva al editar; no se sustituye la persona del vendedor.</small>
+      <label for="nombre">Primer nombre (obligatorio)</label><input id="nombre" maxlength="64" required autocomplete="off">
+      <label for="segundo-nombre">Segundo nombre (opcional)</label><input id="segundo-nombre" maxlength="64" autocomplete="off">
+      <label for="apellido">Primer apellido (obligatorio)</label><input id="apellido" maxlength="64" required autocomplete="off">
+      <label for="segundo-apellido">Segundo apellido (opcional)</label><input id="segundo-apellido" maxlength="64" autocomplete="off">
+      <label for="agencia">Agencia (obligatoria)</label><select id="agencia" required><option value="">Selecciona una agencia</option></select>
+      <small id="ayuda-agencia">Si no hay agencias, agrega una desde el catálogo Agencias antes de guardar.</small>
+      <div class="botones-dialogo"><button id="cancelar" class="secundario" type="button">Cancelar</button><button id="guardar" class="primario" type="submit">Guardar vendedor</button></div>
+    </form>
+  </dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar">
+    <p class="etiqueta">ELIMINAR VENDEDOR</p><h2 id="titulo-eliminar">¿Eliminar este vendedor?</h2><p id="detalle-eliminar"></p><p>Se retira el registro de vendedor. La ficha de la persona se conserva para sus otros roles.</p>
+    <div id="error-eliminar" class="aviso error" role="alert" hidden></div>
+    <div class="botones-dialogo"><button id="conservar" type="button" class="secundario">Conservar vendedor</button><button id="eliminar" type="button" class="peligro">Eliminar vendedor</button></div>
+  </dialog>
+</body>
+</html>

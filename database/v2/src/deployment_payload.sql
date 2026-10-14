@@ -188,6 +188,8 @@ CREATE TABLE dbo.[Credito](
  [Estado] varchar(10) NOT NULL DEFAULT 'BORRADOR' CHECK(Estado IN('BORRADOR','VIGENTE','LIQUIDADO','ANULADO')),
  [FechaAprobacion] datetime2(0) NULL,
  [AprobadoPor] nvarchar(100) NULL,
+ [FechaPresentacion] datetime2(0) NULL,
+ [PresentadoPor] nvarchar(100) NULL,
  [FechaAnulacion] datetime2(0) NULL,
  [MotivoAnulacion] nvarchar(300) NULL,
  [AnuladoPor] nvarchar(100) NULL,
@@ -2120,7 +2122,7 @@ BEGIN
  SET XACT_ABORT ON;
  BEGIN TRY
   
-  IF NULLIF(LTRIM(RTRIM(@Criterio)),N'''') IS NULL THROW 51007,''Indique un criterio de busqueda.'',1; SELECT * FROM dbo.[vw_CreditoResumen] WHERE CONVERT(nvarchar(4000),[NumeroCredito]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoDeudor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoGarantia]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoVendedor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoAgencia]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoParametro]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[Plazo]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[PrecioContado]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[Enganche]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[EngancheMinimo]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TasaAnual]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[ManejoMensual]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TasaSeguroAuto]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TasaSeguroVida]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[PorcentajeComision]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FiadoresRequeridos]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[Estado]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FechaAprobacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[AprobadoPor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FechaAnulacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[MotivoAnulacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[AnuladoPor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[MontoFinanciado]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TotalIntereses]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TotalNetoRecaudable]) LIKE N''%''+@Criterio+N''%'' ORDER BY [NumeroCredito];
+  IF NULLIF(LTRIM(RTRIM(@Criterio)),N'''') IS NULL THROW 51007,''Indique un criterio de busqueda.'',1; SELECT * FROM dbo.[vw_CreditoResumen] WHERE CONVERT(nvarchar(4000),[NumeroCredito]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoDeudor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoGarantia]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoVendedor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoAgencia]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[CodigoParametro]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[Plazo]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[PrecioContado]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[Enganche]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[EngancheMinimo]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TasaAnual]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[ManejoMensual]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TasaSeguroAuto]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TasaSeguroVida]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[PorcentajeComision]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FiadoresRequeridos]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[Estado]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FechaAprobacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[AprobadoPor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FechaPresentacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[PresentadoPor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[FechaAnulacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[MotivoAnulacion]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[AnuladoPor]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[MontoFinanciado]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TotalIntereses]) LIKE N''%''+@Criterio+N''%'' OR CONVERT(nvarchar(4000),[TotalNetoRecaudable]) LIKE N''%''+@Criterio+N''%'' ORDER BY [NumeroCredito];
   
  END TRY
  BEGIN CATCH
@@ -2169,7 +2171,7 @@ BEGIN
  SET XACT_ABORT ON;
  BEGIN TRY
   BEGIN TRANSACTION;
-  IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,''El cliente no puede ser fiador de su propio credito.'',1;
+  IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;UPDATE dbo.Credito SET FechaPresentacion=NULL,PresentadoPor=NULL WHERE NumeroCredito=@NumeroCredito;IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,''El cliente no puede ser fiador de su propio credito.'',1;
 INSERT dbo.[CreditoFiador]([NumeroCredito],[CodigoFiador]) OUTPUT INSERTED.[NumeroCredito],INSERTED.[CodigoFiador] VALUES(@NumeroCredito,@CodigoFiador);
   COMMIT TRANSACTION;
  END TRY
@@ -2187,8 +2189,8 @@ BEGIN
  SET XACT_ABORT ON;
  BEGIN TRY
   BEGIN TRANSACTION;
-  IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,''El cliente no puede ser fiador de su propio credito.'',1;
-DECLARE @Anterior int=@CodigoFiador; SET @CodigoFiador=@NuevoCodigoFiador;IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,''El cliente no puede ser fiador de su propio credito.'',1; UPDATE dbo.[CreditoFiador] SET [CodigoFiador]=@NuevoCodigoFiador WHERE [NumeroCredito]=@NumeroCredito AND [CodigoFiador]=@Anterior; IF @@ROWCOUNT=0 THROW 51008,''Registro no encontrado.'',1;
+  IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;UPDATE dbo.Credito SET FechaPresentacion=NULL,PresentadoPor=NULL WHERE NumeroCredito=@NumeroCredito;IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,''El cliente no puede ser fiador de su propio credito.'',1;
+DECLARE @Anterior int=@CodigoFiador; SET @CodigoFiador=@NuevoCodigoFiador;IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;UPDATE dbo.Credito SET FechaPresentacion=NULL,PresentadoPor=NULL WHERE NumeroCredito=@NumeroCredito;IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,''El cliente no puede ser fiador de su propio credito.'',1; UPDATE dbo.[CreditoFiador] SET [CodigoFiador]=@NuevoCodigoFiador WHERE [NumeroCredito]=@NumeroCredito AND [CodigoFiador]=@Anterior; IF @@ROWCOUNT=0 THROW 51008,''Registro no encontrado.'',1;
   COMMIT TRANSACTION;
  END TRY
  BEGIN CATCH
@@ -2205,7 +2207,7 @@ BEGIN
  SET XACT_ABORT ON;
  BEGIN TRY
   BEGIN TRANSACTION;
-  IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;
+  IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'') THROW 51003,''Solo se modifica este detalle mientras el credito es borrador.'',1;UPDATE dbo.Credito SET FechaPresentacion=NULL,PresentadoPor=NULL WHERE NumeroCredito=@NumeroCredito;
 DELETE dbo.[CreditoFiador] WHERE [NumeroCredito]=@NumeroCredito AND [CodigoFiador]=@CodigoFiador; IF @@ROWCOUNT=0 THROW 51008,''Registro no encontrado.'',1;
   COMMIT TRANSACTION;
  END TRY
@@ -2526,7 +2528,7 @@ BEGIN
  IF @Comision NOT BETWEEN 0 AND 1 THROW 51105,''Comision fuera de rango.'',1;
 
  IF EXISTS(SELECT 1 FROM dbo.CreditoFiador cf JOIN dbo.Fiador f ON f.CodigoFiador=cf.CodigoFiador JOIN dbo.Deudor d ON d.CodigoPersona=f.CodigoPersona WHERE cf.NumeroCredito=@NumeroCredito AND d.CodigoDeudor=@CodigoDeudor) THROW 51107,''El nuevo cliente es fiador de este credito.'',1;
- UPDATE dbo.Credito SET CodigoDeudor=@CodigoDeudor,CodigoGarantia=@CodigoGarantia,CodigoVendedor=@CodigoVendedor,CodigoAgencia=@Agencia,CodigoParametro=@CodigoParametro,Plazo=@Plazo,PrecioContado=@Precio,Enganche=@Enganche,EngancheMinimo=@Minimo,TasaAnual=@Tasa,ManejoMensual=@Manejo,TasaSeguroAuto=@Auto,TasaSeguroVida=@Vida,PorcentajeComision=@Comision,FiadoresRequeridos=@FiadoresRequeridos WHERE NumeroCredito=@NumeroCredito;
+ UPDATE dbo.Credito SET FechaPresentacion=NULL,PresentadoPor=NULL,CodigoDeudor=@CodigoDeudor,CodigoGarantia=@CodigoGarantia,CodigoVendedor=@CodigoVendedor,CodigoAgencia=@Agencia,CodigoParametro=@CodigoParametro,Plazo=@Plazo,PrecioContado=@Precio,Enganche=@Enganche,EngancheMinimo=@Minimo,TasaAnual=@Tasa,ManejoMensual=@Manejo,TasaSeguroAuto=@Auto,TasaSeguroVida=@Vida,PorcentajeComision=@Comision,FiadoresRequeridos=@FiadoresRequeridos WHERE NumeroCredito=@NumeroCredito;
 
   COMMIT TRANSACTION;
  END TRY
@@ -2576,6 +2578,7 @@ BEGIN
  IF NOT EXISTS(SELECT 1 FROM dbo.Deudor d JOIN dbo.Persona p ON p.CodigoPersona=d.CodigoPersona WHERE d.CodigoDeudor=@Cliente AND p.DPI IS NOT NULL AND p.NIT IS NOT NULL AND p.CorreoElectronico IS NOT NULL AND p.FechaNacimiento IS NOT NULL AND EXISTS(SELECT 1 FROM dbo.Telefono t WHERE t.CodigoPersona=p.CodigoPersona) AND EXISTS(SELECT 1 FROM dbo.Direccion x WHERE x.CodigoPersona=p.CodigoPersona)) THROW 51115,''Complete identificacion, NIT, nacimiento, correo, telefono y direccion del cliente.'',1;
  IF (SELECT COUNT(*) FROM dbo.DetalleReferencia dr WITH(HOLDLOCK) JOIN dbo.Referencia r ON r.CodigoReferencia=dr.CodigoReferencia JOIN dbo.Deudor d ON d.CodigoDeudor=dr.CodigoDeudor WHERE dr.CodigoDeudor=@Cliente AND r.CodigoPersona<>d.CodigoPersona AND EXISTS(SELECT 1 FROM dbo.Telefono t WHERE t.CodigoPersona=r.CodigoPersona) AND EXISTS(SELECT 1 FROM dbo.Direccion x WHERE x.CodigoPersona=r.CodigoPersona))<3 THROW 51116,''Se requieren tres referencias distintas y completas con telefono y direccion.'',1;
  IF (SELECT COUNT(*) FROM dbo.CreditoFiador cf WITH(HOLDLOCK) JOIN dbo.Fiador f ON f.CodigoFiador=cf.CodigoFiador JOIN dbo.Persona p ON p.CodigoPersona=f.CodigoPersona JOIN dbo.Deudor d ON d.CodigoDeudor=@Cliente WHERE cf.NumeroCredito=@NumeroCredito AND f.CodigoPersona<>d.CodigoPersona AND p.DPI IS NOT NULL AND p.NIT IS NOT NULL AND p.CorreoElectronico IS NOT NULL AND EXISTS(SELECT 1 FROM dbo.Telefono t WHERE t.CodigoPersona=p.CodigoPersona))<@Fiadores THROW 51117,''Complete la cantidad de fiadores y sus datos obligatorios.'',1;
+ IF NOT EXISTS(SELECT 1 FROM dbo.Credito WHERE NumeroCredito=@NumeroCredito AND FechaPresentacion IS NOT NULL) THROW 51127,''Presente la solicitud completa antes de aprobar.'',1;
  IF @PorcentajeDepreciacion IS NULL SELECT @PorcentajeDepreciacion=DepreciacionInicial FROM dbo.ParametroCredito WHERE CodigoParametro=@Parametro;
  IF @PorcentajeDepreciacion IS NULL OR @PorcentajeDepreciacion NOT BETWEEN 0.15 AND 0.20 THROW 51118,''La depreciacion inicial debe estar entre 15 y 20 por ciento.'',1;
  -- Las cuotas capturadas para un borrador son una simulacion; se recalculan al aprobar.
@@ -2748,6 +2751,31 @@ BEGIN
  BEGIN TRY
   BEGIN TRANSACTION;
   EXEC api.DetallePago_Anular @CodigoPago=@CodigoPago,@Motivo=@Motivo,@Responsable=@Responsable;
+  COMMIT TRANSACTION;
+ END TRY
+ BEGIN CATCH
+  IF XACT_STATE() <> 0 ROLLBACK TRANSACTION;
+  THROW;
+ END CATCH;
+END;');
+
+EXEC(N'CREATE PROCEDURE api.[Credito_Presentar] @NumeroCredito varchar(20), @Responsable nvarchar(100)
+AS
+BEGIN
+ SET NOCOUNT ON;
+ SET XACT_ABORT ON;
+ BEGIN TRY
+  BEGIN TRANSACTION;
+
+ IF NULLIF(LTRIM(RTRIM(@Responsable)),N'''') IS NULL THROW 51124,''Indique quien presenta la solicitud.'',1;
+ DECLARE @Cliente int;
+ SELECT @Cliente=CodigoDeudor FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado=''BORRADOR'';
+ IF @Cliente IS NULL THROW 51125,''Solo se presenta un credito borrador.'',1;
+ IF NOT EXISTS(SELECT 1 FROM dbo.Deudor d JOIN dbo.Persona p WITH(HOLDLOCK) ON p.CodigoPersona=d.CodigoPersona WHERE d.CodigoDeudor=@Cliente AND p.DPI IS NOT NULL AND p.NIT IS NOT NULL AND p.CorreoElectronico IS NOT NULL AND p.FechaNacimiento IS NOT NULL AND EXISTS(SELECT 1 FROM dbo.Telefono t WITH(HOLDLOCK) WHERE t.CodigoPersona=p.CodigoPersona) AND EXISTS(SELECT 1 FROM dbo.Direccion x WITH(HOLDLOCK) WHERE x.CodigoPersona=p.CodigoPersona)) THROW 51115,''Complete identificacion, NIT, nacimiento, correo, telefono y direccion del cliente.'',1;
+ IF (SELECT COUNT(*) FROM dbo.DetalleReferencia dr WITH(HOLDLOCK) JOIN dbo.Referencia r WITH(HOLDLOCK) ON r.CodigoReferencia=dr.CodigoReferencia JOIN dbo.Deudor d ON d.CodigoDeudor=dr.CodigoDeudor WHERE dr.CodigoDeudor=@Cliente AND r.CodigoPersona<>d.CodigoPersona AND EXISTS(SELECT 1 FROM dbo.Telefono t WITH(HOLDLOCK) WHERE t.CodigoPersona=r.CodigoPersona) AND EXISTS(SELECT 1 FROM dbo.Direccion x WITH(HOLDLOCK) WHERE x.CodigoPersona=r.CodigoPersona))<3 THROW 51116,''Se requieren tres referencias distintas y completas con telefono y direccion.'',1;
+ IF EXISTS(SELECT 1 FROM dbo.Credito WHERE NumeroCredito=@NumeroCredito AND FechaPresentacion IS NOT NULL) THROW 51126,''La solicitud ya esta presentada. Puede revisarla y aprobarla.'',1;
+ UPDATE dbo.Credito SET FechaPresentacion=dbo.fn_AhoraGuatemala(),PresentadoPor=LTRIM(RTRIM(@Responsable)) WHERE NumeroCredito=@NumeroCredito;
+
   COMMIT TRANSACTION;
  END TRY
  BEGIN CATCH
@@ -3122,7 +3150,7 @@ END;');
 
 CREATE ROLE magis_api AUTHORIZATION dbo; GRANT EXECUTE ON SCHEMA::api TO magis_api; DENY SELECT,INSERT,UPDATE,DELETE ON SCHEMA::dbo TO magis_api;
 
-IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)<>26 THROW 51400,'Inventario de tablas incompleto.',1; IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID(N'api'))<>150 THROW 51401,'Inventario de procedimientos incompleto.',1;
+IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)<>26 THROW 51400,'Inventario de tablas incompleto.',1; IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID(N'api'))<>151 THROW 51401,'Inventario de procedimientos incompleto.',1;
 
 IF EXISTS(SELECT 1 FROM dbo.[Persona]) THROW 51402,'La instalacion no debe incluir operaciones de ejemplo.',1;
 

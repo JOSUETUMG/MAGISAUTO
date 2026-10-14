@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agencias | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css">
+  <script src="/agencias.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Catálogos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html" aria-current="page">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html">Créditos</a><a href="/pagos.html">Pagos y abonos</a></nav>
+    <p class="ruta">CATÁLOGOS <span aria-hidden="true">/</span> AGENCIAS</p>
+    <section class="encabezado" aria-labelledby="titulo">
+      <div><h1 id="titulo">Agencias</h1><p>Administra las agencias y la región a la que pertenece cada una.</p></div>
+      <button id="nueva" class="primario" type="button"><span aria-hidden="true">＋</span> Agregar agencia</button>
+    </section>
+    <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+    <section class="panel" aria-label="Catálogo de agencias">
+      <form id="busqueda" class="busqueda" role="search">
+        <div class="campo-busqueda"><label for="criterio">Buscar por código, nombre o región</label><input id="criterio" name="criterio" type="search" maxlength="200" placeholder="Por ejemplo, Jalapa u Oriente" autocomplete="off"></div>
+        <button class="primario" type="submit">Buscar</button><button id="todas" class="secundario" type="button">Ver todas</button>
+      </form>
+      <div class="resumen"><h2>Catálogo de agencias</h2><span id="contador" aria-live="polite">Cargando…</span></div>
+      <div class="tabla-contenedor" id="resultados" aria-busy="true">
+        <table><caption class="solo-lector">Agencias disponibles y acciones para cada registro</caption><thead><tr><th scope="col">Código</th><th scope="col">Nombre de la agencia</th><th scope="col">Región</th><th scope="col" class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table>
+        <p id="vacio" class="vacio" role="status">Cargando agencias…</p>
+      </div>
+      <p class="nota">Una agencia con vendedores o créditos asociados se conserva para proteger su historial.</p>
+    </section>
+    <footer>MAGIS-AUTO <span aria-hidden="true">·</span> Administración de catálogos</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor">
+    <form id="formulario">
+      <p class="etiqueta">CATÁLOGO DE AGENCIAS</p><h2 id="titulo-editor">Agregar agencia</h2>
+      <p id="ayuda-editor">Escribe el nombre y la región. El código se asigna automáticamente.</p>
+      <div id="error-editor" class="aviso error" role="alert" hidden></div>
+      <label for="codigo">Código automático</label><input id="codigo" name="codigo" type="text" readonly placeholder="Se asigna al guardar" aria-describedby="ayuda-codigo">
+      <small id="ayuda-codigo">El sistema asigna un código al guardar la nueva agencia.</small>
+      <label for="nombre">Nombre de la agencia <span>(obligatorio)</span></label><input id="nombre" name="nombre" type="text" maxlength="128" required autocomplete="off">
+      <label for="region">Región <span>(obligatoria)</span></label><input id="region" name="region" type="text" maxlength="128" required autocomplete="off">
+      <div class="botones-dialogo"><button id="cancelar" class="secundario" type="button">Cancelar</button><button id="guardar" class="primario" type="submit">Guardar agencia</button></div>
+    </form>
+  </dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar">
+    <p class="etiqueta">ELIMINAR AGENCIA</p><h2 id="titulo-eliminar">¿Eliminar esta agencia?</h2><p id="detalle-eliminar"></p><p>Esta acción elimina el registro del catálogo.</p>
+    <div id="error-eliminar" class="aviso error" role="alert" hidden></div>
+    <div class="botones-dialogo"><button id="conservar" type="button" class="secundario">Conservar agencia</button><button id="eliminar" type="button" class="peligro">Eliminar agencia</button></div>
+  </dialog>
+</body>
+</html>

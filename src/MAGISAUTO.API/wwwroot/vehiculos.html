@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehículos | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css"><link rel="stylesheet" href="/vehiculos.css">
+  <script src="/vehiculos.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Módulos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html" aria-current="page">Vehículos</a><a href="/creditos.html">Créditos</a><a href="/pagos.html">Pagos y abonos</a></nav>
+    <p class="ruta">INVENTARIO <span aria-hidden="true">/</span> VEHÍCULOS</p>
+    <section class="encabezado" aria-labelledby="titulo"><div><h1 id="titulo">Vehículos</h1><p>Registra los vehículos nuevos de agencia y su precio al contado.</p></div><button id="nuevo" class="primario" type="button">＋ Agregar vehículo</button></section>
+    <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+    <section class="panel" aria-label="Registro de vehículos">
+      <form id="busqueda" class="busqueda busqueda-lineas" role="search">
+        <div class="campo-marca"><label for="filtro-marca">Marca</label><select id="filtro-marca"><option value="">Todas las marcas</option></select></div>
+        <div class="campo-busqueda"><label for="criterio">Buscar por código, VIN, placa, marca, línea o año</label><input id="criterio" type="search" maxlength="200" placeholder="Por ejemplo, Corolla o un VIN" autocomplete="off"></div>
+        <button class="primario" type="submit">Buscar</button><button id="todos" class="secundario" type="button">Ver todos</button>
+      </form>
+      <div class="resumen"><h2>Inventario de vehículos</h2><span id="contador" aria-live="polite">Cargando…</span></div>
+      <div id="resultados" class="tabla-contenedor" aria-busy="true">
+        <table class="tabla-vehiculos"><caption class="solo-lector">Vehículos registrados y acciones disponibles</caption><thead><tr><th scope="col">Código</th><th scope="col">Vehículo / año</th><th scope="col">VIN / chasis</th><th scope="col">Precio al contado</th><th scope="col">Placa</th><th scope="col" class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table>
+        <p id="vacio" class="vacio" role="status">Cargando vehículos…</p>
+      </div>
+      <p class="nota">El VIN identifica un vehículo único. Los créditos o valoraciones vinculadas impiden eliminarlo; un historial de crédito aprobado también protege sus datos frente a cambios.</p>
+    </section>
+    <p class="nota">La depreciación inicial se registra al aprobar el crédito. Registrar el vehículo conserva su precio al contado y no genera financiamiento.</p>
+    <footer>MAGIS-AUTO · Vehículos nuevos de agencia</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor">
+    <form id="formulario">
+      <p class="etiqueta">VEHÍCULOS</p><h2 id="titulo-editor">Agregar vehículo</h2><p id="ayuda-editor">El código interno se asigna automáticamente.</p>
+      <div id="error-editor" class="aviso error" role="alert" hidden></div>
+      <fieldset id="campos">
+        <div class="datos-vehiculo">
+          <div><label for="codigo">Código interno</label><input id="codigo" readonly placeholder="Se asigna al guardar"></div>
+          <div><label for="vin">VIN / chasis (obligatorio)</label><input id="vin" required maxlength="17" pattern="[0-9A-HJ-NPR-Z]{17}" autocomplete="off"><small>17 letras o números. No admite I, O ni Q.</small></div>
+          <div><label for="marca">Marca (obligatoria)</label><select id="marca" required><option value="">Selecciona una marca</option></select></div>
+          <div><label for="linea">Línea (obligatoria)</label><select id="linea" required><option value="">Selecciona una línea</option></select><small id="ayuda-linea">Primero selecciona una marca.</small></div>
+          <div><label for="anio">Año de fabricación (obligatorio)</label><input id="anio" type="number" min="1886" max="2100" step="1" required></div>
+          <div><label for="precio">Precio al contado en Q (obligatorio)</label><input id="precio" inputmode="decimal" pattern="[0-9]+([.][0-9]{1,2})?" required autocomplete="off"><small>Ejemplo: 100000.00, sin comas; máximo dos decimales.</small></div>
+          <div><label for="placa">Placa (opcional)</label><input id="placa" maxlength="20" autocomplete="off" placeholder="Puede quedar vacía"></div>
+          <div><label for="tipo">Tipo de garantía (obligatorio)</label><select id="tipo" required><option value="">Selecciona un tipo</option></select></div>
+        </div>
+      </fieldset>
+      <p class="nota">Condición: nuevo de agencia. La marca y línea deben existir en sus catálogos.</p>
+      <div class="botones-dialogo"><button id="cancelar" class="secundario" type="button">Cancelar</button><button id="guardar" class="primario" type="submit">Guardar vehículo</button></div>
+    </form>
+  </dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar"><h2 id="titulo-eliminar">¿Eliminar este vehículo?</h2><p id="detalle-eliminar"></p><p>Solo se permite eliminar vehículos sin créditos ni valoraciones vinculadas.</p><div id="error-eliminar" class="aviso error" role="alert" hidden></div><div class="botones-dialogo"><button id="conservar" class="secundario" type="button">Conservar vehículo</button><button id="eliminar" class="peligro" type="button">Eliminar vehículo</button></div></dialog>
+</body>
+</html>

@@ -1,0 +1,242 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-11T21:20:26.3074629-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado enriquecido disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y campos requeridos servidos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso y navegación: /vendedores.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso y navegación: /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso y navegación: /lineas.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso y navegación: /agencias.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear persona y vendedor juntos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Identidad, nombres recortados y agencia enriquecidos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona ya vendedora rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código de empleado duplicado rechazado sin mensaje SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado revierte la persona creada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agencia inexistente rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agencia inválida no deja persona huérfana",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "codigoEmpleado vacío longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "codigoEmpleado vacío longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerNombre vacío longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerNombre vacío longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerApellido vacío longitud 0 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerApellido vacío longitud 3 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "codigoEmpleado demasiado largo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerNombre demasiado largo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "segundoNombre demasiado largo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerApellido demasiado largo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "segundoApellido demasiado largo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "DPI inválido 123 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "DPI inválido abcdefghijklm rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "DPI inválido 12345678901234 rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agencia requerida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambio de identidad bloqueado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar nombres y cambiar agencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar conserva NIT, correo, nacimiento y género del cliente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Edición con agencia inválida rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fallo al editar revierte también los nombres",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar vendedor por 9983257950753",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar vendedor por ENS-d77bf6bf5d2447a889",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar vendedor por Editado ñ",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar vendedor por Ensayo automático 853b93c82b segunda",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro excluye agencia anterior",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro incluye agencia actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido criterio=%20",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido codigoAgencia=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido codigoAgencia=0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal no ejecuta SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vendedor con crédito no se elimina y error es comprensible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar vendedor sin créditos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar rol conserva la persona compartida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar vendedor conserva el rol cliente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No reemplaza nombres de persona existente al vincular",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona existente se reutiliza como vendedor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Retirar vendedor recreado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contrato API completo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vendedores originales conservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Personas originales conservadas",
+      "Resultado": "Correcto"
+    }
+  ]
+}

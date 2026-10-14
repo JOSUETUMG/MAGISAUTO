@@ -84,6 +84,7 @@ table('Credito',[
  ('TasaAnual','decimal(9,6)','NOT NULL CHECK(TasaAnual BETWEEN 0 AND 1)'),('ManejoMensual','decimal(18,2)','NOT NULL CHECK(ManejoMensual=25)'),('TasaSeguroAuto','decimal(9,6)','NOT NULL CHECK(TasaSeguroAuto>0 AND TasaSeguroAuto<=1)'),('TasaSeguroVida','decimal(9,6)','NOT NULL CHECK(TasaSeguroVida>0 AND TasaSeguroVida<=1)'),
  ('PorcentajeComision','decimal(9,6)','NOT NULL CHECK(PorcentajeComision BETWEEN 0 AND 1)'),('FiadoresRequeridos','smallint','NOT NULL CHECK(FiadoresRequeridos>=0)'),
  ('Estado','varchar(10)',"NOT NULL DEFAULT 'BORRADOR' CHECK(Estado IN('BORRADOR','VIGENTE','LIQUIDADO','ANULADO'))"),('FechaAprobacion','datetime2(0)','NULL'),('AprobadoPor','nvarchar(100)','NULL'),
+ ('FechaPresentacion','datetime2(0)','NULL'),('PresentadoPor','nvarchar(100)','NULL'),
  ('FechaAnulacion','datetime2(0)','NULL'),('MotivoAnulacion','nvarchar(300)','NULL'),('AnuladoPor','nvarchar(100)','NULL')],['NumeroCredito'],
  '''CONSTRAINT CK_Credito_Enganche CHECK(Enganche>=CEILING(PrecioContado*EngancheMinimo*100)/100 AND Enganche<PrecioContado),
  CONSTRAINT CK_Credito_Estado CHECK((Estado='BORRADOR' AND FechaAprobacion IS NULL) OR (Estado IN('VIGENTE','LIQUIDADO') AND FechaAprobacion IS NOT NULL AND AprobadoPor IS NOT NULL) OR (Estado='ANULADO' AND FechaAnulacion IS NOT NULL AND MotivoAnulacion IS NOT NULL AND AnuladoPor IS NOT NULL))''',special=True)
@@ -159,6 +160,8 @@ def generic_guard(name, operation):
         guard+="IF EXISTS(SELECT 1 FROM dbo.Referencia WHERE CodigoReferencia=@CodigoReferencia AND CodigoPersona<>@CodigoPersona) THROW 51015,'No cambie la persona de una referencia; registre otra referencia.',1;"
     if name in ['CreditoFiador','DetalleCuota']:
         guard="IF NOT EXISTS(SELECT 1 FROM dbo.Credito WITH(UPDLOCK,HOLDLOCK) WHERE NumeroCredito=@NumeroCredito AND Estado='BORRADOR') THROW 51003,'Solo se modifica este detalle mientras el credito es borrador.',1;"
+    if name=='CreditoFiador':
+        guard+="UPDATE dbo.Credito SET FechaPresentacion=NULL,PresentadoPor=NULL WHERE NumeroCredito=@NumeroCredito;"
     if name=='CreditoFiador' and operation!='Eliminar':
         guard+="IF EXISTS(SELECT 1 FROM dbo.Credito c JOIN dbo.Deudor d ON d.CodigoDeudor=c.CodigoDeudor JOIN dbo.Fiador f ON f.CodigoPersona=d.CodigoPersona WHERE c.NumeroCredito=@NumeroCredito AND f.CodigoFiador=@CodigoFiador) THROW 51004,'El cliente no puede ser fiador de su propio credito.',1;"
     if name=='Garantia' and operation=='Actualizar':
@@ -197,6 +200,7 @@ for name,e in entities.items():
 
 # Operaciones financieras y reportes se agregan desde archivos fuente revisables.
 exec((ROOT/'financial_procs.py').read_text(encoding='utf-8'))
+exec((ROOT/'presentacion_procs.py').read_text(encoding='utf-8'))
 exec((ROOT/'report_procs.py').read_text(encoding='utf-8'))
 emit('CREATE ROLE magis_api AUTHORIZATION dbo; GRANT EXECUTE ON SCHEMA::api TO magis_api; DENY SELECT,INSERT,UPDATE,DELETE ON SCHEMA::dbo TO magis_api;')
 emit(f"IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)<>{len(entities)} THROW 51400,'Inventario de tablas incompleto.',1; IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID(N'api'))<>{len(procedures)} THROW 51401,'Inventario de procedimientos incompleto.',1;")
@@ -206,7 +210,7 @@ for entity in entities:
         emit(f"IF EXISTS(SELECT 1 FROM dbo.[{entity}]) THROW 51402,'La instalacion no debe incluir operaciones de ejemplo.',1;")
 emit("SELECT (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0) Tablas,(SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID(N'api')) Procedimientos,(SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID(N'api') AND name LIKE N'Reporte%') Reportes;")
 payload='\n\n'.join(parts)
-header='''/* MAGIS-AUTO - VERSION ACADEMICA 2.0 - FASE 4
+header='''/* MAGIS-AUTO - VERSION ACADEMICA 2.1 - FASE 4
 Instalacion NUEVA para SQL Server 2022 o 2025. Alcance de validacion en LEEME.
 Abrir en SSMS, usar una cuenta autorizada para CREATE DATABASE y ejecutar TODO.
 Cambiar SOLO @Base si se desea otro nombre. No requiere modo SQLCMD.
@@ -233,5 +237,5 @@ DECLARE @Instalar nvarchar(max)=N'USE '+QUOTENAME(@Base)+N'; SET XACT_ABORT ON; 
 tail="\nCOMMIT TRANSACTION; END TRY BEGIN CATCH IF XACT_STATE()<>0 ROLLBACK TRANSACTION; THROW; END CATCH;';\nEXEC sys.sp_executesql @Instalar;\nSELECT @Base AS BaseInstalada,N'Instalacion completa. Sin operaciones de ejemplo.' AS Resultado;\n"
 (OUT/'MAGISAUTO_Proyecto_Completo.sql').write_text(header+payload.replace("'","''")+tail,encoding='utf-8-sig')
 (ROOT/'deployment_payload.sql').write_text(payload,encoding='utf-8')
-(OUT/'inventario.json').write_text(json.dumps({'version':'2.0','tablas':list(entities),'vistas':['vw_CreditoResumen','vw_CuotaDesglosada','vw_PagoDesglosado','vw_DepreciacionCalculada'],'procedimientos':procedures},ensure_ascii=False,indent=2),encoding='utf-8')
+(OUT/'inventario.json').write_text(json.dumps({'version':'2.1','tablas':list(entities),'vistas':['vw_CreditoResumen','vw_CuotaDesglosada','vw_PagoDesglosado','vw_DepreciacionCalculada'],'procedimientos':procedures},ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps({'tablas':len(entities),'procedimientos':len(procedures),'bytes':(OUT/'MAGISAUTO_Proyecto_Completo.sql').stat().st_size}))

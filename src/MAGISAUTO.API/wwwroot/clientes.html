@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css"><link rel="stylesheet" href="/clientes.css">
+  <script src="/clientes.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Módulos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html" aria-current="page">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html">Créditos</a><a href="/pagos.html">Pagos y abonos</a></nav>
+    <p class="ruta">PERSONAS <span aria-hidden="true">/</span> CLIENTES</p>
+    <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+    <section id="listado">
+      <div class="encabezado"><div><h1>Clientes</h1><p>Completa los datos, contactos y referencias de cada expediente.</p></div><button id="nuevo" type="button" class="primario">＋ Agregar cliente</button></div>
+      <section class="panel" aria-label="Registro de clientes">
+        <form id="busqueda" class="busqueda" role="search"><div class="campo-busqueda"><label for="criterio">Buscar por código, DPI, NIT, nombre o correo</label><input id="criterio" type="search" maxlength="200" placeholder="Por ejemplo, un apellido" autocomplete="off"></div><button class="primario">Buscar</button><button id="todos" type="button" class="secundario">Ver todos</button></form>
+        <div class="resumen"><h2>Registro de clientes</h2><span id="contador" aria-live="polite">Cargando…</span></div>
+        <div class="tabla-contenedor" id="resultados" aria-busy="true"><table class="tabla-clientes"><caption class="solo-lector">Clientes y estado de sus expedientes</caption><thead><tr><th>Código</th><th>Nombre</th><th>DPI / NIT</th><th>Expediente</th><th class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table><p id="vacio" class="vacio">Cargando clientes…</p></div>
+        <p class="nota">Los contactos y las referencias pueden completarse por etapas. Un expediente completo todavía requiere el proceso de solicitud y aprobación del crédito.</p>
+      </section>
+    </section>
+    <section id="expediente" hidden aria-labelledby="titulo-expediente">
+      <div class="encabezado"><div><h1 id="titulo-expediente" tabindex="-1">Nuevo cliente</h1><p id="resumen-expediente"></p></div><button id="volver" type="button" class="secundario">Volver sin guardar</button></div>
+      <div id="error-editor" class="aviso error" role="alert" hidden></div>
+      <div id="estado-expediente" class="aviso" role="status"></div>
+      <form id="formulario">
+        <fieldset id="campos-expediente">
+          <section class="panel bloque"><h2>1. Datos básicos</h2><p>Obligatorios: DPI, NIT, primer nombre, primer apellido, correo y nacimiento. El código interno es automático.</p><p class="nota">La ficha personal y los contactos se comparten con los otros roles de esta persona. Al editarlos también se actualizan allí. El DPI se conserva.</p><div id="datos-basicos" class="rejilla"></div></section>
+          <section class="panel bloque"><h2>2. Teléfonos</h2><p>Registra uno o más números y su tipo: celular, casa o trabajo, según corresponda.</p><div id="telefonos"></div><button id="agregar-telefono" type="button" class="secundario">Agregar teléfono</button></section>
+          <section class="panel bloque"><h2>3. Direcciones</h2><p>Selecciona el departamento y municipio disponibles e indica la dirección completa.</p><div id="direcciones"></div><button id="agregar-direccion" type="button" class="secundario">Agregar dirección</button></section>
+          <section class="panel bloque"><h2>4. Referencias personales</h2><p>Se requieren al menos tres personas distintas del cliente y entre sí, con nombre, trabajo, relación, teléfono y dirección. Puedes guardarlas por etapas.</p><p class="nota">Si la persona ya es una referencia, selecciónala para reutilizarla. Editar sus datos o contactos afecta su ficha compartida; quitarla de este expediente solo retira el vínculo con este cliente.</p><div class="vincular"><label for="referencia-existente">Referencia ya registrada</label><select id="referencia-existente"><option value="">Selecciona una referencia</option></select><button id="vincular" type="button" class="secundario">Vincular referencia</button></div><div id="referencias"></div><button id="agregar-referencia" type="button" class="secundario">Crear referencia nueva</button></section>
+        </fieldset>
+        <div class="guardar-expediente"><p>Los cambios, incluidos los contactos que quites, se aplican juntos al guardar.</p><button id="guardar" class="primario">Guardar expediente</button></div>
+      </form>
+    </section>
+    <footer>MAGIS-AUTO · Clientes y referencias</footer>
+  </main>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar"><h2 id="titulo-eliminar">¿Eliminar el registro de cliente?</h2><p id="detalle-eliminar"></p><p>Se conserva la ficha personal. Los créditos o referencias vinculadas impiden eliminar el cliente.</p><div id="error-eliminar" class="aviso error" role="alert" hidden></div><div class="botones-dialogo"><button id="conservar" class="secundario" type="button">Conservar cliente</button><button id="eliminar" class="peligro" type="button">Eliminar cliente</button></div></dialog>
+</body>
+</html>

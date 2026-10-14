@@ -1,4 +1,4 @@
-param([string]$Servidor='tcp:127.0.0.1,1433',[string]$Base='MAGISAUTO_ValidacionV2',[string]$Credencial)
+﻿param([string]$Servidor='tcp:127.0.0.1,1433',[string]$Base='MAGISAUTO_ValidacionV2',[string]$Credencial)
 $ErrorActionPreference='Stop'
 if($Base -ne 'MAGISAUTO_ValidacionV2'){throw 'Este ensayo solo permite MAGISAUTO_ValidacionV2.'}
 $cs="Server=$Servidor;Database=$Base;Encrypt=True;TrustServerCertificate=True;Connect Timeout=8"
@@ -30,7 +30,7 @@ $out=Join-Path $PSScriptRoot '..\entrega\validacion-integracion.json'
 try{
  $conn.Open()
  Check 'Destino aislado y operaciones vacias' "SELECT CASE WHEN DB_NAME()='MAGISAUTO_ValidacionV2' AND NOT EXISTS(SELECT 1 FROM dbo.Credito) AND NOT EXISTS(SELECT 1 FROM dbo.Persona) THEN 1 ELSE 0 END;"
- Check 'Inventario 26 tablas, 4 vistas, 150 procedimientos, 20 reportes' "SELECT CASE WHEN (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)=26 AND (SELECT COUNT(*) FROM sys.views WHERE is_ms_shipped=0)=4 AND (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api'))=150 AND (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api') AND name LIKE 'Reporte%')=20 THEN 1 ELSE 0 END;"
+ Check 'Inventario 26 tablas, 4 vistas, 151 procedimientos, 20 reportes' "SELECT CASE WHEN (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)=26 AND (SELECT COUNT(*) FROM sys.views WHERE is_ms_shipped=0)=4 AND (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api'))=151 AND (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID('api') AND name LIKE 'Reporte%')=20 THEN 1 ELSE 0 END;"
  [void](Query (Get-Content -LiteralPath (Join-Path $PSScriptRoot 'fixture-validacion.sql') -Raw))
  Check '12 cuotas, capital Q80000 y vencimiento desde el dia original' "SELECT CASE WHEN COUNT(*)=12 AND SUM(Capital)=80000 AND MIN(FechaVencimiento)='20200229' AND MAX(FechaVencimiento)='20210131' AND MAX(CASE WHEN Cuota=2 THEN FechaVencimiento END)='20200331' THEN 1 ELSE 0 END FROM dbo.DetalleCuota WHERE NumeroCredito='PRUEBA-01';"
  Check 'Desglose fijo del contrato' "SELECT CASE WHEN COUNT(*)=12 AND MIN(ManejoCuenta)=25 AND MAX(ManejoCuenta)=25 AND MIN(SeguroAuto)=120 AND MAX(SeguroAuto)=120 AND MIN(SeguroVida)=40 AND MAX(SeguroVida)=40 AND SUM(Total)=SUM(Capital+Interes+ManejoCuenta+SeguroAuto+SeguroVida) THEN 1 ELSE 0 END FROM dbo.vw_CuotaDesglosada WHERE NumeroCredito='PRUEBA-01';"

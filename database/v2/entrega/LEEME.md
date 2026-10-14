@@ -1,10 +1,14 @@
-﻿# MAGIS-AUTO — SQL versión 2.0
+﻿# MAGIS-AUTO — SQL versión 2.1
 
-Preparado el 8 de octubre de 2026, rama pruebas-diego.
+Base preparada el 8 de octubre de 2026; revisión 2.1 del 12 de octubre, rama pruebas-diego.
+
+La revisión 2.1 añade presentación de solicitudes (fecha y responsable), exige presentación antes de aprobar e invalida la presentación al editar condiciones o asignaciones. Para una base v2 existente, ejecutar `../migraciones/001_Presentacion_Creditos.sql`, no este instalador. No se añade un estado contractual nuevo.
+
+**Alcance de la evidencia:** los cuatro archivos `validacion-*.json` de esta carpeta documentan la versión 2.0 del 8 de octubre. No certifican una instalación nueva de la revisión 2.1. La migración y el recorrido HTTP/SQL de Créditos se verifican por separado en `../../../docs/evidencias/fase-6-creditos.json`; ver `../../../docs/FASE_6_Creditos.md`. El ZIP exportado anteriormente es histórico y no se ha actualizado automáticamente.
 
 ## Contenido
 
-Instalación nueva con **26 tablas, 150 procedimientos, 4 vistas y 2 funciones**, llaves, índices, restricciones, catálogos y parámetros. Incluye los 20 reportes descritos en reportes.json. Sin clientes, referencias, fiadores, vendedores, vehículos, créditos, cuotas ni pagos de ejemplo.
+Instalación nueva con **26 tablas, 151 procedimientos, 4 vistas y 2 funciones**, llaves, índices, restricciones, catálogos y parámetros. Incluye los 20 reportes descritos en reportes.json. Sin clientes, referencias, fiadores, vendedores, vehículos, créditos, cuotas ni pagos de ejemplo.
 
 Es una ampliación académica del modelo del ingeniero, conforme al PDF y los acuerdos. No es copia literal de MagisV1 ni migración de una base existente. API y pantallas se desarrollan por separado.
 
@@ -13,7 +17,7 @@ Es una ampliación académica del modelo del ingeniero, conforme al PDF y los ac
 1. Conectarse al motor SQL Server 2022/2025 con permiso para crear bases.
 2. Abrir MAGISAUTO_Proyecto_Completo.sql. El nombre predeterminado es MAGISAUTO_Proyecto_V2; puede cambiarse la variable @Base por otro nombre NUEVO.
 3. Ejecutar TODO, sin selección parcial ni modo SQLCMD.
-4. Comprobar: 26 tablas, 150 procedimientos y 20 reportes, seguido de instalación completa.
+4. Comprobar: 26 tablas, 151 procedimientos y 20 reportes, seguido de instalación completa.
 5. Seleccionar la nueva base y ejecutar VERIFICAR_INSTALACION.sql.
 
 Si el nombre existe, se detiene. No borra, migra ni sobrescribe. Un error revierte la transacción de objetos; la base nueva puede quedar vacía para inspección. No ejecutar después el archivo original del ingeniero encima de esta versión.

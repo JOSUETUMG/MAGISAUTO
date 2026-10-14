@@ -1,4 +1,4 @@
-# MAGIS-AUTO
+﻿# MAGIS-AUTO
 
 Proyecto universitario de financiamiento de vehículos. Trabajo individual de Diego en **pruebas-diego**, conservando los acuerdos del equipo.
 
@@ -6,7 +6,15 @@ Documentación por fases: [índice y orden de lectura](docs/README.md), desde lo
 
 Decisiones vigentes de la revisión del enunciado: [total recaudable, anulaciones, código del vehículo y referencias](docs/DECISIONES_REVISION_PDF.md). Incluye qué está implementado y qué falta en el recorrido de solicitudes.
 
-API en C# / ASP.NET Core .NET 10 y SQL Server, con interfaz HTML/CSS/JavaScript. Los módulos de marcas y líneas permiten listar, buscar, agregar, editar y eliminar mediante procedimientos almacenados. Los módulos de clientes, créditos y pagos todavía no tienen endpoints ni pantallas.
+API en C# / ASP.NET Core .NET 10 y SQL Server, con interfaz HTML/CSS/JavaScript. Los módulos de marcas, líneas y agencias permiten listar, buscar, agregar, editar y eliminar mediante procedimientos almacenados. Clientes permite preparar datos, contactos y referencias por etapas; Créditos y Pagos también cuentan con API e interfaz, detalladas al final de este documento.
+
+Vendedores permite administrar código de empleado, DPI, nombres y agencia. El registro guarda Persona y Vendedor en una transacción; al eliminar conserva la ficha personal y protege vendedores con créditos. Ver [alcance y pruebas](docs/FASE_6_Vendedores.md).
+
+Clientes guarda el expediente completo en una transacción y muestra lo que falta para tener contactos y tres referencias completas. La presentación de solicitudes mediante validación SQL se incorpora en Créditos y requiere instalar su parche SQL. Ver [alcance, límites y pruebas](docs/FASE_6_Clientes.md).
+
+Fiadores permite registrar, buscar y editar personas y contactos, reutilizar una Persona existente por DPI y eliminar el rol solo si no tiene créditos vinculados. La asignación de fiadores se realiza desde el módulo Créditos. Ver [alcance, pruebas y guía manual](docs/FASE_6_Fiadores.md).
+
+Vehículos permite administrar VIN, marca, línea, año, precio al contado y placa opcional, con código automático y protección por créditos o valoraciones. La depreciación inicial se registra al aprobar el crédito, no al dar de alta el vehículo. Ver [alcance y pruebas de Vehículos](docs/FASE_6_Vehiculos.md).
 
 ## Abrir y ejecutar
 
@@ -38,6 +46,37 @@ HTTP es para pruebas locales. HTTPS requiere el certificado de desarrollo. Los e
 | POST | /api/catalogos/lineas | Crea con codigoMarca, codigoLinea y descripcion. |
 | PUT | /api/catalogos/lineas/{codigoMarca}/{codigoLinea} | Actualiza el nombre conservando la clave compuesta. |
 | DELETE | /api/catalogos/lineas/{codigoMarca}/{codigoLinea} | Elimina una línea sin vehículos asociados. |
+| GET | /agencias.html | Pantalla de agencias, con código automático, nombre y región. |
+| GET | /api/catalogos/agencias | Lista agencias; criterio opcional busca por código, nombre o región. |
+| POST | /api/catalogos/agencias | Crea con nombre y region; SQL asigna codigoAgencia. |
+| PUT | /api/catalogos/agencias/{codigo} | Actualiza nombre y región conservando código. |
+| DELETE | /api/catalogos/agencias/{codigo} | Elimina una agencia sin vendedores ni créditos asociados. |
+| GET | /vendedores.html | Pantalla de vendedores y filtro por agencia. |
+| GET | /api/vendedores | Lista vendedores; admite criterio y codigoAgencia. Búsqueda literal. |
+| POST | /api/vendedores | Registra vendedor y crea o reutiliza Persona por DPI; devuelve codigoVendedor. |
+| PUT | /api/vendedores/{codigo} | Edita código de empleado, nombres y agencia; conserva identidad. |
+| DELETE | /api/vendedores/{codigo} | Retira vendedor sin créditos; conserva Persona y otros roles. |
+| GET | /clientes.html | Listado y expediente de clientes, contactos y referencias. |
+| GET | /api/clientes | Lista fichas; criterio opcional busca por código, DPI, NIT, nombre o correo. |
+| GET | /api/clientes/{codigo} | Devuelve expediente y datos faltantes. |
+| GET | /api/clientes/catalogos | Tipos, ubicaciones y referencias existentes para vincular. |
+| POST | /api/clientes | Guarda cliente y expediente; devuelve codigoCliente. |
+| PUT | /api/clientes/{codigo} | Guarda todos los cambios del expediente de forma atómica. |
+| DELETE | /api/clientes/{codigo} | Elimina rol cliente sin dependencias, conservando Persona. |
+| GET | /fiadores.html | Listado y expediente de fiadores y contactos. |
+| GET | /api/fiadores | Lista fichas; criterio opcional por código, DPI, NIT, nombre o correo. |
+| GET | /api/fiadores/{codigo} | Devuelve ficha, contactos y teléfono pendiente. |
+| GET | /api/fiadores/catalogos | Tipos de contacto y ubicaciones existentes. |
+| POST | /api/fiadores | Crea o reutiliza Persona y registra Fiador; devuelve codigoFiador. |
+| PUT | /api/fiadores/{codigo} | Guarda los datos personales y contactos de forma atómica. |
+| DELETE | /api/fiadores/{codigo} | Retira Fiador sin créditos vinculados; conserva Persona y otros roles. |
+| GET | /vehiculos.html | Inventario, filtros y formulario de vehículos nuevos. |
+| GET | /api/vehiculos | Listado; criterio por código, VIN, placa, marca, línea o año y filtro codigoMarca. |
+| GET | /api/vehiculos/{codigo} | Ficha y resumen de dependencias. |
+| GET | /api/vehiculos/catalogos | Marcas, líneas y tipos de garantía. |
+| POST | /api/vehiculos | Guarda el vehículo; devuelve codigoGarantia automático. |
+| PUT | /api/vehiculos/{codigo} | Edita sin historial de crédito aprobado. |
+| DELETE | /api/vehiculos/{codigo} | Elimina sin créditos ni valoraciones vinculadas. |
 
 Sin filtro se listan todas; filtro vacío, de espacios o mayor de 200 caracteres devuelve 400. Sin coincidencias se devuelve lista vacía. Configuración, conexión o permisos insuficientes producen 503 con ProblemDetails e identificador de solicitud, sin credenciales ni mensajes internos del proveedor.
 
@@ -105,9 +144,29 @@ El ensayo de navegador scripts/Verificar-InterfazMarcas.cjs requiere Node.js, el
 - Fase 5: conexión y primer catálogo, docs/FASE_5_Conexion_API.md.
 - Fase 6: CRUD y pantalla de marcas implementados, API verificada y recorrido manual probado con Diego; docs/FASE_6_Marcas.md.
 - Avance de fase 6: Marcas y Líneas probadas manualmente con Diego; 42 pruebas nuevas de Líneas aprobadas, más 59 de regresión. Ver docs/FASE_6_Lineas.md.
-- Pendiente: demás catálogos, módulos de negocio y sus pantallas, autenticación si se incorpora y aceptación según PDF.
+- Avance actual: Agencias, Vendedores, Clientes, Fiadores, Vehículos, Créditos y Pagos cuentan con implementación y evidencia específica en sus documentos.
+- Pendiente: consultas/reportes en la aplicación, configuración y cobertura restante de entidades, autenticación si se incorpora y aceptación completa según PDF.
 - Siguen pendientes las interpretaciones del ingeniero sobre total neto recaudable y borrado financiero.
 
-Trabajar en pruebas-diego y compilar antes de compartir. SQL e instrucciones sí se versionan; base instalada, usuarios, datos y credenciales no. Esta fase no hace commit, push ni mezcla ramas automáticamente.
+Trabajar en pruebas-diego y compilar antes de compartir. SQL e instrucciones sí se versionan; base instalada, usuarios, datos y credenciales no. La publicación requiere verificar el commit en la rama remota; los ensayos no mezclan ramas ni publican por sí mismos.
 
 Al cerrar cada fase se entregará un informe PDF acumulado con cambios, explicaciones, ejemplos y pruebas. Alcance acordado en docs/INFORMES_POR_FASE.md. El catálogo de líneas no cierra toda la fase 6.
+
+
+### Créditos — fase 6
+
+[Créditos](docs/FASE_6_Creditos.md) incorpora borradores, asignación de fiadores, presentación, aprobación con cuotas y anulación. Abrir `/creditos.html`. Antes de usarlo en la base del proyecto, instalar [el parche aditivo](database/v2/migraciones/001_Presentacion_Creditos.sql) con la cuenta administradora y reiniciar la API. No ejecutar el instalador completo sobre una base existente.
+
+La API expone GET/POST `/api/creditos`, GET/PUT/DELETE `/api/creditos/{numero}`, GET `/api/creditos/catalogos` y POST a `/{numero}/presentar`, `/{numero}/aprobar`, `/{numero}/anular`. La documentación contiene cuerpos, reglas y pruebas. La cuenta API sigue limitada a procedimientos almacenados.
+
+
+### Pagos y abonos — fase 6
+
+[Pagos](docs/FASE_6_Pagos.md) añade captura de abonos por cuota, saldos actuales, recibos, impresión, observaciones y anulaciones con historial. Abrir `/pagos.html` después de reiniciar la API. Reutiliza los procedimientos financieros existentes y no requiere otro parche SQL. Los saldos descuentan únicamente pagos efectivos; las comisiones se calculan sobre cada abono. No procesa cobros bancarios.
+
+
+### Pruebas manuales de Pagos — 13 de octubre de 2026
+
+[Informe detallado y capturas](docs/PRUEBAS_MANUALES_PAGOS_2026-10-13.md): abonos, cuota completa, sobrepago bloqueado, observación, anulación, referencia ACH, búsqueda, Ver todos y vista previa de impresión. El historial conserva tres recibos (uno anulado); el crédito de prueba tiene Q1500 efectivos y Q86239.56 pendientes en la última captura. Las 126 comprobaciones automáticas previas se ejecutaron en la base aislada, no sobre ese crédito.
+
+La fase 6 sigue abierta. Próximo trabajo: consultas y reportes mediante SP, conforme al énfasis del ingeniero. La vista previa fue revisada; no se declara una impresión física ni un PDF guardado.
