@@ -26,6 +26,8 @@ builder.Services.AddScoped<VehiculoRepositorio>();
 builder.Services.AddScoped<CreditoRepositorio>();
 builder.Services.AddScoped<PagoRepositorio>();
 builder.Services.AddScoped<ReporteRepositorio>();
+builder.Services.AddScoped<CatalogoAuxiliarRepositorio>();
+builder.Services.AddScoped<ParametroCreditoRepositorio>();
 
 var app = builder.Build();
 

@@ -1,0 +1,544 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Fecha": "2026-10-15T09:44:27.5778708-06:00",
+  "ConexionLocalSinCifrado": true,
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye las 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Una configuración activa inicial",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta API sin SELECT directo de tablas (229)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /parametros.html (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /parametros.js (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /parametros.css (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /creditos.html (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /creditos.js (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /auxiliares.html (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado de configuraciones (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Configuración activa devuelta en porcentaje",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear configuración A (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar configuración propia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nueva configuración inactiva y sin uso",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "12.5% se guarda exactamente como 0.125000",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar configuración no utilizada (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuatro decimales porcentuales preservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reponer tasa de ensayo (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro nombre (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro nombre sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro nombre (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro nombre sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro tasaAnualPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro seguroAutoMensualPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro seguroAutoMensualPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro seguroVidaMensualPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro seguroVidaMensualPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro engancheMinimoPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro engancheMinimoPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro engancheMinimoPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro engancheMinimoPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro comisionPredeterminadaPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro comisionPredeterminadaPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro depreciacionInicialPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro depreciacionInicialPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro depreciacionInicialPorcentaje (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro depreciacionInicialPorcentaje sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro manejoMensual (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro manejoMensual sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro activo (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro activo sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro codigoParametro (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación parámetro codigoParametro sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?criterio= (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?criterio= sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?criterio=a&criterio=b (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?criterio=a&criterio=b sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?activo=true (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?activo=true sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro inválido ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activar A (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activar A repetido es idempotente (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No editar configuración activa aunque esté libre (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No editar configuración activa aunque esté libre sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No borrar activa aunque esté libre (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No borrar activa aunque esté libre sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activar ausente (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activar ausente sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activación fallida conserva A activa",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear configuración B (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito usa comisión predeterminada al omitirla (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consultar crédito con A (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito copia versión A y comisión de 2%",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida -1 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida -1 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida 100.0001 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida 100.0001 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida 1.00001 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida 1.00001 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida abc (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión inválida abc sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión válida 0 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión exacta 0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión válida 100 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión exacta 100",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión válida 0.0001 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión exacta 0.0001",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión válida 3.25 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión exacta 3.25",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar omitiendo comisión conserva pacto (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pacto 3.25% conservado sin campo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar con null conserva pacto (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pacto 3.25% conservado con null",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No editar configuración usada por borrador (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No editar configuración usada por borrador sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No borrar configuración usada (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No borrar configuración usada sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API identifica configuración utilizada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activar B sustituye A (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Una sola configuración activa: B",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activar B no reescribe borrador existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla con versión activa obsoleta rechazada (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla con versión activa obsoleta rechazada sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rechazo obsoleto revierte también fiadores y valores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentar crédito de A después de activar B (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobar crédito conserva condiciones de A (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contrato usa interés de A y comisión pactada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Manejo y seguro auto originales conservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Depreciación original A aplicada al aprobar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión aprobada no editable (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comisión aprobada no editable sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contrato aprobado intacto tras rechazo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nuevo borrador recibe B (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nuevos valores B y comisión 7.5%",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago efectivo con comisión pactada (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consultar recibo (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago de Q1000 genera Q32.50, no comisión de B",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reactivar A sin editar datos históricos (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambiar activa conserva cuotas y contrato aprobado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Activaciones concurrentes responden éxito o conflicto recuperable",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Concurrencia conserva exactamente una activa",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar borrador propio de B (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Restaurar activa original por API (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar B inactiva y libre (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar configuración inexistente (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar configuración inexistente sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar configuración inexistente (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar configuración inexistente sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "A permanece protegida aun inactiva (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "A permanece protegida aun inactiva sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar inexistente (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda sin coincidencias devuelve lista vacía",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye las 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registros previos de validación conservados tras retirar solo el ensayo",
+      "Resultado": "Correcto"
+    }
+  ]
+}

@@ -34,12 +34,13 @@ public sealed class CreditoRepositorio(ConexionSqlFactory conexiones)
         {
             SqlParameter p=k switch {
                 "NumeroCredito" => cmd.Parameters.Add("@"+k,SqlDbType.VarChar,20),
-                "Enganche" => cmd.Parameters.Add("@"+k,SqlDbType.Decimal),
+                "Enganche" or "PorcentajeComision" => cmd.Parameters.Add("@"+k,SqlDbType.Decimal),
                 "Plazo" or "FiadoresRequeridos" => cmd.Parameters.Add("@"+k,SqlDbType.SmallInt),
                 _ when k.StartsWith("Codigo") => cmd.Parameters.Add("@"+k,SqlDbType.Int),
                 _ => cmd.Parameters.Add("@"+k,SqlDbType.NVarChar,k=="Motivo"?300:100)
             };
             if(k=="Enganche"){p.Precision=18;p.Scale=2;}
+            if(k=="PorcentajeComision"){p.Precision=9;p.Scale=6;}
             p.Value=v??DBNull.Value;
         }
         await cmd.ExecuteNonQueryAsync(ct);
@@ -74,12 +75,17 @@ public sealed class CreditoRepositorio(ConexionSqlFactory conexiones)
         return c;
     },ct);
     public Task<int> Guardar(string? numero,CreditoSolicitud s,CancellationToken ct)=>Transaccion(async(cn,tx,db)=>{
+        decimal? comision=s.ComisionPorcentaje/100m;
         if(numero is not null){var actual=await Existe(db,numero,ct);if(!string.Equals(numero,s.NumeroCredito,StringComparison.OrdinalIgnoreCase))throw new OperacionCatalogoException(400,"El número de crédito se conserva.");
+            comision??=Convert.ToDecimal(actual["porcentajeComision"]);
             // Retirar los vínculos dentro de la misma transacción permite cambiar cliente y fiadores juntos.
             foreach(var f in (await db.Leer("CreditoFiador",ct)).Where(f=>string.Equals(f["numeroCredito"]?.ToString(),numero,StringComparison.OrdinalIgnoreCase)))
                 await Ejecutar(cn,tx,"CreditoFiador_Eliminar",new(){["NumeroCredito"]=numero,["CodigoFiador"]=f["codigoFiador"]},ct);
         }
         var datos=new Fila{["NumeroCredito"]=s.NumeroCredito,["CodigoDeudor"]=s.CodigoDeudor,["CodigoGarantia"]=s.CodigoGarantia,["CodigoVendedor"]=s.CodigoVendedor,["Enganche"]=s.Enganche,["Plazo"]=s.Plazo,["FiadoresRequeridos"]=s.FiadoresRequeridos};
+        datos["PorcentajeComision"]=comision;
+        // Si la pantalla vio otra versión activa, el SP rechaza la operación en vez de aplicar una nueva a escondidas.
+        if(s.CodigoParametro is not null)datos["CodigoParametro"]=s.CodigoParametro.Value;
         await Ejecutar(cn,tx,numero is null?"Credito_Insertar":"Credito_Actualizar",datos,ct);
         // Comprobar la versión dentro de la transacción: sin migración no queda un alta parcial.
         await Existe(db,s.NumeroCredito,ct);

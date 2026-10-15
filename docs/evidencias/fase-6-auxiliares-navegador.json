@@ -1,0 +1,16 @@
+{
+  "Estado": "Pendiente",
+  "Fecha": "2026-10-14T22:39:02.6975806-06:00",
+  "PruebasInterfazAprobadas": 0,
+  "Intentos": [
+    {
+      "Medio": "Playwright con Edge",
+      "Resultado": "No se pudo iniciar el navegador en el entorno restringido."
+    },
+    {
+      "Medio": "Navegador integrado",
+      "Resultado": "No se pudo acceder al servidor HTTP local: ERR_CONNECTION_TIMED_OUT."
+    }
+  ],
+  "Alcance": "Los 242 checks HTTP/SQL se registran por separado. No hay evidencia visual aprobada."
+}

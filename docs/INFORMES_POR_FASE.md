@@ -49,3 +49,20 @@ El crédito de prueba permanece VIGENTE con Q1500 efectivos y Q86239.56 por cobr
 [Documentación del módulo](FASE_6_Reportes.md): 20 SP integrados, filtros tipados, resultados múltiples, nulos, cortes históricos y cartas individuales. Cuenta con 134 comprobaciones HTTP/SQL y 15 de formato; los registros previos de la base aislada se conservaron. No hay revisión visual automática aprobada: Edge no pudo abrir la página en el entorno restringido. Actualización: Diego completó el recorrido de las 20 consultas; [24 casos y 40 capturas](PRUEBAS_MANUALES_REPORTES_2026-10-13.md) documentan sus resultados y límites. Quedan teclado, móvil, respuestas tardías y el resto del alcance de fase 6; no se genera todavía su PDF de cierre.
 
 Acuerdo posterior con Diego: antes de la entrega se comentarán las funciones/procedimientos y líneas clave de SQL y código (propósito, parámetros, cálculos, validaciones, transacciones y decisiones), y se preparará al equipo para entender y defender el proyecto. Este trabajo general queda para el cierre, después de completar y probar los módulos.
+
+## Avance de Catálogos auxiliares — 14 de octubre de 2026
+
+[Documentación del bloque](FASE_6_Catalogos_Auxiliares.md): Departamentos, Municipios y tipos de teléfono, dirección, garantía, referencia y pago. Se reutilizan 35 SP existentes sin migración. La compilación y 242 comprobaciones HTTP/SQL en la base aislada resultaron correctas; las 26 tablas conservaron sus datos anteriores. La revisión en navegador no pudo ejecutarse por restricciones del entorno y queda pendiente junto con su recorrido manual. Este avance local no se ha publicado y no cierra la fase 6.
+
+Actualización posterior: Diego completó el recorrido manual básico de Auxiliares, documentado
+con sus límites en el informe del bloque: carga de los siete catálogos, operaciones de ensayo,
+dependencias, búsqueda vacía, teclado y ventana estrecha. No se acredita una prueba en móvil real.
+
+## Avance de Parámetros y comisión — 15 de octubre de 2026
+
+[Documentación y guía](FASE_6_Parametros_y_Comision.md): configuraciones inactivas editables,
+activación atómica, conservación de versiones utilizadas y comisión específica por crédito.
+El manejo mensual sigue fijo en Q25. Se reutilizan SP existentes, sin nuevos archivos SQL.
+Compilación sin errores ni advertencias; **134 pruebas nuevas y 57 de regresión de Créditos**
+correctas. La base aislada conservó sus registros anteriores. La revisión visual del nuevo bloque
+queda pendiente; sus cambios siguen locales y la fase 6 continúa abierta.

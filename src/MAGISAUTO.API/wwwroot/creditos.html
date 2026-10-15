@@ -9,7 +9,7 @@
 <body>
   <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
   <main>
-    <nav class="catalogos" aria-label="Módulos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html" aria-current="page">Créditos</a><a href="/pagos.html">Pagos y abonos</a><a href="/reportes.html">Consultas y reportes</a></nav>
+    <nav class="catalogos" aria-label="Módulos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html" aria-current="page">Créditos</a><a href="/pagos.html">Pagos y abonos</a><a href="/reportes.html">Consultas y reportes</a><a href="/auxiliares.html">Catálogos auxiliares</a></nav>
     <p class="ruta">FINANCIAMIENTO / CRÉDITOS</p>
     <section class="encabezado"><div><h1>Créditos</h1><p>Prepara solicitudes, revisa los requisitos y consulta las cuotas aprobadas.</p></div><button id="nuevo" class="primario">＋ Agregar crédito</button></section>
     <div id="aviso" class="aviso" role="status" hidden></div>
@@ -30,10 +30,11 @@
       <div><label for="vendedor">Vendedor *</label><select id="vendedor" required></select></div>
       <div><label for="enganche">Enganche en Q *</label><input id="enganche" required inputmode="decimal" pattern="[0-9]+([.][0-9]{1,2})?"><small id="precio"></small></div>
       <div><label for="plazo">Plazo en meses *</label><select id="plazo"><option>12</option><option>24</option><option>36</option><option>48</option><option selected>60</option></select></div>
+      <div><label for="comision">Comisión del vendedor (%) *</label><input id="comision" type="number" min="0" max="100" step="0.0001" required inputmode="decimal"><small>Porcentaje pactado para este crédito sobre cada pago efectivo. Por ejemplo: escribe 2 para 2%. Se fija al aprobar.</small></div>
       <div><label for="requeridos">Fiadores requeridos por el comité *</label><input id="requeridos" type="number" min="0" max="32767" step="1" value="1" required><small>Cero únicamente cuando el comité lo determine. Puedes completar las asignaciones después de guardar.</small></div>
     </div><fieldset class="asignaciones"><legend>Fiadores asignados</legend><div id="fiadores"></div></fieldset></fieldset>
     <div id="requisitos" class="nota" role="status"></div>
-    <p id="condiciones" class="nota"></p>
+    <p id="condiciones" class="nota"></p><p class="nota"><a href="/parametros.html">Consultar parámetros del crédito</a></p>
     <div class="botones-dialogo"><button id="cerrar" type="button" class="secundario">Cerrar</button><button id="guardar" class="primario">Guardar borrador</button></div></form>
     <section id="contrato" hidden><h3>Solicitud guardada</h3><p id="resumen"></p><p id="advertencia-cambios" class="nota" hidden>Hay cambios sin guardar. Guárdalos antes de presentar, aprobar o anular.</p>
       <div class="acciones-credito"><button id="presentar" type="button" class="secundario">Presentar solicitud</button><button id="aprobar" type="button" class="primario">Aprobar y generar cuotas</button><button id="anular" type="button" class="peligro">Anular crédito</button><button id="borrar" type="button" class="secundario">Eliminar borrador</button></div>

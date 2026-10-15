@@ -1,0 +1,1332 @@
+{
+  "fechaRevision": "2026-10-14",
+  "rama": "pruebas-diego",
+  "commitBase": "cf6658a58a085c8d35996c208d69ef615840d8b5",
+  "tipo": "Auditoria estatica de cobertura; no prueba de ejecucion",
+  "limites": [
+    "No se conecto a SQL ni se modificaron registros.",
+    "No se ejecutaron de nuevo las pruebas historicas.",
+    "La presencia de un SP no garantiza que una operacion este permitida ni expuesta en la aplicacion.",
+    "Rutas extraidas de atributos literales; integraciones internas revisadas manualmente en el documento.",
+    "Inventario de procedimientos definitivos CREATE OR ALTER del paquete del equipo, contrastado con inventario v2.1."
+  ],
+  "entidades": [
+    {
+      "entidad": "Departamento",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Departamento_Insertar",
+          "linea": 3652
+        },
+        "Actualizar": {
+          "nombre": "api.Departamento_Actualizar",
+          "linea": 3604
+        },
+        "Eliminar": {
+          "nombre": "api.Departamento_Eliminar",
+          "linea": 3636
+        },
+        "Listar": {
+          "nombre": "api.Departamento_Listar",
+          "linea": 3669
+        },
+        "Buscar": {
+          "nombre": "api.Departamento_Buscar",
+          "linea": 3621
+        }
+      }
+    },
+    {
+      "entidad": "Municipio",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Municipio_Insertar",
+          "linea": 4648
+        },
+        "Actualizar": {
+          "nombre": "api.Municipio_Actualizar",
+          "linea": 4598
+        },
+        "Eliminar": {
+          "nombre": "api.Municipio_Eliminar",
+          "linea": 4631
+        },
+        "Listar": {
+          "nombre": "api.Municipio_Listar",
+          "linea": 4666
+        },
+        "Buscar": {
+          "nombre": "api.Municipio_Buscar",
+          "linea": 4616
+        }
+      }
+    },
+    {
+      "entidad": "TipoTelefono",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.TipoTelefono_Insertar",
+          "linea": 5781
+        },
+        "Actualizar": {
+          "nombre": "api.TipoTelefono_Actualizar",
+          "linea": 5733
+        },
+        "Eliminar": {
+          "nombre": "api.TipoTelefono_Eliminar",
+          "linea": 5765
+        },
+        "Listar": {
+          "nombre": "api.TipoTelefono_Listar",
+          "linea": 5798
+        },
+        "Buscar": {
+          "nombre": "api.TipoTelefono_Buscar",
+          "linea": 5750
+        }
+      }
+    },
+    {
+      "entidad": "TipoDireccion",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.TipoDireccion_Insertar",
+          "linea": 5459
+        },
+        "Actualizar": {
+          "nombre": "api.TipoDireccion_Actualizar",
+          "linea": 5411
+        },
+        "Eliminar": {
+          "nombre": "api.TipoDireccion_Eliminar",
+          "linea": 5443
+        },
+        "Listar": {
+          "nombre": "api.TipoDireccion_Listar",
+          "linea": 5476
+        },
+        "Buscar": {
+          "nombre": "api.TipoDireccion_Buscar",
+          "linea": 5428
+        }
+      }
+    },
+    {
+      "entidad": "TipoGarantia",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.TipoGarantia_Insertar",
+          "linea": 5539
+        },
+        "Actualizar": {
+          "nombre": "api.TipoGarantia_Actualizar",
+          "linea": 5491
+        },
+        "Eliminar": {
+          "nombre": "api.TipoGarantia_Eliminar",
+          "linea": 5523
+        },
+        "Listar": {
+          "nombre": "api.TipoGarantia_Listar",
+          "linea": 5556
+        },
+        "Buscar": {
+          "nombre": "api.TipoGarantia_Buscar",
+          "linea": 5508
+        }
+      }
+    },
+    {
+      "entidad": "TipoReferencia",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.TipoReferencia_Insertar",
+          "linea": 5701
+        },
+        "Actualizar": {
+          "nombre": "api.TipoReferencia_Actualizar",
+          "linea": 5653
+        },
+        "Eliminar": {
+          "nombre": "api.TipoReferencia_Eliminar",
+          "linea": 5685
+        },
+        "Listar": {
+          "nombre": "api.TipoReferencia_Listar",
+          "linea": 5718
+        },
+        "Buscar": {
+          "nombre": "api.TipoReferencia_Buscar",
+          "linea": 5670
+        }
+      }
+    },
+    {
+      "entidad": "TipoPago",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.TipoPago_Insertar",
+          "linea": 5620
+        },
+        "Actualizar": {
+          "nombre": "api.TipoPago_Actualizar",
+          "linea": 5571
+        },
+        "Eliminar": {
+          "nombre": "api.TipoPago_Eliminar",
+          "linea": 5604
+        },
+        "Listar": {
+          "nombre": "api.TipoPago_Listar",
+          "linea": 5638
+        },
+        "Buscar": {
+          "nombre": "api.TipoPago_Buscar",
+          "linea": 5589
+        }
+      }
+    },
+    {
+      "entidad": "Marca",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Marca_Insertar",
+          "linea": 4566
+        },
+        "Actualizar": {
+          "nombre": "api.Marca_Actualizar",
+          "linea": 4518
+        },
+        "Eliminar": {
+          "nombre": "api.Marca_Eliminar",
+          "linea": 4550
+        },
+        "Listar": {
+          "nombre": "api.Marca_Listar",
+          "linea": 4583
+        },
+        "Buscar": {
+          "nombre": "api.Marca_Buscar",
+          "linea": 4535
+        }
+      }
+    },
+    {
+      "entidad": "Linea",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Linea_Insertar",
+          "linea": 4485
+        },
+        "Actualizar": {
+          "nombre": "api.Linea_Actualizar",
+          "linea": 4435
+        },
+        "Eliminar": {
+          "nombre": "api.Linea_Eliminar",
+          "linea": 4468
+        },
+        "Listar": {
+          "nombre": "api.Linea_Listar",
+          "linea": 4503
+        },
+        "Buscar": {
+          "nombre": "api.Linea_Buscar",
+          "linea": 4453
+        }
+      }
+    },
+    {
+      "entidad": "Agencia",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Agencia_Insertar",
+          "linea": 3274
+        },
+        "Actualizar": {
+          "nombre": "api.Agencia_Actualizar",
+          "linea": 3225
+        },
+        "Eliminar": {
+          "nombre": "api.Agencia_Eliminar",
+          "linea": 3258
+        },
+        "Listar": {
+          "nombre": "api.Agencia_Listar",
+          "linea": 3291
+        },
+        "Buscar": {
+          "nombre": "api.Agencia_Buscar",
+          "linea": 3243
+        }
+      }
+    },
+    {
+      "entidad": "Persona",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Persona_Insertar",
+          "linea": 4832
+        },
+        "Actualizar": {
+          "nombre": "api.Persona_Actualizar",
+          "linea": 4776
+        },
+        "Eliminar": {
+          "nombre": "api.Persona_Eliminar",
+          "linea": 4816
+        },
+        "Listar": {
+          "nombre": "api.Persona_Listar",
+          "linea": 4856
+        },
+        "Buscar": {
+          "nombre": "api.Persona_Buscar",
+          "linea": 4801
+        }
+      }
+    },
+    {
+      "entidad": "Telefono",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Telefono_Insertar",
+          "linea": 5377
+        },
+        "Actualizar": {
+          "nombre": "api.Telefono_Actualizar",
+          "linea": 5326
+        },
+        "Eliminar": {
+          "nombre": "api.Telefono_Eliminar",
+          "linea": 5360
+        },
+        "Listar": {
+          "nombre": "api.Telefono_Listar",
+          "linea": 5396
+        },
+        "Buscar": {
+          "nombre": "api.Telefono_Buscar",
+          "linea": 5345
+        }
+      }
+    },
+    {
+      "entidad": "Direccion",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Direccion_Insertar",
+          "linea": 4227
+        },
+        "Actualizar": {
+          "nombre": "api.Direccion_Actualizar",
+          "linea": 4174
+        },
+        "Eliminar": {
+          "nombre": "api.Direccion_Eliminar",
+          "linea": 4210
+        },
+        "Listar": {
+          "nombre": "api.Direccion_Listar",
+          "linea": 4248
+        },
+        "Buscar": {
+          "nombre": "api.Direccion_Buscar",
+          "linea": 4195
+        }
+      }
+    },
+    {
+      "entidad": "Deudor",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Deudor_Insertar",
+          "linea": 4143
+        },
+        "Actualizar": {
+          "nombre": "api.Deudor_Actualizar",
+          "linea": 4095
+        },
+        "Eliminar": {
+          "nombre": "api.Deudor_Eliminar",
+          "linea": 4127
+        },
+        "Listar": {
+          "nombre": "api.Deudor_Listar",
+          "linea": 4159
+        },
+        "Buscar": {
+          "nombre": "api.Deudor_Buscar",
+          "linea": 4112
+        }
+      }
+    },
+    {
+      "entidad": "Referencia",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Referencia_Insertar",
+          "linea": 4920
+        },
+        "Actualizar": {
+          "nombre": "api.Referencia_Actualizar",
+          "linea": 4871
+        },
+        "Eliminar": {
+          "nombre": "api.Referencia_Eliminar",
+          "linea": 4904
+        },
+        "Listar": {
+          "nombre": "api.Referencia_Listar",
+          "linea": 4937
+        },
+        "Buscar": {
+          "nombre": "api.Referencia_Buscar",
+          "linea": 4889
+        }
+      }
+    },
+    {
+      "entidad": "DetalleReferencia",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.DetalleReferencia_Insertar",
+          "linea": 4061
+        },
+        "Actualizar": {
+          "nombre": "api.DetalleReferencia_Actualizar",
+          "linea": 4010
+        },
+        "Eliminar": {
+          "nombre": "api.DetalleReferencia_Eliminar",
+          "linea": 4044
+        },
+        "Listar": {
+          "nombre": "api.DetalleReferencia_Listar",
+          "linea": 4080
+        },
+        "Buscar": {
+          "nombre": "api.DetalleReferencia_Buscar",
+          "linea": 4029
+        }
+      }
+    },
+    {
+      "entidad": "Fiador",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Fiador_Insertar",
+          "linea": 4311
+        },
+        "Actualizar": {
+          "nombre": "api.Fiador_Actualizar",
+          "linea": 4263
+        },
+        "Eliminar": {
+          "nombre": "api.Fiador_Eliminar",
+          "linea": 4295
+        },
+        "Listar": {
+          "nombre": "api.Fiador_Listar",
+          "linea": 4327
+        },
+        "Buscar": {
+          "nombre": "api.Fiador_Buscar",
+          "linea": 4280
+        }
+      }
+    },
+    {
+      "entidad": "Vendedor",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Vendedor_Insertar",
+          "linea": 5863
+        },
+        "Actualizar": {
+          "nombre": "api.Vendedor_Actualizar",
+          "linea": 5813
+        },
+        "Eliminar": {
+          "nombre": "api.Vendedor_Eliminar",
+          "linea": 5847
+        },
+        "Listar": {
+          "nombre": "api.Vendedor_Listar",
+          "linea": 5881
+        },
+        "Buscar": {
+          "nombre": "api.Vendedor_Buscar",
+          "linea": 5832
+        }
+      }
+    },
+    {
+      "entidad": "Garantia",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Garantia_Insertar",
+          "linea": 4397
+        },
+        "Actualizar": {
+          "nombre": "api.Garantia_Actualizar",
+          "linea": 4342
+        },
+        "Eliminar": {
+          "nombre": "api.Garantia_Eliminar",
+          "linea": 4381
+        },
+        "Listar": {
+          "nombre": "api.Garantia_Listar",
+          "linea": 4420
+        },
+        "Buscar": {
+          "nombre": "api.Garantia_Buscar",
+          "linea": 4366
+        }
+      }
+    },
+    {
+      "entidad": "ParametroCredito",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.ParametroCredito_Insertar",
+          "linea": 4737
+        },
+        "Actualizar": {
+          "nombre": "api.ParametroCredito_Actualizar",
+          "linea": 4681
+        },
+        "Eliminar": {
+          "nombre": "api.ParametroCredito_Eliminar",
+          "linea": 4721
+        },
+        "Listar": {
+          "nombre": "api.ParametroCredito_Listar",
+          "linea": 4761
+        },
+        "Buscar": {
+          "nombre": "api.ParametroCredito_Buscar",
+          "linea": 4706
+        }
+      }
+    },
+    {
+      "entidad": "Credito",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Credito_Insertar",
+          "linea": 3449
+        },
+        "Actualizar": {
+          "nombre": "api.Credito_Actualizar",
+          "linea": 3306
+        },
+        "Eliminar": {
+          "nombre": "api.Credito_Eliminar",
+          "linea": 3434
+        },
+        "Listar": {
+          "nombre": "api.Credito_Listar",
+          "linea": 3484
+        },
+        "Buscar": {
+          "nombre": "api.Credito_Buscar",
+          "linea": 3419
+        }
+      }
+    },
+    {
+      "entidad": "CreditoFiador",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.CreditoFiador_Insertar",
+          "linea": 3572
+        },
+        "Actualizar": {
+          "nombre": "api.CreditoFiador_Actualizar",
+          "linea": 3523
+        },
+        "Eliminar": {
+          "nombre": "api.CreditoFiador_Eliminar",
+          "linea": 3555
+        },
+        "Listar": {
+          "nombre": "api.CreditoFiador_Listar",
+          "linea": 3589
+        },
+        "Buscar": {
+          "nombre": "api.CreditoFiador_Buscar",
+          "linea": 3540
+        }
+      }
+    },
+    {
+      "entidad": "Depreciacion",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.Depreciacion_Insertar",
+          "linea": 3736
+        },
+        "Actualizar": {
+          "nombre": "api.Depreciacion_Actualizar",
+          "linea": 3684
+        },
+        "Eliminar": {
+          "nombre": "api.Depreciacion_Eliminar",
+          "linea": 3720
+        },
+        "Listar": {
+          "nombre": "api.Depreciacion_Listar",
+          "linea": 3756
+        },
+        "Buscar": {
+          "nombre": "api.Depreciacion_Buscar",
+          "linea": 3705
+        }
+      }
+    },
+    {
+      "entidad": "DetalleCuota",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.DetalleCuota_Insertar",
+          "linea": 3823
+        },
+        "Actualizar": {
+          "nombre": "api.DetalleCuota_Actualizar",
+          "linea": 3771
+        },
+        "Eliminar": {
+          "nombre": "api.DetalleCuota_Eliminar",
+          "linea": 3806
+        },
+        "Listar": {
+          "nombre": "api.DetalleCuota_Listar",
+          "linea": 3843
+        },
+        "Buscar": {
+          "nombre": "api.DetalleCuota_Buscar",
+          "linea": 3791
+        }
+      }
+    },
+    {
+      "entidad": "DetallePago",
+      "procedimientos": {
+        "Insertar": {
+          "nombre": "api.DetallePago_Insertar",
+          "linea": 3934
+        },
+        "Actualizar": {
+          "nombre": "api.DetallePago_Actualizar",
+          "linea": 3858
+        },
+        "Eliminar": {
+          "nombre": "api.DetallePago_Eliminar",
+          "linea": 3919
+        },
+        "Listar": {
+          "nombre": "api.DetallePago_Listar",
+          "linea": 3995
+        },
+        "Buscar": {
+          "nombre": "api.DetallePago_Buscar",
+          "linea": 3904
+        }
+      }
+    },
+    {
+      "entidad": "ResumenCredito",
+      "procedimientos": {
+        "Listar": {
+          "nombre": "api.ResumenCredito_Listar",
+          "linea": 5311
+        },
+        "Buscar": {
+          "nombre": "api.ResumenCredito_Buscar",
+          "linea": 5296
+        }
+      }
+    }
+  ],
+  "cantidadProcedimientos": 151,
+  "controladores": [
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/AgenciasController.cs",
+      "rutaBase": [
+        "api/catalogos/agencias"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 14
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 28
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:int}",
+          "linea": 38
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigo:int}",
+          "linea": 51
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/ClientesController.cs",
+      "rutaBase": [
+        "api/clientes"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 14
+        },
+        {
+          "metodo": "GET",
+          "ruta": "catalogos",
+          "linea": 21
+        },
+        {
+          "metodo": "GET",
+          "ruta": "{codigo:int}",
+          "linea": 24
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 31
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:int}",
+          "linea": 35
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigo:int}",
+          "linea": 42
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/CreditosController.cs",
+      "rutaBase": [
+        "api/creditos"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 9
+        },
+        {
+          "metodo": "GET",
+          "ruta": "catalogos",
+          "linea": 10
+        },
+        {
+          "metodo": "GET",
+          "ruta": "{numero}",
+          "linea": 11
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 12
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{numero}",
+          "linea": 13
+        },
+        {
+          "metodo": "POST",
+          "ruta": "{numero}/presentar",
+          "linea": 14
+        },
+        {
+          "metodo": "POST",
+          "ruta": "{numero}/aprobar",
+          "linea": 15
+        },
+        {
+          "metodo": "POST",
+          "ruta": "{numero}/anular",
+          "linea": 16
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{numero}",
+          "linea": 17
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/FiadoresController.cs",
+      "rutaBase": [
+        "api/fiadores"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 14
+        },
+        {
+          "metodo": "GET",
+          "ruta": "catalogos",
+          "linea": 21
+        },
+        {
+          "metodo": "GET",
+          "ruta": "{codigo:int}",
+          "linea": 24
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 31
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:int}",
+          "linea": 35
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigo:int}",
+          "linea": 42
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/LineasController.cs",
+      "rutaBase": [
+        "api/catalogos/lineas"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 14
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 35
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigoMarca:int}/{codigoLinea:int}",
+          "linea": 45
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigoMarca:int}/{codigoLinea:int}",
+          "linea": 59
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/MarcasController.cs",
+      "rutaBase": [
+        "api/catalogos/marcas"
+      ],
+      "acciones": [
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 12
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:int}",
+          "linea": 24
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigo:int}",
+          "linea": 38
+        },
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 53
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/PagosController.cs",
+      "rutaBase": [
+        "api/pagos"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 9
+        },
+        {
+          "metodo": "GET",
+          "ruta": "catalogos",
+          "linea": 10
+        },
+        {
+          "metodo": "GET",
+          "ruta": "credito/{numero}",
+          "linea": 11
+        },
+        {
+          "metodo": "GET",
+          "ruta": "{codigo:long}",
+          "linea": 12
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 13
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:long}/observacion",
+          "linea": 14
+        },
+        {
+          "metodo": "POST",
+          "ruta": "{codigo:long}/anular",
+          "linea": 15
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/ReportesController.cs",
+      "rutaBase": [
+        "api/reportes"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 10
+        },
+        {
+          "metodo": "GET",
+          "ruta": "catalogos",
+          "linea": 13
+        },
+        {
+          "metodo": "GET",
+          "ruta": "{id:int}",
+          "linea": 16
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/SaludBaseDatosController.cs",
+      "rutaBase": [
+        "api/salud/base-datos"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 11
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/SaludController.cs",
+      "rutaBase": [
+        "api/salud"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 10
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/VehiculosController.cs",
+      "rutaBase": [
+        "api/vehiculos"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 14
+        },
+        {
+          "metodo": "GET",
+          "ruta": "catalogos",
+          "linea": 25
+        },
+        {
+          "metodo": "GET",
+          "ruta": "{codigo:int}",
+          "linea": 28
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 35
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:int}",
+          "linea": 39
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigo:int}",
+          "linea": 43
+        }
+      ]
+    },
+    {
+      "archivo": "src/MAGISAUTO.API/Controllers/VendedoresController.cs",
+      "rutaBase": [
+        "api/vendedores"
+      ],
+      "acciones": [
+        {
+          "metodo": "GET",
+          "ruta": "",
+          "linea": 14
+        },
+        {
+          "metodo": "POST",
+          "ruta": "",
+          "linea": 28
+        },
+        {
+          "metodo": "PUT",
+          "ruta": "{codigo:int}",
+          "linea": 37
+        },
+        {
+          "metodo": "DELETE",
+          "ruta": "{codigo:int}",
+          "linea": 47
+        }
+      ]
+    }
+  ],
+  "reportes": [
+    "api.Reporte01_CreditosEmitidos",
+    "api.Reporte02_CarteraMora",
+    "api.Reporte03_PagosPorMedio",
+    "api.Reporte04_VentasVendedor",
+    "api.Reporte05_Cumpleaneros",
+    "api.Reporte06_EstadoCuenta",
+    "api.Reporte07_PlanPagos",
+    "api.Reporte08_Comisiones",
+    "api.Reporte09_CapitalPendiente",
+    "api.Reporte10_Intereses",
+    "api.Reporte11_ProximosVencimientos",
+    "api.Reporte12_AbonosParciales",
+    "api.Reporte13_CreditosMarcaLinea",
+    "api.Reporte14_CarteraAgenciaRegion",
+    "api.Reporte15_MoraRangos",
+    "api.Reporte16_GarantiaContraCapital",
+    "api.Reporte17_DepreciacionCostoFinanciamiento",
+    "api.Reporte18_CreditosFiador",
+    "api.Reporte19_RecaudacionComponentes",
+    "api.Reporte20_PagosAnulados"
+  ],
+  "evidenciasHistoricas": [
+    {
+      "archivo": "docs/evidencias/fase-5-api.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 31,
+      "fecha": "2026-10-08T22:01:44.0592350-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-agencias-interfaz.json",
+      "estado": "Fallido",
+      "cantidadComprobaciones": 0,
+      "fecha": "2026-10-12T03:04:53.605Z",
+      "resultados": []
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-agencias-regresion-marcas.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 28,
+      "fecha": "2026-10-11T21:03:40.2484195-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-agencias.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 34,
+      "fecha": "2026-10-11T21:03:07.4726115-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-clientes-regresion-vendedores.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 59,
+      "fecha": "2026-10-11T21:43:13.2149602-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-clientes.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 62,
+      "fecha": "2026-10-11T21:42:29.0655682-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-creditos.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 57,
+      "fecha": "2026-10-12T15:55:05.6163444-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-fiadores-regresion-clientes.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 62,
+      "fecha": "2026-10-12T09:40:56.1334567-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-fiadores.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 70,
+      "fecha": "2026-10-12T09:40:17.6197341-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-lineas-regresion-api.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 31,
+      "fecha": "2026-10-10T21:51:14.1644638-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-lineas-regresion-marcas.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 28,
+      "fecha": "2026-10-10T21:50:57.2895342-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-lineas.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 42,
+      "fecha": "2026-10-10T21:50:26.7250995-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-marcas.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 28,
+      "fecha": "2026-10-08T22:34:31.5068943-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-pagos.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 126,
+      "fecha": "2026-10-13T13:52:08.8584817-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-regresion-api.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 31,
+      "fecha": "2026-10-08T22:35:45.3587080-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-reportes-formato.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 15,
+      "fecha": null,
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-reportes-interfaz.json",
+      "estado": "Recorrido manual documentado; cobertura visual adicional pendiente",
+      "cantidadComprobaciones": 0,
+      "fecha": "2026-10-13",
+      "resultados": []
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-reportes.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 134,
+      "fecha": "2026-10-13T20:47:52.3529003-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-vehiculos-regresion-lineas.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 42,
+      "fecha": "2026-10-12T10:38:24.5696393-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-vehiculos.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 80,
+      "fecha": "2026-10-12T10:37:29.0814431-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-vendedores-regresion-agencias.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 34,
+      "fecha": "2026-10-11T21:21:29.3563218-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/fase-6-vendedores.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 59,
+      "fecha": "2026-10-11T21:20:26.3074629-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    },
+    {
+      "archivo": "docs/evidencias/paquete-equipo.json",
+      "estado": "Correcto",
+      "cantidadComprobaciones": 60,
+      "fecha": "2026-10-13T23:54:27.8293887-06:00",
+      "resultados": [
+        "Correcto"
+      ]
+    }
+  ],
+  "fuentesSHA256": {
+    "database/equipo/MAGISAUTO_Equipo_2026-10-13.sql": "3ffb46fe7a42c9bd468c7fb703c3a9476285afbcd2242d7de418e3ebdbc61a3a",
+    "database/v2/entrega/inventario.json": "e260a3066309a6d7e52f8aca1fde2c85fa740a83502c186129bae3a87346faad",
+    "docs/DECISIONES_REVISION_PDF.md": "09d4dad67e5f9f42a000b32fe2cb21a31969f53199394664066666ae473b5802",
+    "docs/INFORMES_POR_FASE.md": "be3d7ed9f122fdf36f9db77a27e8bd27488afa3c310f832cae74e1939ae61709",
+    "src/MAGISAUTO.API/Controllers/AgenciasController.cs": "42058c70a5ffdef74cfaa143f631bc54752d2dd44336cd716d44c358d871a512",
+    "src/MAGISAUTO.API/Controllers/ClientesController.cs": "93aac87f60edddb0ff89d9b5df3d91374ecd205a6df80eec5feb748221b7a870",
+    "src/MAGISAUTO.API/Controllers/CreditosController.cs": "744d9c758eb1f8516e32cd7b2c147a7413d1ceda957813f63a4e377371b211d4",
+    "src/MAGISAUTO.API/Controllers/FiadoresController.cs": "5e38cb7b43126be8eaf717cd0d200c6904366c936295acca41d14140e368f926",
+    "src/MAGISAUTO.API/Controllers/LineasController.cs": "a67fab7355d78affc7804cda5b4c063be9085193694d3718e0da09faa166390f",
+    "src/MAGISAUTO.API/Controllers/MarcasController.cs": "d37c5054600302c3e62722f49009a0a65e0308dee95588cc054b5e78d2febb5a",
+    "src/MAGISAUTO.API/Controllers/PagosController.cs": "0ef61ab44d42c9da870a21f2c5413a6ac44758abe6fdb539b2aff520a543cc04",
+    "src/MAGISAUTO.API/Controllers/ReportesController.cs": "bed10c5a65f93eec36f8d211359921e9698e946ec260b3998ef94f5633d4489e",
+    "src/MAGISAUTO.API/Controllers/SaludBaseDatosController.cs": "2630305d808c0e589429146ad05b43af7eebc3284f2632c584d843a6ca93842d",
+    "src/MAGISAUTO.API/Controllers/SaludController.cs": "39412a1ce86a8dde7cb870f0a9dbdd88667058490b9edd311076a221db1d10d1",
+    "src/MAGISAUTO.API/Controllers/VehiculosController.cs": "fdf5f408a8f54b7be9a2e20680bc134249f3342396611bfbaff7cd02e2cb8a4e",
+    "src/MAGISAUTO.API/Controllers/VendedoresController.cs": "54e23ae93979de0bebba064062db17c5e2de2dee6a42b00b168567763208b2dc",
+    "src/MAGISAUTO.API/Datos/AgenciaRepositorio.cs": "596a1ff2aa18740f6c87fb4c4813c59ee75fbd8f1bdb3394557d752f07828c36",
+    "src/MAGISAUTO.API/Datos/CatalogoReportes.cs": "410f570162317c2001de26b34452efe54ea81932e9b27281472cf095dcf2197b",
+    "src/MAGISAUTO.API/Datos/ClienteRepositorio.cs": "0046f18ec7dd7f9b017ac2e6043ae16f9329cebb42b9bb1c7db03635b4c4cf6a",
+    "src/MAGISAUTO.API/Datos/ClienteSqlSesion.cs": "1134e05904df41b32d06ad6dfe7d3a1c465731a5a72fbfa6fb0b8a0aa291e5bd",
+    "src/MAGISAUTO.API/Datos/ConexionSqlFactory.cs": "5cbbd48d5c567e3366aaef9bb15e1411d5b75215f6914f12a9227d9553acc350",
+    "src/MAGISAUTO.API/Datos/ContactosPersona.cs": "30747b1e9908c15ec8fff81ce11529a715acc1d17b7afd92a10eb912bdf30983",
+    "src/MAGISAUTO.API/Datos/CreditoRepositorio.cs": "5ad535a4169832349b08ec41427ad5c2735bc0240371f7ee32c8bcf4bfcb9ac4",
+    "src/MAGISAUTO.API/Datos/FiadorRepositorio.cs": "f700d4ec94d6740dcce517b3a4927fdfaed6e0bbf73fa35a69e6bed5e06eb32b",
+    "src/MAGISAUTO.API/Datos/IAgenciaRepositorio.cs": "c45fd40c7a6935a78c07f377751a5e556ab137f8a4adbd2988ff6bd7edaa48a2",
+    "src/MAGISAUTO.API/Datos/ILineaRepositorio.cs": "934abf37c438d6289ffe7fd5ad05a5cd9f8546ed3a940e7c0fecb0e3af7f2589",
+    "src/MAGISAUTO.API/Datos/IMarcaRepositorio.cs": "40426201fd1eee1e3be3ed64a3b56ffb47a96372fbcdbfc451aa989c03e5919b",
+    "src/MAGISAUTO.API/Datos/IVendedorRepositorio.cs": "4b752f09cd09eb9c9da1ba7247a238d8a22830878c471423d1da4a426c2fa77d",
+    "src/MAGISAUTO.API/Datos/LineaRepositorio.cs": "05a236c0cbe5642e74795ec0e943af181b4155dc651e09b658247661da6de677",
+    "src/MAGISAUTO.API/Datos/MarcaRepositorio.cs": "4bb0d1b763b0b6b1253e50e0bc950bcafc91c35d1f2565e0674bc360b038f2cf",
+    "src/MAGISAUTO.API/Datos/OperacionCatalogoException.cs": "477194584ee4efc6e00e130dfdecf7cc82d12655233ab0256e892773b3887c63",
+    "src/MAGISAUTO.API/Datos/PagoRepositorio.cs": "d38abee3bd3f65cb9c405ecbafdf23300c9d9cbdc3bee357c531459369507c9c",
+    "src/MAGISAUTO.API/Datos/ReporteRepositorio.cs": "3b8e43ee36cdd78d2c61d935e39c3f4a85ec6d72bb90b2660285165987db9b4a",
+    "src/MAGISAUTO.API/Datos/VehiculoRepositorio.cs": "13496972cd7de3c40b2959858d547662e22cd78c4099d9f7ed7bef91b1037e1f",
+    "src/MAGISAUTO.API/Datos/VendedorRepositorio.cs": "30f6d66c69ee35c4739b6d9a4394dc76680b8fb1e32f17d7608c62b8fb2b0253",
+    "src/MAGISAUTO.API/Modelos/AgenciaRespuesta.cs": "edf3c67a63032f6ef5c7b4ab4c623cac626b420665d7bee5bd98b6878523ca1b",
+    "src/MAGISAUTO.API/Modelos/AgenciaSolicitud.cs": "9f4223b66ccc76313749d31564e4e76838cdbf738bd789d1a034c696c3fa6c11",
+    "src/MAGISAUTO.API/Modelos/ClienteSolicitud.cs": "d81a40dc16da32d611e4abde9424d6ca4700cafa2e6ed1c0690c5b9ad2c50ce1",
+    "src/MAGISAUTO.API/Modelos/CreditoSolicitud.cs": "681f67b6278d41335b219338b7ce346f59ff429cc1a67d105e38cddbd67c0e30",
+    "src/MAGISAUTO.API/Modelos/FiadorSolicitud.cs": "63daba1f173263c9b594af009be93f61d9dbf6bf1dbeaff6869116b72c4422cc",
+    "src/MAGISAUTO.API/Modelos/LineaRespuesta.cs": "d580cf13eb1052c15194713b922e76dc22ee1b146b5a8dd8dd5fcbfc74e92094",
+    "src/MAGISAUTO.API/Modelos/LineaSolicitud.cs": "f75df9e72542084b50ba31a374dbfece67e72988d95153fcea175965db2ad20c",
+    "src/MAGISAUTO.API/Modelos/MarcaRespuesta.cs": "431121a237b02c71c9d8e69c19daea8d1b86adb93f3f84ba0f71448450b7720d",
+    "src/MAGISAUTO.API/Modelos/MarcaSolicitud.cs": "ab9b79aabfe23e7cd350ed97cf5731f914c00c53a549f0397115e09736961eae",
+    "src/MAGISAUTO.API/Modelos/PagoSolicitud.cs": "8270093b9d4257173a82c4f0860ec649440e884d3809c46510046a3e111a5642",
+    "src/MAGISAUTO.API/Modelos/VehiculoSolicitud.cs": "79b93f15f8d0811d4aca587d8dc6456aadef4d350117dfd4f0a9a30d6efc0327",
+    "src/MAGISAUTO.API/Modelos/VendedorRespuesta.cs": "5fe337d6ce9ef8b5dbc8ea60411b5cf39a1d6544f1186ce793f89ec7ae1b5791",
+    "src/MAGISAUTO.API/Modelos/VendedorSolicitud.cs": "8e3f72d04690a5c907f711c41c09f4fdd4330f9693c5e01be11ccaf59cecd6c0",
+    "src/MAGISAUTO.API/Program.cs": "09f8954a950cb8b2bacfd62d4e1cebcbce0bce552f19f1d79884fa1195dc0e47",
+    "src/MAGISAUTO.API/wwwroot/agencias.html": "f340d4783a6a8d2311354a6a8c609782f74e093963665ad27ffae92beebff0ad",
+    "src/MAGISAUTO.API/wwwroot/agencias.js": "303ae56013dd53d1e50635c3d733781aa073facb1bb3d46b8e78a00fa2bd4736",
+    "src/MAGISAUTO.API/wwwroot/clientes.css": "5e766b580742226bc1143a2c6bb3313fe972a6cf7903e628b36c1a99340e4e62",
+    "src/MAGISAUTO.API/wwwroot/clientes.html": "4d1504696cb1e4aa2b8f551935555dada700df9318ad472c0e65795ce7489dc5",
+    "src/MAGISAUTO.API/wwwroot/clientes.js": "59af8ef1507a983f3ddc9e501445e5fa3fdf0847fc89b2c8ba2e44790d67c03b",
+    "src/MAGISAUTO.API/wwwroot/creditos.css": "ca5851320d16f4f4a209531d621a949bd7348c622e8e4f4356274d3871ac7141",
+    "src/MAGISAUTO.API/wwwroot/creditos.html": "3303e1b5b3b78b5c41e1c05b172a3cba245339a92985a7b23508492ccf072456",
+    "src/MAGISAUTO.API/wwwroot/creditos.js": "c4cd5884a6b80750e4d5478f944ca9a6f97d4fa0778a3b04c237f506ad861a51",
+    "src/MAGISAUTO.API/wwwroot/estilos.css": "5230ab02f8d1d3ee13d4bfdec19d0afc5293698f97ef38d318a69506719c69aa",
+    "src/MAGISAUTO.API/wwwroot/fiadores.html": "ae4d6b0691c9d08cd4340fba562fd9d3d4350659245f973363070d28014c9121",
+    "src/MAGISAUTO.API/wwwroot/fiadores.js": "4bae06bca412e81f3e1d63e28b8a9fab4986396093dc17064c49c6dd52ca8629",
+    "src/MAGISAUTO.API/wwwroot/index.html": "4cd9d1c11daf066f174e977126465a0464b1d79c43b36d2082fcc24ebfd416b5",
+    "src/MAGISAUTO.API/wwwroot/lineas.html": "7e89b60a199f035572ebaf961c3130a470bb76e4c21744bc399c4fda1ac0e369",
+    "src/MAGISAUTO.API/wwwroot/lineas.js": "77c52965fefc614ace525ff68ffd05fd8f2011c80beba1bab033a91b142a7991",
+    "src/MAGISAUTO.API/wwwroot/marcas.js": "a85b4f279db86f3d4e2ee124f73aa4940c94625c2aadc69bbcaf3d6a55e06ddb",
+    "src/MAGISAUTO.API/wwwroot/pagos.css": "2744845aa8051f401430f85e5d34c0a4e279458c5f07a854fcb0ecf27b0daff8",
+    "src/MAGISAUTO.API/wwwroot/pagos.html": "b46e30de77795c08ea3055731c6cd8f26b543237c6a08d60b68ac21b93cf2dfb",
+    "src/MAGISAUTO.API/wwwroot/pagos.js": "2aaadaad5c8df7ba646808d06a40b8781b5867f0b654bae5d09c49f76beb309b",
+    "src/MAGISAUTO.API/wwwroot/reportes-formato.js": "cd1c341fd6037b4ba23f30d48f3c9fd15f5eadae468cfa9af72439b961d3337c",
+    "src/MAGISAUTO.API/wwwroot/reportes.css": "70d35490d81b5f4ad69b16811cbfc525d8020672c5d460f7efbccf0b84182237",
+    "src/MAGISAUTO.API/wwwroot/reportes.html": "a90100dfa075564957c93aaf56d96f6a2fd4b5ab25e2b8b2991a3450c554927e",
+    "src/MAGISAUTO.API/wwwroot/reportes.js": "abe0a84f1b59278c5be9acb26421c9b511f72bc9a4e5c23255b3af331c31b5a1",
+    "src/MAGISAUTO.API/wwwroot/vehiculos.css": "2f7186141d8415d26cd63bab1d118e74ed5a4db1690ef1be82153695935f539c",
+    "src/MAGISAUTO.API/wwwroot/vehiculos.html": "264e5de08d0a4ce39b04f9a060a25835f837d9e0d5d52cc63bdc39365d99c70d",
+    "src/MAGISAUTO.API/wwwroot/vehiculos.js": "50f9aca62e11c7c2b28c60351410810f6bf2d04b56e99e76d5f87278e6ce43aa",
+    "src/MAGISAUTO.API/wwwroot/vendedores.html": "0994f7db8ce99645df77253eb892742d83eb06ba3198650d5c9577bbda7c034f",
+    "src/MAGISAUTO.API/wwwroot/vendedores.js": "481ff1163f6389f7d6fc3b45b6e5e8dc2e3be7955e44446b95f9467f9546ff40"
+  }
+}

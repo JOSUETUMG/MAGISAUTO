@@ -1,5 +1,5 @@
 # Ensayo exclusivamente en MAGISAUTO_ValidacionV2. Conserva los datos anteriores.
-param([string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml',[string]$SalidaCompilacion='bin\Creditos')
+param([string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml',[string]$SalidaCompilacion='bin\Creditos',[switch]$ConexionLocalSinCifrado)
 $ErrorActionPreference='Stop'
 $repo=Split-Path $PSScriptRoot -Parent
 $api=Join-Path $repo 'src\MAGISAUTO.API'
@@ -32,6 +32,10 @@ try{
  $inicial=Captura
  $local=Get-Content (Join-Path $api 'appsettings.Local.json') -Raw|ConvertFrom-Json
  $cs=[Data.SqlClient.SqlConnectionStringBuilder]::new($local.ConnectionStrings.MagisAuto);$cs['Initial Catalog']='MAGISAUTO_ValidacionV2'
+ if($ConexionLocalSinCifrado){
+  if($cs.DataSource -ne 'tcp:127.0.0.1,1433'){throw 'El modo sin cifrado solo admite loopback local.'}
+  $cs['Encrypt']=$false
+ }
  $limitada=[Data.SqlClient.SqlConnection]::new($cs.ConnectionString)
  try{$limitada.Open();$cmd=$limitada.CreateCommand();$cmd.CommandText='SELECT * FROM dbo.Credito';$negado=$false;try{[void]$cmd.ExecuteScalar()}catch{$negado=$true};Comprobar 'Cuenta API sin lectura directa de tablas' $negado}finally{$limitada.Dispose()}
  $tcp=[Net.Sockets.TcpListener]::new([Net.IPAddress]::Loopback,0);$tcp.Start();$puerto=$tcp.LocalEndpoint.Port;$tcp.Stop();$url="http://127.0.0.1:$puerto"
@@ -150,7 +154,7 @@ try{
    if($inicial){Comprobar 'Registros previos de validación conservados tras retirar solo el ensayo' ((Captura) -ceq $inicial)}
   }
  }catch{$estado='Fallido';throw}finally{
-  $cn.Dispose();[pscustomobject]@{Estado=$estado;Base='MAGISAUTO_ValidacionV2';Fecha=(Get-Date -Format o);Pruebas=$pruebas}|ConvertTo-Json -Depth 8|Set-Content (Join-Path $salida 'resultado.json') -Encoding UTF8
+  $cn.Dispose();[pscustomobject]@{Estado=$estado;Base='MAGISAUTO_ValidacionV2';Fecha=(Get-Date -Format o);ConexionLocalSinCifrado=[bool]$ConexionLocalSinCifrado;Pruebas=$pruebas}|ConvertTo-Json -Depth 8|Set-Content (Join-Path $salida 'resultado.json') -Encoding UTF8
  }
 }
 Write-Output "Créditos: $($pruebas.Count) comprobaciones correctas."

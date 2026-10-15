@@ -20,6 +20,10 @@ Orden recomendado para estudiar el proyecto. Las fases 0 y 1 se reconstruyeron e
 
 ## Decisiones vigentes y evidencias
 
+- [Parámetros y comisión — avance del 15 de octubre](FASE_6_Parametros_y_Comision.md): versiones de configuración y porcentaje pactado por crédito, conservación del historial y pruebas aisladas.
+- [Catálogos auxiliares — avance del 14 de octubre](FASE_6_Catalogos_Auxiliares.md): siete mantenimientos con 242 comprobaciones HTTP/SQL y recorrido manual básico confirmado después por Diego; sin cambios de SQL.
+- [Auditoría inicial de cobertura](AUDITORIA_COBERTURA_2026-10-14.md): fotografía del commit anterior al avance de catálogos auxiliares.
+
 - [Pruebas manuales de Reportes del 13 de octubre](PRUEBAS_MANUALES_REPORTES_2026-10-13.md): 20 consultas, casos límite y capturas originales.
 
 - [Pruebas manuales de Pagos del 13 de octubre](PRUEBAS_MANUALES_PAGOS_2026-10-13.md): recorrido completo, capturas originales, importes conciliados y pendientes.

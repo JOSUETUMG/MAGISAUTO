@@ -1,0 +1,64 @@
+{
+  "Fecha": "2026-10-15T09:47:07.6340234-06:00",
+  "Rama": "pruebas-diego",
+  "CommitBase": "cf6658a58a085c8d35996c208d69ef615840d8b5",
+  "Estado": "Cambios locales sin publicar",
+  "Compilacion": "0 errores y 0 advertencias",
+  "PruebasParametros": 134,
+  "RegresionCreditos": 57,
+  "RevisionVisual": "Pendiente",
+  "Archivos": [
+    {
+      "Archivo": "src/MAGISAUTO.API/Modelos/ParametroCreditoSolicitud.cs",
+      "SHA256": "6D842C20BC70DDB07DFC88BF1A56DBB5BA657310C76A196D003CDE0512374111"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/Datos/ParametroCreditoRepositorio.cs",
+      "SHA256": "551526CA260C1A4C16C66CC18ED31F69767042E02DB28328558DEDD0B97B5C79"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/Controllers/ParametrosCreditoController.cs",
+      "SHA256": "6E642E5C6D7FE43BC3A1037BEFCDF46AE67EAE9A8EAC50428AE0FAD99DEE30A7"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/Modelos/CreditoSolicitud.cs",
+      "SHA256": "805D0C9EC944ACA6AB4CF85760FA4111310EDFC588C439AA0BF34A37302EC116"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/Datos/CreditoRepositorio.cs",
+      "SHA256": "C9CF6FFA1FF75A5EC9A1AE687EC6A61B4D5BAEB303CE9E4282BAB87963CBB03F"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/wwwroot/parametros.html",
+      "SHA256": "4E014DE8E520918B9FB9C37C15AB55BA3098545DE1648C6A08859C6BDB1417C0"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/wwwroot/parametros.js",
+      "SHA256": "6D852D733B9EBCC9F255AE617B5F572A851F43BCC1D0E9FA0A52FC6CABD1304B"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/wwwroot/parametros.css",
+      "SHA256": "2047AC52BFA2D36381C897A31F964E658C4D7D6668642644383AB39B4D548D8E"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/wwwroot/creditos.html",
+      "SHA256": "3EB6425071D46B83114EF03EDD2DCEA1ADB40F10636272F8633CA1F12F6344DE"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/wwwroot/creditos.js",
+      "SHA256": "24351A856A5E6A928CBAAA5FEB6A3FB8F6E325795974A8EE3A4E94197D04F333"
+    },
+    {
+      "Archivo": "src/MAGISAUTO.API/Program.cs",
+      "SHA256": "9FCB52A2D005232AAE0BCA511CBB374B0DDB0174CDCADD7285D8D5D0A19F2F13"
+    },
+    {
+      "Archivo": "scripts/Verificar-ParametrosCredito.ps1",
+      "SHA256": "42F64D60854176687BE4FA61904F34C7C0A7106ECEF02FB3A8EDE04FBE3F0C14"
+    },
+    {
+      "Archivo": "scripts/Verificar-Creditos.ps1",
+      "SHA256": "D62ACF0A2C030C01814A9FA335D32D84AAE4C7DA05D8CB33D855373329F59A7F"
+    }
+  ]
+}

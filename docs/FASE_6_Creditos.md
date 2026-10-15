@@ -99,6 +99,11 @@ Los antiguos 45 ensayos SQL y los archivos `validacion-*.json` del paquete acred
 
 ## Límites y pendientes
 
+Actualización del 15 de octubre: [Parámetros y comisión por crédito](FASE_6_Parametros_y_Comision.md)
+incorpora captura de comisión en borradores, conservación del pacto al editar sin ese campo,
+verificación de la configuración activa vista por la pantalla y nuevos ensayos de historial.
+Los resultados y límites anteriores son evidencia histórica del módulo inicial.
+
 - Diego confirmó manualmente el recorrido principal: alta de borrador, presentación, aprobación, 12 cuotas, persistencia al reabrir, búsquedas por número y cliente y Ver todos. Los demás rechazos y anulaciones cuentan con el ensayo automatizado; no se afirma que todos hayan sido repetidos manualmente.
 - Instalación del parche en `MAGISAUTO_Proyecto_V2` confirmada por la captura de SSMS de Diego y el recorrido de presentación/aprobación en la aplicación.
 - Autenticación/roles del personal no implementados: responsable es un nombre escrito, no una identidad autenticada. Esta es una aplicación académica local.

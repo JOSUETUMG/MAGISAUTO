@@ -1,0 +1,977 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Fecha": "2026-10-14T22:34:17.3849085-06:00",
+  "ConexionLocalSinCifrado": true,
+  "NavegadorSolicitado": false,
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye las 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta API sin SELECT directo de tablas (229)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en Departamento",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en Municipio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en TipoTelefono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en TipoDireccion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en TipoGarantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en TipoReferencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código reservado libre en TipoPago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Metadatos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Siete catálogos públicos sin nombres internos de SP",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /auxiliares.html (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /auxiliares.css (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /auxiliares.js (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página index (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación index a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página lineas (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación lineas a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página agencias (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación agencias a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página vendedores (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación vendedores a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página clientes (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación clientes a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página fiadores (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación fiadores a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página vehiculos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación vehiculos a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página creditos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación creditos a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página pagos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación pagos a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página reportes (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Navegación reportes a auxiliares",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear departamentos (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "departamentos conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear departamentos (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "departamentos conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado departamentos (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar departamentos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio departamentos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar departamentos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar departamentos (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición departamentos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente departamentos (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente departamentos (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía departamentos (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga departamentos (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para departamentos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK departamentos (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear municipios (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "municipios conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado municipios (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar municipios (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio municipios",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar municipios (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar municipios (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición municipios",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente municipios (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente municipios (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía municipios (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga municipios (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para municipios",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK municipios (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear tipos-telefono (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "tipos-telefono conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-telefono (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-telefono sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar tipos-telefono (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio tipos-telefono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar tipos-telefono (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar tipos-telefono (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición tipos-telefono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-telefono (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-telefono sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-telefono (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-telefono sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-telefono (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-telefono sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-telefono (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-telefono sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para tipos-telefono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-telefono (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-telefono sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear tipos-direccion (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "tipos-direccion conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-direccion (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-direccion sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar tipos-direccion (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio tipos-direccion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar tipos-direccion (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar tipos-direccion (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición tipos-direccion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-direccion (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-direccion sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-direccion (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-direccion sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-direccion (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-direccion sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-direccion (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-direccion sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para tipos-direccion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-direccion (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-direccion sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear tipos-garantia (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "tipos-garantia conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-garantia (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-garantia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar tipos-garantia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio tipos-garantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar tipos-garantia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar tipos-garantia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición tipos-garantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-garantia (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-garantia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-garantia (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-garantia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-garantia (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-garantia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-garantia (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-garantia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para tipos-garantia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-garantia (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-garantia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear tipos-referencia (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "tipos-referencia conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-referencia (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-referencia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar tipos-referencia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio tipos-referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar tipos-referencia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar tipos-referencia (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición tipos-referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-referencia (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-referencia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-referencia (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-referencia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-referencia (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-referencia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-referencia (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-referencia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para tipos-referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-referencia (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-referencia sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear tipos-pago (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "tipos-pago conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-pago (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Duplicado tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar tipos-pago (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda devuelve código propio tipos-pago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar tipos-pago (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listar tipos-pago (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persistencia edición tipos-pago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia bancaria true persistida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambiar referencia a false (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "False persistido en SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-pago (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar ausente tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-pago (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar ausente tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-pago (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción vacía tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-pago (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Descripción larga tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe dependencia de ensayo para tipos-pago",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-pago (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Protección FK tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear municipios (HTTP 201)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "municipios conserva código y recorta descripción",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtrar primer departamento (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtrar segundo departamento (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Municipios con mismo código siguen independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar solo segundo municipio (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Municipio del primer departamento conservado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/inexistente (HTTP 404)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/inexistente sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?criterio= (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?criterio= sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?procedimiento=dbo.Persona (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?procedimiento=dbo.Persona sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?criterio=a&criterio=b (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?criterio=a&criterio=b sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?codigoDepartamento=1 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/departamentos?codigoDepartamento=1 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/municipios?codigoDepartamento= (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/municipios?codigoDepartamento= sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/municipios?codigoDepartamento=-1 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/municipios?codigoDepartamento=-1 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/municipios?codigoDepartamento=abc (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación GET /api/catalogos/auxiliares/municipios?codigoDepartamento=abc sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación DELETE /api/catalogos/auxiliares/municipios/867307471 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación DELETE /api/catalogos/auxiliares/municipios/867307471 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/municipios (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/municipios (HTTP 409)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/municipios sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/departamentos sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/tipos-pago (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación POST /api/catalogos/auxiliares/tipos-pago sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación PUT /api/catalogos/auxiliares/departamentos/867307471 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación PUT /api/catalogos/auxiliares/departamentos/867307471 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación PUT /api/catalogos/auxiliares/departamentos/867307471 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación PUT /api/catalogos/auxiliares/departamentos/867307471 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación DELETE /api/catalogos/auxiliares/departamentos/867307471?codigoDepartamento=1 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación DELETE /api/catalogos/auxiliares/departamentos/867307471?codigoDepartamento=1 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación DELETE /api/catalogos/auxiliares/municipios/867307471?codigoDepartamento=867307471&codigoDepartamento=867307472 (HTTP 400)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación DELETE /api/catalogos/auxiliares/municipios/867307471?codigoDepartamento=867307471&codigoDepartamento=867307472 sin detalles internos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda se trata como texto (HTTP 200)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda de texto SQL sin coincidencias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio municipios 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio tipos-telefono 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio tipos-direccion 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio tipos-garantia 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio tipos-referencia 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio tipos-pago 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio departamentos 867307471 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar propio departamentos 867307472 (HTTP 204)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye las 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Las 26 tablas conservan todos sus datos previos",
+      "Resultado": "Correcto"
+    }
+  ]
+}

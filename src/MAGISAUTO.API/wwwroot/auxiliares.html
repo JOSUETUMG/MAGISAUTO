@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogos auxiliares | MAGIS-AUTO</title>
+  <link rel="stylesheet" href="/estilos.css"><link rel="stylesheet" href="/auxiliares.css">
+  <script src="/auxiliares.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="identidad" href="/" aria-label="MAGIS-AUTO, inicio"><span class="emblema" aria-hidden="true">M</span> MAGIS<span class="ligero">AUTO</span></a><span class="entorno">Proyecto académico</span></header>
+  <main>
+    <nav class="catalogos" aria-label="Catálogos"><a href="/">Marcas</a><a href="/lineas.html">Líneas de vehículos</a><a href="/agencias.html">Agencias</a><a href="/vendedores.html">Vendedores</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vehiculos.html">Vehículos</a><a href="/creditos.html">Créditos</a><a href="/pagos.html">Pagos y abonos</a><a href="/reportes.html">Consultas y reportes</a><a href="/auxiliares.html" aria-current="page">Catálogos auxiliares</a></nav>
+    <p class="ruta">ADMINISTRACIÓN <span>/</span> CATÁLOGOS AUXILIARES</p>
+    <div class="encabezado"><div><h1>Catálogos auxiliares</h1><p>Administra las ubicaciones y los tipos utilizados en los expedientes y pagos.</p></div><button id="nuevo" class="primario" type="button" disabled>Agregar registro</button></div>
+    <p><a href="/parametros.html">Administrar parámetros del crédito</a></p>
+    <div id="aviso" class="aviso" role="status" hidden></div>
+    <section class="panel" aria-labelledby="titulo-catalogo">
+      <div class="selector-catalogo"><label for="catalogo">Catálogo</label><select id="catalogo" disabled><option>Cargando catálogos…</option></select><p id="ayuda-catalogo"></p><button id="reintentar" class="secundario" type="button" hidden>Reintentar conexión</button></div>
+      <form id="busqueda" class="busqueda">
+        <div id="campo-filtro-departamento" class="campo-marca" hidden><label for="filtro-departamento">Departamento</label><select id="filtro-departamento"><option value="">Todos los departamentos</option></select></div>
+        <div class="campo-busqueda"><label for="criterio">Buscar por código o descripción</label><input id="criterio" maxlength="200" placeholder="Escribe un código o parte de la descripción" autocomplete="off"></div>
+        <button id="buscar" class="primario" type="submit" disabled>Buscar</button><button id="todos" class="secundario" type="button" disabled>Ver todos</button>
+      </form>
+      <div class="resumen"><h2 id="titulo-catalogo">Registros</h2><span id="contador">Cargando…</span></div>
+      <div id="resultados" class="tabla-contenedor" aria-busy="true"><table><thead><tr><th>Código</th><th id="th-departamento" hidden>Departamento</th><th>Descripción</th><th id="th-referencia" hidden>Referencia bancaria obligatoria</th><th class="acciones-titulo">Acciones</th></tr></thead><tbody id="filas"></tbody></table><p id="vacio" class="vacio" role="status">Cargando registros…</p></div>
+      <p class="nota">Los códigos se capturan al agregar y se conservan al editar. Los registros relacionados con otros datos no se pueden eliminar.</p>
+    </section>
+    <footer>MAGIS-AUTO · Administración de catálogos</footer>
+  </main>
+  <dialog id="editor" aria-labelledby="titulo-editor"><form id="formulario">
+    <p class="etiqueta" id="catalogo-editor"></p><h2 id="titulo-editor">Agregar registro</h2>
+    <div id="error-editor" class="aviso error" role="alert" hidden></div>
+    <fieldset id="campos">
+      <div id="campo-departamento" hidden><label for="departamento">Departamento (obligatorio)</label><select id="departamento"></select></div>
+      <label for="codigo">Código (obligatorio)</label><input id="codigo" type="number" min="1" max="2147483647" step="1" required aria-describedby="ayuda-codigo"><small id="ayuda-codigo">Escribe un código entero positivo disponible en este catálogo.</small>
+      <label for="descripcion">Descripción (obligatoria)</label><input id="descripcion" maxlength="128" required autocomplete="off">
+      <div id="campo-referencia" hidden><label for="requiere-referencia">¿Exige referencia bancaria?</label><select id="requiere-referencia"><option value="">Selecciona una opción</option><option value="true">Sí</option><option value="false">No</option></select><small>Esta opción se aplica a los próximos pagos. No modifica los recibos ya registrados.</small></div>
+    </fieldset>
+    <div class="botones-dialogo"><button id="cancelar" type="button" class="secundario">Cancelar</button><button id="guardar" type="submit" class="primario">Guardar registro</button></div>
+  </form></dialog>
+  <dialog id="confirmacion" aria-labelledby="titulo-eliminar"><h2 id="titulo-eliminar">¿Eliminar este registro?</h2><p id="detalle-eliminar"></p><p>Si está relacionado con otros datos, se conservará y se mostrará el motivo.</p><div id="error-eliminar" class="aviso error" role="alert" hidden></div><div class="botones-dialogo"><button id="conservar" type="button" class="secundario">Conservar registro</button><button id="eliminar" type="button" class="peligro">Eliminar registro</button></div></dialog>
+</body>
+</html>
