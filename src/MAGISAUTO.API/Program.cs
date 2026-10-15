@@ -23,6 +23,7 @@ builder.Services.AddScoped<IVendedorRepositorio, VendedorRepositorio>();
 builder.Services.AddScoped<ClienteRepositorio>();
 builder.Services.AddScoped<FiadorRepositorio>();
 builder.Services.AddScoped<VehiculoRepositorio>();
+builder.Services.AddScoped<ValoracionRepositorio>();
 builder.Services.AddScoped<CreditoRepositorio>();
 builder.Services.AddScoped<PagoRepositorio>();
 builder.Services.AddScoped<ReporteRepositorio>();

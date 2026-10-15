@@ -21,6 +21,7 @@ Orden recomendado para estudiar el proyecto. Las fases 0 y 1 se reconstruyeron e
 ## Decisiones vigentes y evidencias
 
 - [Parámetros y comisión — avance del 15 de octubre](FASE_6_Parametros_y_Comision.md): versiones de configuración y porcentaje pactado por crédito, conservación del historial y pruebas aisladas.
+- [Valoraciones de vehículos — avance del 15 de octubre](FASE_6_Valoraciones.md): historial, registro posterior y protección contractual, pruebas aisladas y recorrido manual confirmado por Diego.
 - [Catálogos auxiliares — avance del 14 de octubre](FASE_6_Catalogos_Auxiliares.md): siete mantenimientos con 242 comprobaciones HTTP/SQL y recorrido manual básico confirmado después por Diego; sin cambios de SQL.
 - [Auditoría inicial de cobertura](AUDITORIA_COBERTURA_2026-10-14.md): fotografía del commit anterior al avance de catálogos auxiliares.
 

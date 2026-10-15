@@ -2,7 +2,7 @@
 const $ = id => document.getElementById(id);
 const api = "/api/vehiculos";
 let catalogos, editando = null, seleccionado = null, guardando = false, borrando = false;
-let carga = 0, apertura = 0;
+let carga = 0, apertura = 0, vehiculoValoraciones = null, edicionValoracion = null, cargandoValoraciones = 0, guardandoValoracion = false;
 function mensaje(id, texto, error = false) { $(id).textContent = texto; $(id).hidden = !texto; $(id).classList.toggle("error", error); }
 async function solicitar(url, opciones = {}) {
   let r;
@@ -17,6 +17,8 @@ function dinero(valor) {
   const [entero, centavos = ""] = String(valor).split(".");
   return `Q${entero.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.${centavos.padEnd(2, "0")}`;
 }
+function porcentaje(valor) { return `${Number(valor)}%`; }
+function fecha(valor) { const [a, m, d] = String(valor).slice(0, 10).split("-"); return a && m && d ? `${d}/${m}/${a}` : "Sin fecha"; }
 function opciones(id, lista, clave, encabezado) {
   $(id).replaceChildren(new Option(encabezado, ""));
   for (const item of lista) $(id).append(new Option(item.descripcion, item[clave]));
@@ -49,7 +51,7 @@ async function cargar() {
       if (v.tieneHistorialContractual) detalle.append(texto("small", "Historial contractual · datos protegidos"));
       fila.append(detalle, texto("td", v.vin), texto("td", dinero(v.valorAgencia)), texto("td", v.placa || "Sin placa"));
       const celda = document.createElement("td"), acciones = document.createElement("div"); acciones.className = "acciones";
-      for (const [nombre, clase, accion] of [[v.tieneHistorialContractual ? "Ver datos" : "Editar", "editar-fila", () => abrir(v.codigoGarantia)], ["Eliminar", "eliminar-fila", () => eliminar(v)]]) {
+      for (const [nombre, clase, accion] of [[v.tieneHistorialContractual ? "Ver datos" : "Editar", "editar-fila", () => abrir(v.codigoGarantia)], [`Valoraciones (${v.valoracionesRegistradas})`, "secundario", () => abrirValoraciones(v)], ["Eliminar", "eliminar-fila", () => eliminar(v)]]) {
         const b = texto("button", nombre); b.type = "button"; b.className = clase; b.setAttribute("aria-label", `${nombre} vehículo ${v.codigoGarantia}`); b.addEventListener("click", accion); acciones.append(b);
       }
       celda.append(acciones); fila.append(celda); $("filas").append(fila);
@@ -58,6 +60,55 @@ async function cargar() {
     $("vacio").hidden = vehiculos.length > 0; $("vacio").textContent = "No hay vehículos que coincidan. Puedes agregar uno o cambiar la búsqueda.";
   } catch (e) { if (turno === carga) { mensaje("aviso", e.message, true); $("contador").textContent = "Sin conexión"; $("vacio").textContent = "No se pudo cargar el inventario. Pulsa Ver todos para reintentar."; } }
   finally { if (turno === carga) $("resultados").setAttribute("aria-busy", "false"); }
+}
+async function cargarValoraciones() {
+  if (!vehiculoValoraciones) return;
+  const turno = ++cargandoValoraciones; $("resultado-valoraciones").setAttribute("aria-busy", "true"); $("filas-valoraciones").replaceChildren();
+  $("vacio-valoraciones").hidden = false; $("vacio-valoraciones").textContent = "Cargando valoraciones…";
+  try {
+    const filtro = new URLSearchParams({ codigoGarantia: vehiculoValoraciones.codigoGarantia });
+    if ($("criterio-valoracion").value.trim()) filtro.set("criterio", $("criterio-valoracion").value.trim());
+    const valoraciones = await solicitar(`/api/valoraciones?${filtro}`);
+    if (turno !== cargandoValoraciones || !$("historial-valoraciones").open) return;
+    for (const v of valoraciones) {
+      const fila = document.createElement("tr");
+      fila.append(texto("td", fecha(v.fechaValoracion)), texto("td", dinero(v.valorOriginal)), texto("td", porcentaje(v.porcentaje)), texto("td", dinero(v.valorDepreciado)), texto("td", v.observacion));
+      const celda = document.createElement("td"), acciones = document.createElement("div"); acciones.className = "acciones";
+      if (v.protegidaPorContrato) acciones.append(texto("small", "Historial protegido"));
+      else {
+        for (const [nombre, clase, accion] of [["Editar", "editar-fila", () => abrirEditorValoracion(v)], ["Eliminar", "eliminar-fila", () => eliminarValoracion(v)]]) {
+          const b = texto("button", nombre); b.type = "button"; b.className = clase; b.addEventListener("click", accion); acciones.append(b);
+        }
+      }
+      celda.append(acciones); fila.append(celda); $("filas-valoraciones").append(fila);
+    }
+    $("vacio-valoraciones").hidden = valoraciones.length > 0; $("vacio-valoraciones").textContent = "No hay valoraciones para estos filtros.";
+  } catch (e) { if (turno === cargandoValoraciones) { mensaje("aviso-valoraciones", e.message, true); $("vacio-valoraciones").textContent = "No se pudo cargar el historial."; } }
+  finally { if (turno === cargandoValoraciones) $("resultado-valoraciones").setAttribute("aria-busy", "false"); }
+}
+function abrirValoraciones(vehiculo) {
+  vehiculoValoraciones = vehiculo; $("criterio-valoracion").value = ""; mensaje("aviso-valoraciones", "");
+  $("titulo-valoraciones").textContent = `Valoraciones del vehículo ${vehiculo.codigoGarantia}`;
+  $("detalle-valoraciones").textContent = `${vehiculo.marca} · ${vehiculo.linea} · VIN ${vehiculo.vin}`;
+  $("nueva-valoracion").disabled = !vehiculo.tieneHistorialContractual;
+  if (!vehiculo.tieneHistorialContractual) mensaje("aviso-valoraciones", "La valoración inicial se genera al aprobar el crédito. Aún no hay un contrato aprobado para este vehículo.");
+  $("historial-valoraciones").showModal(); cargarValoraciones();
+}
+function abrirEditorValoracion(valoracion = null) {
+  edicionValoracion = valoracion; $("formulario-valoracion").reset(); mensaje("error-valoracion", "");
+  $("valoracion-garantia").value = valoracion?.codigoGarantia ?? vehiculoValoraciones.codigoGarantia;
+  $("fecha-valoracion").value = valoracion?.fechaValoracion?.slice(0, 10) ?? "";
+  $("valor-original").value = valoracion?.valorOriginal ?? ""; $("porcentaje-valoracion").value = valoracion?.porcentaje ?? "";
+  $("observacion-valoracion").value = valoracion?.observacion ?? "";
+  $("titulo-editor-valoracion").textContent = valoracion ? "Editar valoración" : "Registrar valoración";
+  $("guardar-valoracion").textContent = valoracion ? "Guardar cambios" : "Guardar valoración";
+  $("editor-valoracion").showModal(); $("fecha-valoracion").focus();
+}
+async function eliminarValoracion(valoracion) {
+  if (!window.confirm(`¿Eliminar la valoración del ${fecha(valoracion.fechaValoracion)}?`)) return;
+  mensaje("aviso-valoraciones", "");
+  try { await solicitar(`/api/valoraciones/${valoracion.codigoDepreciacion}`, { method: "DELETE" }); mensaje("aviso-valoraciones", "Valoración eliminada correctamente."); await cargarValoraciones(); await cargar(); }
+  catch (e) { mensaje("aviso-valoraciones", e.message, true); }
 }
 async function abrir(codigo = null) {
   const turno = ++apertura; editando = null; $("formulario").reset(); mensaje("error-editor", "");
@@ -107,6 +158,24 @@ $("editor").addEventListener("cancel", e => { if (guardando) e.preventDefault();
 $("confirmacion").addEventListener("cancel", e => { if (borrando) e.preventDefault(); });
 $("cancelar").addEventListener("click", () => { ++apertura; $("editor").close(); });
 $("conservar").addEventListener("click", () => $("confirmacion").close());
+$("busqueda-valoraciones").addEventListener("submit", e => { e.preventDefault(); mensaje("aviso-valoraciones", ""); cargarValoraciones(); });
+$("todas-valoraciones").addEventListener("click", () => { $("criterio-valoracion").value = ""; mensaje("aviso-valoraciones", ""); cargarValoraciones(); });
+$("nueva-valoracion").addEventListener("click", () => abrirEditorValoracion());
+$("cerrar-valoraciones").addEventListener("click", () => { ++cargandoValoraciones; $("historial-valoraciones").close(); });
+$("formulario-valoracion").addEventListener("submit", async e => {
+  e.preventDefault(); if (guardandoValoracion) return;
+  const datos = { codigoGarantia: Number($("valoracion-garantia").value), fechaValoracion: $("fecha-valoracion").value, valorOriginal: $("valor-original").value.trim(), porcentaje: $("porcentaje-valoracion").value.trim(), observacion: $("observacion-valoracion").value.trim() };
+  guardandoValoracion = true; $("campos-valoracion").disabled = $("guardar-valoracion").disabled = $("cancelar-valoracion").disabled = true; mensaje("error-valoracion", "");
+  try {
+    const url = edicionValoracion ? `/api/valoraciones/${edicionValoracion.codigoDepreciacion}` : "/api/valoraciones";
+    await solicitar(url, { method: edicionValoracion ? "PUT" : "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(datos) });
+    $("editor-valoracion").close(); mensaje("aviso-valoraciones", edicionValoracion ? "Valoración actualizada correctamente." : "Valoración registrada correctamente."); await cargarValoraciones(); await cargar();
+  } catch (error) { mensaje("error-valoracion", error.message, true); }
+  finally { guardandoValoracion = false; $("campos-valoracion").disabled = $("guardar-valoracion").disabled = $("cancelar-valoracion").disabled = false; }
+});
+$("cancelar-valoracion").addEventListener("click", () => $("editor-valoracion").close());
+$("editor-valoracion").addEventListener("cancel", e => { if (guardandoValoracion) e.preventDefault(); });
+$("historial-valoraciones").addEventListener("cancel", () => { ++cargandoValoraciones; });
 $("nuevo").addEventListener("click", () => abrir());
 $("busqueda").addEventListener("submit", e => { e.preventDefault(); mensaje("aviso", ""); cargar(); });
 $("todos").addEventListener("click", () => { $("criterio").value = $("filtro-marca").value = ""; mensaje("aviso", ""); cargarMarcas().catch(e => mensaje("aviso", e.message, true)); cargar(); });

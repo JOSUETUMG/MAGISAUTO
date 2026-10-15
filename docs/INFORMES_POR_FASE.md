@@ -66,3 +66,11 @@ El manejo mensual sigue fijo en Q25. Se reutilizan SP existentes, sin nuevos arc
 Compilación sin errores ni advertencias; **134 pruebas nuevas y 57 de regresión de Créditos**
 correctas. La base aislada conservó sus registros anteriores. La revisión visual del nuevo bloque
 queda pendiente; sus cambios siguen locales y la fase 6 continúa abierta.
+
+## Actualización de Parámetros y avance de Valoraciones — 15 de octubre de 2026
+
+Diego completó después el recorrido manual de Parámetros: consulta, copia, edición persistente, validación de enganche, cancelación y confirmación de activación, comisión propia del crédito, protección por uso, limpieza, búsqueda y ventana estrecha. Catálogos y Parámetros fueron publicados en `pruebas-diego`, commit `b4eb4f0`; las notas anteriores describen su estado histórico.
+
+[Valoraciones](FASE_6_Valoraciones.md) incorpora historial por vehículo, búsquedas y registro posterior con protección contractual. **42 comprobaciones HTTP/SQL correctas** en `MAGISAUTO_ValidacionV2`, comparación del crédito completo y de los reportes 16/17, y limpieza verificada de las 26 tablas. Compilación sin errores ni advertencias; evidencia en `evidencias/fase-6-valoraciones.json`.
+
+Diego confirmó las once pruebas manuales y aportó capturas de los reportes. La valoración académica de Q72,250 permanece en su base, protegida por el contrato. El informe distingue esta evidencia de las pruebas automáticas, del alcance limitado del rango SQL 15–20% para seguimientos y de una prueba en móvil real. Valoraciones queda preparado localmente para publicación. La fase 6 continúa abierta: faltan revisar las demás brechas de cobertura y completar la integración documental del equipo.
