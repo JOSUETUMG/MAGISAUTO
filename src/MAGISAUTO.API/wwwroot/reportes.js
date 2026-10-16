@@ -1,7 +1,7 @@
 'use strict';
 (() => {
   const $ = id => document.getElementById(id);
-  let definiciones = [], hoy = '', catalogos = null, catalogosCargando = false, version = 0, controlador = null;
+  let definiciones = [], hoy = '', catalogos = null, catalogosCargando = false, version = 0, controlador = null, secuenciaDetalle = 0;
   const etiquetas = {
     NumeroCredito: 'Crédito', CodigoDeudor: 'Código de cliente', CodigoVendedor: 'Código de vendedor', CodigoEmpleado: 'Código de empleado',
     CodigoPago: 'Código de pago', CodigoTipoPago: 'Código del medio', CodigoFiador: 'Código de fiador', CodigoAgencia: 'Código de agencia',
@@ -87,6 +87,86 @@
     $('carta-dialogo').showModal();
     $('carta-dialogo').addEventListener('close', () => { document.body.classList.remove('imprimir-carta'); boton.focus(); }, { once: true });
   }
+  function botonAccion(texto, accion) {
+    const b = nodo('button', texto, 'secundario'); b.type = 'button'; b.addEventListener('click', () => accion(b)); return b;
+  }
+  function ventana(titulo, origen) {
+    const d = nodo('dialog', undefined, 'detalle-reporte'), h = nodo('h2', titulo), cuerpo = nodo('div');
+    h.id = 'detalle-' + (++secuenciaDetalle); d.setAttribute('aria-labelledby', h.id);
+    const pie = nodo('div', undefined, 'botones-dialogo');
+    const cerrar = botonAccion('Cerrar y volver', () => d.close()); cerrar.id = 'cerrar-' + h.id;
+    pie.append(cerrar); d.append(h, cuerpo, pie); document.body.append(d);
+    const ctrl = new AbortController();
+    d.addEventListener('close', () => { ctrl.abort(); d.remove(); if (origen?.isConnected) origen.focus(); }, { once:true });
+    d.showModal(); return { d, cuerpo, signal:ctrl.signal };
+  }
+  function ficha(fila, tabla, origen) {
+    const v = ventana('Detalle del registro', origen), dl = nodo('dl', undefined, 'ficha-reporte');
+    for (const c of tabla.columnas) dl.append(nodo('dt', tituloColumna(c.nombre)), nodo('dd', FormatoReportes.celda(fila[c.nombre], c)));
+    v.cuerpo.append(dl);
+  }
+  async function verPlan(numero, corte, origen) {
+    const v = ventana('Plan del crédito ' + numero, origen); v.cuerpo.append(nodo('p', 'Cargando plan…', 'aviso'));
+    try {
+      const data = await leer('/api/reportes/7?' + new URLSearchParams({ numeroCredito:numero, fechaCorte:corte }), v.signal);
+      if (!v.d.open) return;
+      v.cuerpo.replaceChildren(nodo('p', 'Fecha de corte: ' + corte, 'aclaracion'), nodo('p', data.nota));
+      for (const t of data.tablas) v.cuerpo.append(tablaResultado(t, data));
+      const a = nodo('a', 'Ver pagos actuales de este crédito →', 'regreso'); a.href = '/pagos.html?credito=' + encodeURIComponent(numero); v.cuerpo.append(a);
+    } catch(e) { if (e.name !== 'AbortError' && v.d.open) v.cuerpo.replaceChildren(nodo('p', e.message, 'aviso error')); }
+  }
+  async function verRango(fila, data, origen) {
+    const rangos = {'01-30':[1,30], '31-60':[31,60], '61-90':[61,90], '91 o mas':[91,Infinity]};
+    const rango = rangos[fila.Rango]; if (!rango) return;
+    const v = ventana('Créditos con mora de ' + fila.Rango + ' días', origen); v.cuerpo.append(nodo('p', 'Cargando créditos…', 'aviso'));
+    try {
+      const detalle = await leer('/api/reportes/2?' + new URLSearchParams({ fechaCorte:data.filtros.fechaCorte, diasMinimos:rango[0] }), v.signal);
+      if (!v.d.open) return;
+      const t = detalle.tablas[0]; t.filas = t.filas.filter(f => Number(f.DiasMora) >= rango[0] && Number(f.DiasMora) <= rango[1]);
+      t.titulo = 'Créditos del rango';
+      v.cuerpo.replaceChildren(nodo('p', `Corte: ${data.filtros.fechaCorte}. ${t.filas.length} crédito(s). Clasificados por su cuota pendiente más antigua.`, 'aclaracion'));
+      if (t.filas.length !== Number(fila.Creditos)) v.cuerpo.append(nodo('p', 'La cantidad cambió desde la consulta inicial. Cierra y vuelve a consultar el reporte para actualizar el resumen.', 'aviso'));
+      v.cuerpo.append(tablaResultado(t, detalle));
+    } catch(e) { if (e.name !== 'AbortError' && v.d.open) v.cuerpo.replaceChildren(nodo('p', e.message, 'aviso error')); }
+  }
+  function acciones(fila, t, data) {
+    const salida = [];
+    if (data.id === 5) salida.push(botonAccion('Ver carta', b => abrirCarta(fila, data, b)));
+    if (data.id === 15) salida.push(botonAccion('Ver créditos del rango', b => verRango(fila, data, b)));
+    if (fila.NumeroCredito && [1,2,6,9,10,11,12,16,17,18,20].includes(data.id))
+      salida.push(botonAccion('Ver plan', b => verPlan(fila.NumeroCredito, data.filtros.fechaCorte || data.filtros.hasta, b)));
+    if (t.columnas.length >= 8 && data.id !== 5) salida.push(botonAccion('Leer registro', b => ficha(fila, t, b)));
+    return salida;
+  }
+  function exportar(t, data) {
+    // Las celdas de texto no pueden convertirse en fórmulas al abrir el CSV.
+    const celda = valor => { let s = String(valor ?? ''); if (/^[\s]*[=+@-]/.test(s)) s = "'" + s; return '"' + s.replaceAll('"','""') + '"'; };
+    const lineas = [t.columnas.map(c => celda(tituloColumna(c.nombre))).join(',')];
+    for (const f of t.filas) lineas.push(t.columnas.map(c => celda(f[c.nombre])).join(','));
+    const url = URL.createObjectURL(new Blob(['\uFEFF' + lineas.join('\r\n')], {type:'text/csv;charset=utf-8'}));
+    const contexto = Object.values(data.filtros).join('-').replace(/[^a-z0-9-]/gi,'-');
+    const a = nodo('a'); a.href = url; a.download = `MAGISAUTO-reporte-${data.id}-${contexto}-${t.titulo.replace(/[^a-z0-9]/gi,'-')}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  function tablaResultado(t, data) {
+    const seccion = nodo('section', undefined, 'panel resultado-tabla'), resumen = nodo('div', undefined, 'resumen');
+    resumen.append(nodo('h3', t.titulo), nodo('span', `${t.filas.length} fila(s)`));
+    if (t.filas.length) resumen.append(botonAccion('Exportar CSV', () => exportar(t, data)));
+    seccion.append(resumen);
+    if (!t.filas.length) { seccion.append(nodo('p', 'No hay resultados para estos filtros.', 'vacio')); return seccion; }
+    const cont = nodo('div', undefined, 'tabla-contenedor'); cont.tabIndex = 0; cont.setAttribute('role','region'); cont.setAttribute('aria-label',t.titulo + '. Desplaza para ver las columnas.');
+    const tabla = nodo('table'), thead = nodo('thead'), tr = nodo('tr');
+    for (const c of t.columnas) { const th = nodo('th',tituloColumna(c.nombre),c.tipo === 'decimal' ? 'numero' : ''); th.scope='col'; tr.append(th); }
+    const tieneAcciones = t.filas.some(f => acciones(f,t,data).length > 0);
+    if (tieneAcciones) { const th = nodo('th','Acciones','columna-acciones'); th.scope='col'; tr.append(th); }
+    thead.append(tr); tabla.append(thead); const tbody=nodo('tbody');
+    for (const fila of t.filas) {
+      const row=nodo('tr');
+      for (const c of t.columnas) row.append(nodo('td',FormatoReportes.celda(fila[c.nombre],c), ['decimal','entero'].includes(c.tipo)?'numero':c.tipo==='texto'?(/Observacion|Motivo|Carta|Direccion/.test(c.nombre)?'texto-largo':'texto-corto'):''));
+      if (tieneAcciones) { const td=nodo('td',undefined,'columna-acciones'), grupo=nodo('div',undefined,'acciones-reporte'); grupo.append(...acciones(fila,t,data)); td.append(grupo); row.append(td); }
+      tbody.append(row);
+    }
+    tabla.append(tbody);cont.append(tabla);seccion.append(cont,nodo('p','Desplaza horizontalmente para ver todas las columnas. «Sin dato» no equivale a cero.','nota')); return seccion;
+  }
   function mostrar(data, r) {
     const panel = $('resultados'); panel.replaceChildren();
     const cab = nodo('div', undefined, 'encabezado-resultados'); cab.append(nodo('h2', data.titulo));
@@ -97,33 +177,10 @@
     }).join(' · ')));
     cab.append(nodo('p', `Consultado: ${data.consultadoEnGuatemala} · Guatemala`));
     cab.append(nodo('p', data.nota, 'aclaracion')); panel.append(cab);
-    for (const t of data.tablas) {
-      const seccion = nodo('section', undefined, 'panel resultado-tabla'), resumen = nodo('div', undefined, 'resumen');
-      resumen.append(nodo('h3', t.titulo), nodo('span', `${t.filas.length} fila(s)`)); seccion.append(resumen);
-      if (!t.filas.length) seccion.append(nodo('p', 'No hay resultados para estos filtros.', 'vacio'));
-      else {
-        const cont = nodo('div', undefined, 'tabla-contenedor'); cont.tabIndex = 0; cont.setAttribute('role', 'region'); cont.setAttribute('aria-label', t.titulo + '. Desplázate horizontalmente para ver todas las columnas.');
-        const tabla = nodo('table'), thead = nodo('thead'), tr = nodo('tr');
-        for (const c of t.columnas) { const th = nodo('th', tituloColumna(c.nombre), c.tipo === 'decimal' ? 'numero' : ''); th.scope = 'col'; tr.append(th); }
-        if (data.id === 5) { const th = nodo('th', 'Carta'); th.scope = 'col'; tr.append(th); }
-        thead.append(tr); tabla.append(thead); const tbody = nodo('tbody');
-        for (const fila of t.filas) {
-          const row = nodo('tr');
-          for (const c of t.columnas) {
-            const clase = c.tipo === 'decimal' || c.tipo === 'entero' ? 'numero' : c.tipo === 'texto' ? 'texto-largo' : '';
-            row.append(nodo('td', FormatoReportes.celda(fila[c.nombre], c), clase));
-          }
-          if (data.id === 5) {
-            const td = nodo('td'), b = nodo('button', 'Ver carta', 'secundario'); b.type = 'button';
-            b.addEventListener('click', () => abrirCarta(fila, data, b)); td.append(b); row.append(td);
-          }
-          tbody.append(row);
-        }
-        tabla.append(tbody); cont.append(tabla); seccion.append(cont);
-        seccion.append(nodo('p', 'Desplázate horizontalmente para ver todas las columnas. «Sin dato» no equivale a cero.', 'nota'));
-      }
-      panel.append(seccion);
-    }
+    const herramientas = nodo('div', undefined, 'herramientas-reporte');
+    herramientas.append(botonAccion('Volver a filtros', () => { $('consulta').scrollIntoView({behavior:'smooth'}); $('reporte').focus(); }), botonAccion('Imprimir reporte', () => { document.body.classList.add('imprimir-reporte'); window.print(); }));
+    panel.append(herramientas);
+    for (const t of data.tablas) panel.append(tablaResultado(t, data));
     panel.hidden = false; $('inicio').hidden = true;
   }
   $('consulta').addEventListener('submit', async e => {
@@ -142,7 +199,7 @@
   $('reintentar').addEventListener('click', cargarCatalogos);
   $('cerrar-carta').addEventListener('click', () => $('carta-dialogo').close());
   $('imprimir-carta').addEventListener('click', () => { document.body.classList.add('imprimir-carta'); window.print(); });
-  window.addEventListener('afterprint', () => document.body.classList.remove('imprimir-carta'));
+  window.addEventListener('afterprint', () => document.body.classList.remove('imprimir-carta', 'imprimir-reporte'));
   async function iniciar() {
     try {
       const data = await leer('/api/reportes'); definiciones = data.reportes; hoy = data.fechaGuatemala;

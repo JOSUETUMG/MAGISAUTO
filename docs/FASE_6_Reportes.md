@@ -4,6 +4,15 @@ Implementación del 13 de octubre de 2026 en `pruebas-diego`. La fase 6 continú
 
 ## Requisitos y alcance
 
+Actualización del 16 de octubre: [Diseño y acciones de las 20 consultas](FASE_6_Diseno_y_Acciones_Reportes.md)
+implementa el detalle de mora, consulta de plan, lectura ampliada, CSV y navegación común.
+No confundir pruebas DOM correctas con aprobación visual: el recorrido final sigue pendiente.
+
+Nota del 15 de octubre: los pendientes generales antiguos de catálogos, parámetros y entidades
+integradas deben leerse con el [estado consolidado C05/C06](FASE_6_Cierre_C05_C06.md).
+No se reabren por aparecer en este informe histórico. Los pendientes visuales específicos de
+Reportes siguen identificados por separado.
+
 Se contrastó el PDF original «Base de Datos I Proyecto final I.pdf», apartado «Módulo de consultas», página impresa 3 (cuarta página física). Pide al menos 20 consultas financieras, explicación de su utilidad y las consultas de todos los catálogos. Enumera como ejemplos créditos por período, mora, pagos por medio, ventas por vendedor, cumpleaños con carta, estado de cuenta y plan de pagos. Todas las operaciones SQL deben pasar por procedimientos almacenados llamados desde la API.
 
 Se integran los **20 procedimientos de reporte existentes** de SQL 2.1. Los siete ejemplos del PDF quedan accesibles en la nueva pantalla. La revisión de Listar/Buscar y CRUD de todas las demás entidades y catálogos es un pendiente separado: disponer de 20 reportes no certifica por sí solo el cumplimiento integral del PDF.

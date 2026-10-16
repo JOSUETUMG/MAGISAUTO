@@ -1,0 +1,798 @@
+{
+  "Estado": "Correcto",
+  "Tipo": "DOM sin renderizado visual",
+  "Pruebas": [
+    {
+      "Prueba": "agencias.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "agencias.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "auxiliares.html: acceso en tarjeta",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "clientes.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "consultas-integradas.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "consultas-integradas.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "consultas-integradas.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "consultas-integradas.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "consultas-integradas.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "creditos.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "index.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "lineas.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre superior recibo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre reutiliza control recibo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre respeta guardado recibo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre superior accion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre reutiliza control accion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "pagos.html: cierre respeta guardado accion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "parametros.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: cierre superior carta-dialogo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: cierre reutiliza control carta-dialogo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: cierre respeta guardado carta-dialogo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "reportes.html: acceso en tarjeta",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre superior historial-valoraciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre reutiliza control historial-valoraciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre respeta guardado historial-valoraciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre superior editor-valoracion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre reutiliza control editor-valoracion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vehiculos.html: cierre respeta guardado editor-valoracion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cuatro grupos y acceso a reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: trece destinos y página actual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: recursos de identidad cargados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: un menú abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: Escape devuelve foco al menú",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cierre superior editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cierre reutiliza control editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cierre respeta guardado editor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cierre superior confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cierre reutiliza control confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vendedores.html: cierre respeta guardado confirmacion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 1: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 1: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 2: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 2: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 3: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 3: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 4: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 4: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 5: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 5: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 6: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 6: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 7: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 7: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 8: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 8: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 9: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 9: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 10: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 10: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 11: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 11: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 12: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 12: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 13: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 13: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 14: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 14: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 15: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 15: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 18: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 18: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 19: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 19: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 20: resultado real HTTP representado (Consulta completada.)",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 20: volver e imprimir disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Mora: acción solo en filas de rango",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rango 01-30: dos límites correctos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "CSV del rango 01-30: solo dos créditos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Plan conserva crédito y fecha de corte",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cerrar plan conserva rango abierto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cerrar rango devuelve foco",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rango 31-60: dos límites correctos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "CSV del rango 31-60: solo dos créditos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cerrar rango devuelve foco",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rango 61-90: dos límites correctos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "CSV del rango 61-90: solo dos créditos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cerrar rango devuelve foco",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rango 91 o mas: dos límites correctos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "CSV del rango 91 o mas: solo dos créditos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cerrar rango devuelve foco",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Respuesta tardía descartada",
+      "Resultado": "Correcto"
+    }
+  ]
+}

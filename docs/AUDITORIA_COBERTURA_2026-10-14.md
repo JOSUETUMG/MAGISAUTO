@@ -1,5 +1,9 @@
 # Revisión de cobertura por entidad — 14 de octubre de 2026
 
+Actualización del 15 de octubre: consultar el [cierre C05/C06](FASE_6_Cierre_C05_C06.md)
+para el alcance implementado, confirmaciones manuales y matriz financiera. Este informe
+conserva su diagnóstico histórico; sus pendientes no deben contarse de nuevo sin ese complemento.
+
 Nota posterior: esta auditoría describe el commit base, antes de implementar los siete
 catálogos. El [avance posterior y sus pruebas](FASE_6_Catalogos_Auxiliares.md) se documentan
 por separado para conservar el alcance histórico de esta revisión.

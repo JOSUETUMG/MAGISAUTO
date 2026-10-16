@@ -20,6 +20,12 @@ Orden recomendado para estudiar el proyecto. Las fases 0 y 1 se reconstruyeron e
 
 ## Decisiones vigentes y evidencias
 
+- [Diseño común y acciones de las 20 consultas](FASE_6_Diseno_y_Acciones_Reportes.md): menú agrupado, paleta del logo, cierres, detalle de mora y plan; 134 pruebas HTTP/SQL y 198 DOM, revisión visual real pendiente.
+
+- [Cierre del bloque C05/C06 y pendientes acotados](FASE_6_Cierre_C05_C06.md): pruebas manuales confirmadas, matriz de entidades y operaciones financieras, ensayo de bloqueos SQL e impacto para el equipo.
+
+- [Consultas de personas y vínculos](FASE_6_Consultas_Integradas.md): seis consultas y eliminación controlada, recorrido manual confirmado; 86 comprobaciones automáticas; sin cambios SQL.
+
 - [Parámetros y comisión — avance del 15 de octubre](FASE_6_Parametros_y_Comision.md): versiones de configuración y porcentaje pactado por crédito, conservación del historial y pruebas aisladas.
 - [Valoraciones de vehículos — avance del 15 de octubre](FASE_6_Valoraciones.md): historial, registro posterior y protección contractual, pruebas aisladas y recorrido manual confirmado por Diego.
 - [Catálogos auxiliares — avance del 14 de octubre](FASE_6_Catalogos_Auxiliares.md): siete mantenimientos con 242 comprobaciones HTTP/SQL y recorrido manual básico confirmado después por Diego; sin cambios de SQL.

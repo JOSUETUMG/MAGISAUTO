@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personas y vínculos | MAGIS-AUTO</title>
+<link rel="stylesheet" href="/estilos.css"><link rel="stylesheet" href="/consultas-integradas.css">
+<script src="/consultas-integradas.js" defer></script>
+<link rel="stylesheet" href="/identidad.css?v=20261016-2"><script src="/sitio.js" defer></script></head><body>
+<header class="barra"><a class="identidad" href="/">MAGISAUTO</a><span class="entorno">Proyecto académico</span></header>
+<main>
+<nav class="catalogos" aria-label="Módulos"><a href="/reportes.html">Consultas y reportes</a><a href="/clientes.html">Clientes</a><a href="/fiadores.html">Fiadores</a><a href="/vendedores.html">Vendedores</a><a href="/creditos.html">Créditos</a></nav>
+<p class="ruta">INFORMACIÓN / PERSONAS Y VÍNCULOS</p>
+<h1>Personas y vínculos</h1>
+<p>Consulta los registros completos, incluidos los que no están vinculados a un expediente. Para modificar datos, abre el expediente correspondiente. Puedes eliminar personas y referencias sin dependencias; el sistema bloquea las que estén vinculadas.</p>
+<form id="consulta" class="panel">
+<label for="entidad">Consulta</label><select id="entidad" required disabled><option>Cargando consultas…</option></select>
+<p id="ayuda"></p>
+<label for="criterio">Buscar por un dato del registro</label><input id="criterio" maxlength="60" aria-describedby="ayuda literal">
+<p id="literal" class="aclaracion">Busca parte de un dato. Los códigos corresponden a las fichas y catálogos del sistema. %, _ y [ se buscan como texto.</p>
+<div class="acciones-consulta"><button id="buscar" class="primario" disabled>Buscar</button><button id="todos" class="secundario" type="button" disabled>Ver todos</button></div>
+</form>
+<p id="mensaje" role="status" aria-live="polite"></p>
+<section id="resultado" class="panel" aria-busy="false" hidden><h2 id="titulo"></h2><p id="cantidad"></p><div class="tabla-desplazable" tabindex="0" role="region" aria-label="Resultados; desplázate horizontalmente para ver todas las columnas"><table><thead id="cabecera"></thead><tbody id="filas"></tbody></table></div><p class="aclaracion">Desplázate horizontalmente para ver todas las columnas. «Sin dato» no equivale a cero.</p></section>
+</main><footer>MAGIS-AUTO · Consultas de personas y vínculos</footer>
+</body></html>

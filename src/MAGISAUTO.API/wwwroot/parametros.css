@@ -1,5 +1,5 @@
 dialog{width:min(720px,calc(100% - 32px));max-height:90vh;overflow:auto}
 fieldset{border:0;padding:0;margin:0;min-width:0}.campos-parametros{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
-small{display:block;color:#61766f;font-size:12px;margin-top:6px}.acciones{flex-wrap:wrap}table{min-width:720px}td:first-child{min-width:180px;width:auto}td{overflow-wrap:anywhere}
+small{display:block;color:#617489;font-size:12px;margin-top:6px}.acciones{flex-wrap:wrap}table{min-width:720px}td:first-child{min-width:180px;width:auto}td{overflow-wrap:anywhere}
 .aviso{margin-top:16px}.nota{margin-bottom:16px}.tabla-contenedor+.nota{margin-bottom:0}
 @media(max-width:640px){.campos-parametros{grid-template-columns:1fr}dialog{padding:20px}}

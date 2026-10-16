@@ -4,6 +4,15 @@ Acuerdo solicitado por Diego el 10 de octubre de 2026: al terminar cada fase, en
 
 ## Contenido de cada PDF
 
+Actualización del 15 de octubre: Diego confirmó las pruebas manuales de consultas y eliminación
+controlada, incluida la referencia de prueba y navegación estrecha/teclado. Se consolidó la
+[matriz C05/C06](FASE_6_Cierre_C05_C06.md) con sus límites. Evidencia: 86 comprobaciones de
+consultas/eliminación (incluyen las 69 iniciales) y 9 de excepciones financieras. El nuevo ensayo
+bloqueó las tres escrituras manuales de cuotas de un contrato aprobado y liquidado y conservó
+las 26 tablas de la base aislada. Sin cambios SQL ni migración; actualización local, sin nueva
+publicación. El remanente se concentra en C07/Reportes, la mejora de mora y la entrega.
+No repetir los recorridos manuales ya confirmados; ver la lista acotada del informe.
+
 1. Objetivo y alcance de la fase, relacionados con el enunciado del proyecto.
 2. Resumen acumulado de lo construido hasta ese momento.
 3. Funcionalidades nuevas, cambios a funcionalidades anteriores y motivo de cada cambio.
