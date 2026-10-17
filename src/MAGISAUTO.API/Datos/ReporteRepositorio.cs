@@ -118,6 +118,8 @@ public sealed class ReporteRepositorio(ConexionSqlFactory factory)
                         };
                         columnas.Add(new(reader.GetName(i), tipo));
                     }
+                    if (id == 10 && !columnas.Any(c => c.Nombre == "InteresesDevengados"))
+                        throw new OperacionCatalogoException(409, "La base requiere la actualización del cierre técnico para consultar el devengo. Solicita su instalación.");
                     var filas = new List<Dictionary<string, object?>>();
                     while (await reader.ReadAsync(ct))
                     {

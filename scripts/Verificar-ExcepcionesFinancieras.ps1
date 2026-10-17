@@ -33,7 +33,12 @@ try {
   }
   try { $codigo=[int]$cmd.ExecuteScalar();Comprobar "Cuota aprobada bloquea $accion con 51003" ($codigo -eq 51003) } finally { $cmd.Dispose() }
  }
- Comprobar 'Resumen solo expone Listar y Buscar en api' ((Query "SELECT COUNT(*) FROM sys.procedures WHERE SCHEMA_NAME(schema_id)='api' AND name LIKE 'ResumenCredito[_]%' AND name NOT IN('ResumenCredito_Listar','ResumenCredito_Buscar')").Tables[0].Rows[0][0] -eq 0)
+ Comprobar 'Resumen expone cinco operaciones' ((Query "SELECT COUNT(*) FROM sys.procedures WHERE SCHEMA_NAME(schema_id)='api' AND name IN('ResumenCredito_Listar','ResumenCredito_Buscar','ResumenCredito_Insertar','ResumenCredito_Actualizar','ResumenCredito_Eliminar')").Tables[0].Rows[0][0] -eq 5)
+ foreach($accion in @('Insertar','Actualizar','Eliminar')){
+  $cmd=$cn.CreateCommand();$cmd.CommandText="BEGIN TRANSACTION; BEGIN TRY EXEC api.ResumenCredito_$accion @NumeroCredito=@n; IF @@TRANCOUNT>0 ROLLBACK; SELECT 0; END TRY BEGIN CATCH IF @@TRANCOUNT>0 ROLLBACK; SELECT ERROR_NUMBER(); END CATCH;"
+  [void]$cmd.Parameters.Add('@n',[Data.SqlDbType]::VarChar,20);$cmd.Parameters['@n'].Value=$cuota.NumeroCredito
+  try{Comprobar "Resumen aprobado bloquea $accion" ([int]$cmd.ExecuteScalar() -eq 51003)}finally{$cmd.Dispose()}
+ }
  $despues=Captura
  Comprobar 'Las 26 tablas conservan su contenido' ($antes -ceq $despues)
  $estado='Correcto'

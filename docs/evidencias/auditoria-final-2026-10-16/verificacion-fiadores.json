@@ -1,0 +1,286 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-16T16:17:16.5224223-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado de fiadores disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogos de contactos y ubicación disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y enlace a Fiadores: /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y enlace a Fiadores: /lineas.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y enlace a Fiadores: /agencias.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y enlace a Fiadores: /vendedores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y enlace a Fiadores: /clientes.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pantalla y enlace a Fiadores: /fiadores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recursos correctos en HTML",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible /fiadores.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible /clientes.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registrar fiador sin teléfono como incompleto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre recortado y teléfono pendiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona ya fiadora rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "NIT duplicado rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Creación fallida no deja persona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Campo vacío rechazado: nit",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Campo vacío rechazado: primerNombre",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Campo vacío rechazado: primerApellido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Campo vacío rechazado: correoElectronico",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Colección nula rechazada: telefonos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contacto nulo rechazado: telefonos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Colección nula rechazada: direcciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contacto nulo rechazado: direcciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formato de DPI rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "DPI inmutable al editar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Correo inválido rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Guardar múltiples contactos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recarga conserva contactos y satisface teléfono",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Municipio inválido rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reversión completa de cambios anteriores al error",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Correlativo repetido rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contacto ajeno o inexistente rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Teléfono corto tras recorte rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar persona y contactos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persisten edición y contactos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por 15",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por 9984354915936",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por ENSe05a955badd6",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por Editado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda literal por fiador@example.invalid",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Texto SQL se trata como búsqueda literal",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Criterio vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Criterio demasiado largo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar fiador que también es cliente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Conservar nacimiento y género no editados en Fiadores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cliente comparte los cambios de nombre",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Retirar contactos compartidos explícitamente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Quitar teléfonos vuelve a indicar pendiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Completar teléfono sin obligar dirección",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito vinculado impide eliminar con mensaje específico",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fiador y vínculo permanecen después del rechazo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar rol sin créditos vinculados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar fiador conserva cliente y contacto compartido",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fiador inexistente devuelve 404 en GET",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fiador inexistente devuelve 404 en PUT",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fiador inexistente devuelve 404 en DELETE",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar no reemplaza primerNombre existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar no reemplaza nit existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar no reemplaza correoElectronico existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Alta de rol no sustituye contactos existentes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar persona por DPI sin duplicación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar conserva teléfono existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Retirar rol recreado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fiadores iniciales conservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Personas iniciales intactas tras limpieza",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contactos iniciales intactos tras limpieza",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Expedientes de clientes iniciales intactos",
+      "Resultado": "Correcto"
+    }
+  ]
+}

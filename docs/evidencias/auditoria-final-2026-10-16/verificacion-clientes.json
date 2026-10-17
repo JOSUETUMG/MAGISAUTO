@@ -1,0 +1,254 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-16T16:16:57.9074385-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Servidor de ensayo disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado clientes disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogos de contactos, ubicación y referencias disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible /clientes.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible /clientes.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible /clientes.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso disponible /vendedores.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Guardar cliente con expediente incompleto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Datos recortados y faltantes explícitos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "DPI cliente duplicado rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "NIT duplicado rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No queda persona de creación fallida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "nit vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerNombre vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "primerApellido vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "correoElectronico vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Colección nula telefonos rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Colección nula direcciones rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Colección nula referencias rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nacimiento futuro rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambio DPI cliente rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Guardar varios contactos y dos referencias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Dos referencias mantienen expediente incompleto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Agregar tercera referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Tres referencias completas satisfacen checklist sin aprobar crédito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Municipio inválido rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Error revierte expediente entero",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Correlativo repetido de contacto rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No se puede editar contacto ajeno o inexistente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia repetida no cuenta dos veces",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cliente no puede ser su propia referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar contactos y referencia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambios de contactos y relación persistidos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia incompleta se permite en borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia sin teléfono deja de contar completa",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Completar referencia de nuevo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear segundo cliente de ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vincular referencia existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vincular no duplica ni reemplaza identidad compartida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cliente con referencias no se borra accidentalmente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Retirar vínculo sin borrar referencia compartida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar rol cliente sin vínculos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar cliente conserva persona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por 9988221523519",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por ENSd15859997360",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por Cliente Ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por cliente@example.invalid",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro de texto no ejecuta SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Retirar referencias en crédito borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cliente con crédito se conserva",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar cliente después de retirar dependencias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Se conserva el rol vendedor de la persona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cliente inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar cliente inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar cliente inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código cero rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar persona existente sin duplicarla",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reutilizar conserva contactos anteriores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Retirar cliente recreado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Clientes iniciales conservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Personas iniciales conservadas después de limpieza",
+      "Resultado": "Correcto"
+    }
+  ]
+}

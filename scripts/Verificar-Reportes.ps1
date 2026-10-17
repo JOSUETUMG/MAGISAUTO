@@ -128,6 +128,13 @@ try{
   Comprobar "Reporte $id coincide con SP, incluidos importes, fechas y nulos" $igual
  }
  Comprobar 'Estado de cuenta entrega resumen, cuotas y movimientos' ($resultados[6].tablas.Count -eq 3 -and $resultados[6].tablas[1].filas.Count -eq 12 -and $resultados[6].tablas[2].filas.Count -eq 2)
+ foreach($corte in @($ayer,$hoy)){
+  $dev=(Bien "Devengo consultable al $corte" GET "/api/reportes/10?fechaCorte=$corte" $null 200).Json
+  $fila=@($dev.tablas[0].filas|Where-Object NumeroCredito -eq $numero)[0]
+  $esperado=(Query "SELECT COALESCE((SELECT SUM(Interes) FROM dbo.DetalleCuota WHERE NumeroCredito='$numero' AND FechaVencimiento<='$corte'),0) Devengado,COALESCE((SELECT SUM(Interes) FROM dbo.DetallePago WHERE NumeroCredito='$numero' AND FechaPago<DATEADD(day,1,CONVERT(date,'$corte')) AND (FechaAnulacion IS NULL OR FechaAnulacion>=DATEADD(day,1,CONVERT(date,'$corte')))),0) Cobrado;").Tables[0].Rows[0]
+  Comprobar "Devengo y cobro independiente con anulación al $corte" ([decimal]$fila.InteresesDevengados -eq [decimal]$esperado.Devengado -and [decimal]$fila.InteresesCobrados -eq [decimal]$esperado.Cobrado)
+  Comprobar "Devengado pendiente correcto al $corte" ([decimal]$fila.DevengadosPorCobrar -eq ([decimal]$esperado.Devengado-[decimal]$esperado.Cobrado))
+ }
  $resumen=$resultados[6].tablas[0].filas[0]
  Comprobar 'Corte actual resta solo 500 efectivos' ([decimal]$resumen.PagadoAlCorte -eq 500 -and [decimal]$resumen.SaldoTotal -eq ([decimal]$resumen.TotalPlan-500))
  $historico=(Bien 'Estado de cuenta al corte anterior a la anulación' GET "/api/reportes/6?codigoDeudor=$($ids.Cliente)&fechaCorte=$ayer" $null 200).Json

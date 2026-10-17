@@ -30,8 +30,8 @@ try{
  $listo=$false;for($i=0;$i -lt 40;$i++){try{if((Peticion GET '/api/salud').Codigo -eq 200){$listo=$true;break}}catch{};Start-Sleep -Milliseconds 200};Comprobar 'API temporal disponible' $listo
  $base='/api/consultas-integradas'
  $catalogo=Peticion GET $base
- Comprobar 'Seis consultas disponibles' ($catalogo.Codigo -eq 200 -and $catalogo.Json.Count -eq 6)
- $entidades=@{personas='Persona';telefonos='Telefono';direcciones='Direccion';referencias='Referencia';'vinculos-referencias'='DetalleReferencia';'fiadores-creditos'='CreditoFiador'}
+ Comprobar 'Ocho consultas disponibles' ($catalogo.Codigo -eq 200 -and $catalogo.Json.Count -eq 8)
+ $entidades=@{personas='Persona';telefonos='Telefono';direcciones='Direccion';referencias='Referencia';'vinculos-referencias'='DetalleReferencia';'fiadores-creditos'='CreditoFiador';cuotas='DetalleCuota';resumenes='ResumenCredito'}
  foreach($id in $entidades.Keys){
   $tabla=$entidades[$id];$r=Peticion GET "$base/$id"
   Comprobar "$id listado coincide con todas las filas SQL" ($r.Codigo -eq 200 -and $r.Json.filas.Count -eq (Query "SELECT COUNT(*) FROM dbo.[$tabla]").Tables[0].Rows[0][0])

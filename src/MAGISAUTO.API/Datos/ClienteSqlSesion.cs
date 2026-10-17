@@ -39,14 +39,16 @@ internal sealed class ClienteSqlSesion(SqlConnection conexion, SqlTransaction? t
         {
             var tipo = nombre switch
             {
-                "DPI" or "NIT" or "Numero" => SqlDbType.VarChar,
-                "FechaNacimiento" => SqlDbType.Date,
+                "DPI" or "NIT" or "Numero" or "NumeroCredito" => SqlDbType.VarChar,
+                "FechaNacimiento" or "FechaVencimiento" => SqlDbType.Date,
+                "Capital" or "Interes" => SqlDbType.Decimal,
                 "Genero" => SqlDbType.Char,
-                "Correlativo" => SqlDbType.SmallInt,
+                "Correlativo" or "Cuota" => SqlDbType.SmallInt,
                 _ when nombre.StartsWith("Codigo", StringComparison.Ordinal) => SqlDbType.Int,
                 _ => SqlDbType.NVarChar
             };
             var p = cmd.Parameters.Add("@" + nombre, tipo);
+            if (tipo == SqlDbType.Decimal) { p.Precision = 18; p.Scale = 2; }
             p.Value = valor ?? DBNull.Value;
         }
         return await cmd.ExecuteScalarAsync(ct);

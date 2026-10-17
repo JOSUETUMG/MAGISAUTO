@@ -17,6 +17,7 @@ builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<ErroresApiHandler>();
 builder.Services.AddSingleton<ConexionSqlFactory>();
 builder.Services.AddScoped<ConsultaIntegradaRepositorio>();
+builder.Services.AddScoped<MantenimientoPersonaRepositorio>();
 builder.Services.AddScoped<IMarcaRepositorio, MarcaRepositorio>();
 builder.Services.AddScoped<ILineaRepositorio, LineaRepositorio>();
 builder.Services.AddScoped<IAgenciaRepositorio, AgenciaRepositorio>();

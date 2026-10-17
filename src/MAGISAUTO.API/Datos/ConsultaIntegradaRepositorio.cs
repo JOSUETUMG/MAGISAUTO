@@ -16,7 +16,9 @@ public sealed class ConsultaIntegradaRepositorio(ConexionSqlFactory factory)
         ["direcciones"] = ("Direccion", "Direcciones", "Código de persona, correlativo, códigos de tipo, departamento o municipio, o detalle de la dirección."),
         ["referencias"] = ("Referencia", "Referencias", "Código de referencia, código de persona o lugar de trabajo. Incluye fichas sin vínculos con clientes."),
         ["vinculos-referencias"] = ("DetalleReferencia", "Referencias por cliente", "Código de cliente, referencia o tipo de referencia, o parentesco/relación."),
-        ["fiadores-creditos"] = ("CreditoFiador", "Fiadores por crédito", "Número de crédito o código de fiador. Incluye asignaciones de borradores y contratos.")
+        ["fiadores-creditos"] = ("CreditoFiador", "Fiadores por crédito", "Número de crédito o código de fiador. Incluye asignaciones de borradores y contratos."),
+        ["cuotas"] = ("DetalleCuota", "Cuotas", "Consulta global por crédito, cuota, vencimiento o importe. Solo se modifica la simulación de borradores; aprobar genera el plan definitivo."),
+        ["resumenes"] = ("ResumenCredito", "Resúmenes de créditos", "Consulta por crédito o importe. En borradores se crea o recalcula desde sus cuotas; los totales no se escriben a mano. Los contratos aprobados se conservan.")
     };
 
     public static IEnumerable<DefinicionConsultaIntegrada> Definiciones => Catalogo.Select(x => new DefinicionConsultaIntegrada(x.Key, x.Value.Titulo, x.Value.Ayuda));

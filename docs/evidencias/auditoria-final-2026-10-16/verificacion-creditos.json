@@ -1,0 +1,236 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Fecha": "2026-10-16T16:20:34.8325386-06:00",
+  "ConexionLocalSinCifrado": false,
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Migración aditiva repetible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuenta API sin lectura directa de tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /creditos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /creditos.css",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /creditos.js",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recurso /vehiculos.html",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Catálogos de selección disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Guardar borrador con dos referencias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Número de crédito duplicado rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consultar borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Borrador conserva condiciones y asignaciones; no genera cuotas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por CT27B46CDD1B-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por CT27B46CDD1B",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por CT27B46CDD1B00001",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda por BORRADOR",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentación exige tres referencias",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Responsable obligatorio",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Condiciones inválidas: enganche",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Condiciones inválidas: enganche",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Condiciones inválidas: enganche",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Condiciones inválidas: plazo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Condiciones inválidas: fiadores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Condiciones inválidas: codigoVendedor",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fallos de edición revierten también las asignaciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobación directa exige presentación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentar expediente completo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentación guarda actor y fecha sin cuotas ni aprobación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Repetición de presentación rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar condiciones de borrador presentado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Edición requiere presentar nuevamente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentar otra vez",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobación revalida referencias después de presentar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobación exige teléfono del fiador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobar solicitud y generar plan",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "12 cuotas liquidan Q80000 de capital",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Total neto coincide con suma de cuotas, sin enganche",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Manejo Q25 y seguros sobre monto inicial según configuración existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Una valoración inicial automática",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Aprobación duplicada rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito aprobado no se edita",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crédito aprobado no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Otro borrador puede evaluar el mismo vehículo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Presentar segundo borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vehículo impide dos contratos vigentes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar borrador con sus asignaciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "El borrador eliminado no existe",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anulación requiere motivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pagos efectivos impiden anular",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Anular conserva el contrato",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Historial de aprobación, cuotas y motivo conservados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Contrato anulado no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Comité puede requerir cero fiadores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar segundo borrador sin fiadores",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registros previos de validación conservados tras retirar solo el ensayo",
+      "Resultado": "Correcto"
+    }
+  ]
+}

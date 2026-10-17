@@ -1,0 +1,350 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Seis consultas disponibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias listado coincide con todas las filas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias conserva columnas aun sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias búsqueda encuentra clave existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias rechaza filtro ?criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias rechaza filtro ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias rechaza filtro ?otro=x",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias rechaza filtro ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias porcentaje literal no devuelve todo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias no admite escritura",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos listado coincide con todas las filas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos conserva columnas aun sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos búsqueda encuentra clave existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos rechaza filtro ?criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos rechaza filtro ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos rechaza filtro ?otro=x",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos rechaza filtro ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos porcentaje literal no devuelve todo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos no admite escritura",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias listado coincide con todas las filas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias conserva columnas aun sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias búsqueda encuentra clave existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias rechaza filtro ?criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias rechaza filtro ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias rechaza filtro ?otro=x",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias rechaza filtro ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias porcentaje literal no devuelve todo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "vinculos-referencias no admite escritura",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones listado coincide con todas las filas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones conserva columnas aun sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones búsqueda encuentra clave existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones rechaza filtro ?criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones rechaza filtro ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones rechaza filtro ?otro=x",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones rechaza filtro ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones porcentaje literal no devuelve todo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones no admite escritura",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas listado coincide con todas las filas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas conserva columnas aun sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas búsqueda encuentra clave existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas rechaza filtro ?criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas rechaza filtro ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas rechaza filtro ?otro=x",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas rechaza filtro ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas porcentaje literal no devuelve todo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas no admite escritura",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos listado coincide con todas las filas SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos conserva columnas aun sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos búsqueda encuentra clave existente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos rechaza filtro ?criterio=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos rechaza filtro ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos rechaza filtro ?otro=x",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos rechaza filtro ?criterio=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos porcentaje literal no devuelve todo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "fiadores-creditos no admite escritura",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Entidad ajena rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Página servida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Acceso desde reportes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con referencia no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia vinculada no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vínculo protegido se conserva",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Referencia libre se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar referencia conserva persona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Repetir eliminación devuelve inexistente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con teléfono no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con dirección no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con rol Deudor no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con rol Fiador no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con rol vendedor no se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona libre se elimina",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona eliminada no existe en SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona inexistente devuelve 404",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código negativo rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminación ajena rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtros en eliminación rechazados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consultas conservan las 26 tablas",
+      "Resultado": "Correcto"
+    }
+  ]
+}

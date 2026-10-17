@@ -1,0 +1,126 @@
+{
+  "Estado": "Correcto",
+  "Fecha": "2026-10-17T03:18:07.304Z",
+  "Pruebas": [
+    {
+      "Prueba": "Ocho consultas visibles",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas: alta accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas: diálogo abierto y cierre explícito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Código de persona automático",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "personas: cierre funciona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos: alta accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos: diálogo abierto y cierre explícito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos: correlativo automático",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "telefonos: cierre funciona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones: alta accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones: diálogo abierto y cierre explícito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones: correlativo automático",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Municipios se actualizan con departamento",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "direcciones: cierre funciona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias: alta accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias: diálogo abierto y cierre explícito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "referencias: cierre funciona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "cuotas: alta accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "cuotas: diálogo abierto y cierre explícito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "cuotas: cierre funciona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "resumenes: alta accesible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "resumenes: diálogo abierto y cierre explícito",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen no permite inventar importes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "resumenes: cierre funciona",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Alta envía campos y no código automático",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Durante guardado se bloquea cierre",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Durante guardado se bloquean campos",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Escape no cierra durante guardado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Guardado cierra y refresca",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vínculos siguen administrándose en su expediente",
+      "Resultado": "Correcto"
+    }
+  ]
+}

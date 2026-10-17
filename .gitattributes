@@ -4,3 +4,7 @@ database/v2/entrega/** -text
 database/equipo/** -text
 # El SQL exportado conserva espacios de las definiciones originales dentro de literales.
 database/equipo/*.sql whitespace=-blank-at-eol,cr-at-eol
+
+# Evidencias con hashes: conservar exactamente los bytes registrados.
+docs/evidencias/auditoria-final-2026-10-16/** -text whitespace=cr-at-eol
+docs/evidencias/cierre-tecnico-2026-10-16/** -text whitespace=cr-at-eol

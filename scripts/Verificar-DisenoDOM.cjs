@@ -23,7 +23,8 @@ function entorno(nombre){
   const dom=entorno(nombre),w=dom.window,d=w.document;w.eval(fs.readFileSync(path.join(root,'sitio.js'),'utf8'));await tick();
   ok(nombre+': cuatro grupos y acceso a reportes',d.querySelectorAll('.menu-grupo').length===4 && d.querySelectorAll('.menu-reportes').length===1);
   ok(nombre+': trece destinos y página actual',d.querySelectorAll('.menu-principal a').length===13 && d.querySelectorAll('.menu-principal [aria-current="page"]').length===1);
-  ok(nombre+': recursos de identidad cargados',!!d.querySelector('link[href="/identidad.css"]') && !!d.querySelector('script[src="/sitio.js"]'));
+  const identidad=[...d.querySelectorAll('link[rel="stylesheet"]')].some(link=>new URL(link.href).pathname==='/identidad.css');
+  ok(nombre+': recursos de identidad referenciados',identidad && !!d.querySelector('script[src="/sitio.js"]'));
   const grupos=d.querySelectorAll('details');grupos[0].open=true;await tick();grupos[1].open=true;await tick();ok(nombre+': un menú abierto',!grupos[0].open && grupos[1].open);
   grupos[1].querySelector('summary').dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));ok(nombre+': Escape devuelve foco al menú',!grupos[1].open && d.activeElement===grupos[1].querySelector('summary'));
   for(const dialogo of d.querySelectorAll('dialog')){

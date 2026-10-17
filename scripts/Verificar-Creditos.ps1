@@ -27,6 +27,8 @@ try{
  $cn.Open();Comprobar 'Destino aislado confirmado' ((Query 'SELECT DB_NAME()').Tables[0].Rows[0][0] -ceq 'MAGISAUTO_ValidacionV2')
  $migracion=(Get-Content (Join-Path $repo 'database\v2\migraciones\001_Presentacion_Creditos.sql') -Raw).Replace('USE [MAGISAUTO_Proyecto_V2]','USE [MAGISAUTO_ValidacionV2]')
  [void](Query $migracion);[void](Query $migracion);Comprobar 'Migración aditiva repetible' $true
+ $cierre=Get-Content (Join-Path $repo 'database\v2\migraciones\002_Cierre_Tecnico.sql') -Raw
+ [void](Query $cierre);[void](Query $cierre);Comprobar 'Migración de cierre repetible' $true
  # Usar la misma cuenta limitada que la aplicación, en el destino aislado.
  [void](Query "IF USER_ID(N'magis_api_diego') IS NULL CREATE USER magis_api_diego FOR LOGIN magis_api_diego; IF IS_ROLEMEMBER(N'magis_api',N'magis_api_diego')<>1 ALTER ROLE magis_api ADD MEMBER magis_api_diego;")
  $inicial=Captura
@@ -100,9 +102,11 @@ try{
  [void](Query "EXEC api.Telefono_Eliminar @CodigoPersona=$pfiador,@Correlativo=1;")
  [void](Bien 'Aprobación exige teléfono del fiador' POST "$ruta/aprobar" $autor 409)
  [void](Query "EXEC api.Telefono_Insertar @CodigoPersona=$pfiador,@Correlativo=1,@CodigoTipoTelefono=1,@Numero='00000000';")
+ [void](Query "EXEC api.DetalleCuota_Insertar @NumeroCredito='$numero',@Cuota=1,@FechaVencimiento='2027-01-01',@Capital=10,@Interes=1; EXEC api.ResumenCredito_Insertar @NumeroCredito='$numero';")
  [void](Bien 'Aprobar solicitud y generar plan' POST "$ruta/aprobar" $autor 204)
  $f=(Peticion GET $ruta).Json;[decimal]$capital=0;[decimal]$total=0;foreach($q in $f.cuotas){$capital+=[decimal]$q.capital;$total+=[decimal]$q.total}
  Comprobar '12 cuotas liquidan Q80000 de capital' ($f.estado -eq 'VIGENTE' -and $f.cuotas.Count -eq 12 -and $capital -eq 80000)
+ Comprobar 'Aprobación reemplaza simulación y resumen previo' ([decimal]$f.totalIntereses -gt 1 -and [decimal]$f.cuotas[0].capital -gt 10)
  Comprobar 'Total neto coincide con suma de cuotas, sin enganche' ([decimal]$f.totalNetoRecaudable -eq $total)
  Comprobar 'Manejo Q25 y seguros sobre monto inicial según configuración existente' ([decimal]$f.cuotas[0].manejoCuenta -eq 25 -and [decimal]$f.cuotas[0].seguroAuto -eq [decimal]::Round(80000*[decimal]$configuracion.tasaSeguroAuto,2) -and [decimal]$f.cuotas[0].seguroVida -eq [decimal]::Round(80000*[decimal]$configuracion.tasaSeguroVida,2))
  Comprobar 'Una valoración inicial automática' ((Query "SELECT COUNT(*) FROM dbo.Depreciacion WHERE CodigoGarantia=$($ids.Vehiculo)").Tables[0].Rows[0][0] -eq 1)

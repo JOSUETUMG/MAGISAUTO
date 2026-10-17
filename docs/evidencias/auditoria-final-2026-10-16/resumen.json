@@ -1,0 +1,119 @@
+{
+  "CommitRevisado": "5d57fa3e47d8b06dd40d5e46aad76c3fd687c8aa",
+  "BasePruebas": "MAGISAUTO_ValidacionV2",
+  "BasePrincipal": "Solo lectura",
+  "Suites": [
+    {
+      "Modulo": "verificacion-agencias",
+      "Comprobaciones": 34,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-agencias.json"
+    },
+    {
+      "Modulo": "verificacion-auxiliares",
+      "Comprobaciones": 242,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-auxiliares.json"
+    },
+    {
+      "Modulo": "verificacion-clientes",
+      "Comprobaciones": 62,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-clientes.json"
+    },
+    {
+      "Modulo": "verificacion-consultas-integradas",
+      "Comprobaciones": 86,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-consultas-integradas.json"
+    },
+    {
+      "Modulo": "verificacion-creditos",
+      "Comprobaciones": 57,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-creditos.json"
+    },
+    {
+      "Modulo": "verificacion-excepciones-financieras",
+      "Comprobaciones": 9,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-excepciones-financieras.json"
+    },
+    {
+      "Modulo": "verificacion-fiadores",
+      "Comprobaciones": 70,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-fiadores.json"
+    },
+    {
+      "Modulo": "verificacion-lineas",
+      "Comprobaciones": 42,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-lineas.json"
+    },
+    {
+      "Modulo": "verificacion-marcas",
+      "Comprobaciones": 28,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-marcas.json"
+    },
+    {
+      "Modulo": "verificacion-pagos",
+      "Comprobaciones": 126,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-pagos.json"
+    },
+    {
+      "Modulo": "verificacion-parametros",
+      "Comprobaciones": 134,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-parametros.json"
+    },
+    {
+      "Modulo": "verificacion-reportes",
+      "Comprobaciones": 134,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-reportes.json"
+    },
+    {
+      "Modulo": "verificacion-valoraciones",
+      "Comprobaciones": 42,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-valoraciones.json"
+    },
+    {
+      "Modulo": "verificacion-vehiculos",
+      "Comprobaciones": 80,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-vehiculos.json"
+    },
+    {
+      "Modulo": "verificacion-vendedores",
+      "Comprobaciones": 59,
+      "Estado": "Correcto",
+      "Archivo": "verificacion-vendedores.json"
+    }
+  ],
+  "TotalComprobacionesHTTP_SQL": 1205,
+  "DOM": {
+    "Comprobaciones": 198,
+    "Estado": "Correcto",
+    "Limite": "Sin renderizado visual",
+    "Archivo": "diseno-dom.json"
+  },
+  "CalculoIndependiente": {
+    "Comprobaciones": 39,
+    "Contratos": 1,
+    "Estado": "Correcto",
+    "Archivo": "calculos-independientes.json"
+  },
+  "FormatoReportes": {
+    "Comprobaciones": 15,
+    "Estado": "Correcto",
+    "Script": "scripts/Verificar-FormatoReportes.cjs"
+  },
+  "Conservacion26Tablas": true,
+  "LimitacionVisual": "Navegador integrado: ERR_CONNECTION_REFUSED en localhost:5164; sin verificacion nueva de impresion real.",
+  "EnsayoDOMCorregido": "Selector de CSS reconoce query de version; aplicacion no modificada durante la auditoria.",
+  "FechaDocumentacion": "2026-10-16"
+}

@@ -1,0 +1,163 @@
+{
+  "Estado": "Correcto",
+  "Tipo": "Recalculo independiente de contratos existentes; lectura de base principal",
+  "Contratos": 1,
+  "Pruebas": [
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cantidad de cuotas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 1, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 1, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 1, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 2, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 2, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 2, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 3, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 3, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 3, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 4, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 4, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 4, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 5, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 5, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 5, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 6, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 6, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 6, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 7, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 7, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 7, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 8, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 8, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 8, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 9, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 9, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 9, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 10, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 10, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 10, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 11, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 11, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 11, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 12, capital e interes independientes",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 12, fecha y correlativo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: cuota 12, cargos y total",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: liquida exactamente capital",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "PRUEBA-CREDITO-01: resumen coincide con cuotas",
+      "Resultado": "Correcto"
+    }
+  ]
+}

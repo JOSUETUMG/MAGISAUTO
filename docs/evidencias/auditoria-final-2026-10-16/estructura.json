@@ -1,0 +1,318 @@
+{
+  "Commit": "5d57fa3e47d8b06dd40d5e46aad76c3fd687c8aa",
+  "Fecha": "2026-10-16T16:19:16.8965450-06:00",
+  "Tablas": 26,
+  "ObjetosPorTipo": {
+    "P": 151,
+    "FN": 1,
+    "IF": 1,
+    "V": 4
+  },
+  "DefinicionesIgualesSinEspaciosFinales": true,
+  "ColumnasIguales": true,
+  "RestriccionesIguales": true,
+  "ForaneasIguales": true,
+  "IndicesEquivalentesSinNombreAutomatico": true,
+  "RestriccionesDeshabilitadas": 0,
+  "ForaneasDeshabilitadas": 0,
+  "CRUD": {
+    "Agencia": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Credito": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "CreditoFiador": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Departamento": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Depreciacion": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "DetalleCuota": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "DetallePago": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "DetalleReferencia": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Deudor": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Direccion": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Fiador": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Garantia": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Linea": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Marca": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Municipio": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "ParametroCredito": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Persona": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Referencia": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "ResumenCredito": [
+      "Listar",
+      "Buscar"
+    ],
+    "Telefono": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "TipoDireccion": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "TipoGarantia": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "TipoPago": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "TipoReferencia": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "TipoTelefono": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ],
+    "Vendedor": [
+      "Insertar",
+      "Actualizar",
+      "Eliminar",
+      "Listar",
+      "Buscar"
+    ]
+  },
+  "IndicesUnicosRelevantes": [
+    {
+      "Tabla": "Credito",
+      "Nombre": "PK_Credito",
+      "Unico": true,
+      "PK": true,
+      "Columna": "NumeroCredito",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Credito",
+      "Nombre": "UX_Credito_VehiculoActivo",
+      "Unico": true,
+      "PK": false,
+      "Filtro": "([Estado]='VIGENTE')",
+      "Columna": "CodigoGarantia",
+      "Orden": 1
+    },
+    {
+      "Tabla": "CreditoFiador",
+      "Nombre": "PK_CreditoFiador",
+      "Unico": true,
+      "PK": true,
+      "Columna": "NumeroCredito",
+      "Orden": 1
+    },
+    {
+      "Tabla": "CreditoFiador",
+      "Nombre": "PK_CreditoFiador",
+      "Unico": true,
+      "PK": true,
+      "Columna": "CodigoFiador",
+      "Orden": 2
+    },
+    {
+      "Tabla": "DetallePago",
+      "Nombre": "PK_DetallePago",
+      "Unico": true,
+      "PK": true,
+      "Columna": "CodigoPago",
+      "Orden": 1
+    },
+    {
+      "Tabla": "DetallePago",
+      "Nombre": "UQ__DetalleP__467126531A11AB61",
+      "Unico": true,
+      "PK": false,
+      "Columna": "Comprobante",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Garantia",
+      "Nombre": "PK_Garantia",
+      "Unico": true,
+      "PK": true,
+      "Columna": "CodigoGarantia",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Garantia",
+      "Nombre": "UQ__Garantia__C5DF234C2EAEF638",
+      "Unico": true,
+      "PK": false,
+      "Columna": "VIN",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Garantia",
+      "Nombre": "UX_Garantia_Placa",
+      "Unico": true,
+      "PK": false,
+      "Filtro": "([Placa] IS NOT NULL)",
+      "Columna": "Placa",
+      "Orden": 1
+    },
+    {
+      "Tabla": "ParametroCredito",
+      "Nombre": "PK_ParametroCredito",
+      "Unico": true,
+      "PK": true,
+      "Columna": "CodigoParametro",
+      "Orden": 1
+    },
+    {
+      "Tabla": "ParametroCredito",
+      "Nombre": "UX_Parametro_Activo",
+      "Unico": true,
+      "PK": false,
+      "Filtro": "([Activo]=(1))",
+      "Columna": "Activo",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Persona",
+      "Nombre": "PK_Persona",
+      "Unico": true,
+      "PK": true,
+      "Columna": "CodigoPersona",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Persona",
+      "Nombre": "UX_Persona_DPI",
+      "Unico": true,
+      "PK": false,
+      "Filtro": "([DPI] IS NOT NULL)",
+      "Columna": "DPI",
+      "Orden": 1
+    },
+    {
+      "Tabla": "Persona",
+      "Nombre": "UX_Persona_NIT",
+      "Unico": true,
+      "PK": false,
+      "Filtro": "([NIT] IS NOT NULL)",
+      "Columna": "NIT",
+      "Orden": 1
+    }
+  ]
+}

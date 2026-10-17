@@ -1,0 +1,56 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "EstadoContratoEnsayado": "LIQUIDADO",
+  "FechaGuatemala": "2026-10-16T21:15:06",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe cuota aprobada para ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota aprobada bloquea Insertar con 51003",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota aprobada bloquea Actualizar con 51003",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota aprobada bloquea Eliminar con 51003",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen expone cinco operaciones",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen aprobado bloquea Insertar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen aprobado bloquea Actualizar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen aprobado bloquea Eliminar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Las 26 tablas conservan su contenido",
+      "Resultado": "Correcto"
+    }
+  ]
+}

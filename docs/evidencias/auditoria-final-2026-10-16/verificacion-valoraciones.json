@@ -1,0 +1,174 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Listado de valoraciones disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Existe valoración inicial contractual para el ensayo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Porcentaje se devuelve en unidades humanas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Consulta por vehículo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda vacía rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro desconocido rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Detalle individual disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro rechazado: ?criterio=a&criterio=b",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro rechazado: ?codigoGarantia=",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Filtro rechazado: ?codigoGarantia=1&codigoGarantia=2",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación valorOriginal 0",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación valorOriginal -1",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación valorOriginal 1.001",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación porcentaje 21",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación porcentaje 15.00001",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación observacion  ",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación observacion xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Validación fechaValoracion 0001-01-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Fecha futura rechazada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Porcentaje fuera de rango rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registro de valoración posterior",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cálculo exacto Q85000 al 15% = Q72250",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Buscar observación devuelve solo la valoración propia",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Búsqueda sin resultados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Registro no modifica crédito, comisión ni cuotas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 usa nueva valoración Q72250",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 conserva CapitalPendiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 16 conserva PrecioContado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 usa nueva valoración Q72250",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 conserva MontoFinanciado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 conserva TotalIntereses",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 conserva TotalNetoRecaudable",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte 17 conserva Enganche",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Historial contractual bloquea edición",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Historial contractual bloquea eliminación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Limpieza restaura las 26 tablas",
+      "Resultado": "Correcto"
+    }
+  ]
+}

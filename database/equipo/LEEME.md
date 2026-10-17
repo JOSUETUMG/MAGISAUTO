@@ -18,6 +18,8 @@ Si el destino existe, se detiene sin modificarlo. No borrar una base para resolv
 
 ## Conectar Visual Studio
 
+**Código actualizado el 16 de octubre:** después de instalar esta copia (o si ya la tienen instalada), seleccionar su base en SSMS y ejecutar completo [002_Cierre_Tecnico.sql](../v2/migraciones/002_Cierre_Tecnico.sql). No volver a ejecutar el instalador ni la migración 001. La actualización agrega tres procedimientos de resumen y modifica seis; conserva tablas y datos. El resultado pasa de 151 a 154 procedimientos. Ver [cierre técnico](../../docs/CIERRE_TECNICO_2026-10-16.md) para cambios del manual y criterio de devengo.
+
 Seguir [la guía completa de instalación](../../docs/INSTALACION_EQUIPO.md). El proyecto ya utiliza el archivo local de configuración: no se requiere editar C# para cambiar de servidor. Cada equipo genera su propia clave mediante `Preparar-Equipo.ps1` y ejecuta el SQL privado de habilitación; ese paso requiere modo mixto de SQL Server.
 
 ## Cifras iniciales de control

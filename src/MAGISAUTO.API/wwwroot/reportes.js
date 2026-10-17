@@ -165,7 +165,9 @@
       if (tieneAcciones) { const td=nodo('td',undefined,'columna-acciones'), grupo=nodo('div',undefined,'acciones-reporte'); grupo.append(...acciones(fila,t,data)); td.append(grupo); row.append(td); }
       tbody.append(row);
     }
-    tabla.append(tbody);cont.append(tabla);seccion.append(cont,nodo('p','Desplaza horizontalmente para ver todas las columnas. «Sin dato» no equivale a cero.','nota')); return seccion;
+    const nota = nodo('p', undefined, 'nota');
+    nota.append(nodo('span', 'Desplaza horizontalmente para ver todas las columnas. ', 'instruccion-desplazamiento'), document.createTextNode('«Sin dato» no equivale a cero.'));
+    tabla.append(tbody);cont.append(tabla);seccion.append(cont,nota); return seccion;
   }
   function mostrar(data, r) {
     const panel = $('resultados'); panel.replaceChildren();

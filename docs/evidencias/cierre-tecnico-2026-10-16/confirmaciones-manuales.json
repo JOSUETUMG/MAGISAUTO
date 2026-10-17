@@ -1,0 +1,28 @@
+{
+  "Fecha": "2026-10-16",
+  "Fuente": "Capturas y confirmaciones del usuario en este chat",
+  "Migracion": {
+    "Base": "MAGISAUTO_Proyecto_V2",
+    "Resultado": "Cierre técnico instalado",
+    "Captura": "codex-clipboard-eb2ede9b-1687-4530-9349-561e8774795d.png"
+  },
+  "Reporte10": {
+    "Corte": "2026-10-16",
+    "Credito": "PRUEBA-CREDITO-01",
+    "Contrato": 5519.56,
+    "Cobrado": 170.96,
+    "Pendiente": 5348.6,
+    "Devengado": 0,
+    "DevengadoPorCobrar": 0,
+    "PorDevengar": 5519.56,
+    "CobradoAnticipado": 170.96,
+    "Captura": "codex-clipboard-c602dedb-ea39-4c04-8a59-53c3c6da24b9.png"
+  },
+  "Impresion": {
+    "Carta": "Captura final: texto completo, arriba, una pagina",
+    "CapturaCarta": "codex-clipboard-33518cd0-9069-4174-a022-6c23fb26b0bc.png",
+    "Reporte17": "Confirmacion textual posterior a ajustes: ya tambien",
+    "SalidaFisicaVerificada": false
+  },
+  "Limite": "Nombres identifican adjuntos del chat; imagenes no incluidas en este registro."
+}

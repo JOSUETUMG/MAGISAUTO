@@ -1,0 +1,251 @@
+{
+  "Estado": "Correcto",
+  "Base": "MAGISAUTO_ValidacionV2",
+  "Fecha": "2026-10-16T21:28:04.8409897-06:00",
+  "Pruebas": [
+    {
+      "Prueba": "Destino aislado confirmado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "API temporal disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario personas disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario telefonos disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario direcciones disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario referencias disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario cuotas disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario resumenes disponible",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "No permite elegir tabla arbitraria",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear persona sin expediente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar persona sin expediente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Rechaza edición obsoleta",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Correo inválido rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nombre vacío rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Nacimiento futuro rechazado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear teléfono independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar teléfono independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Persona con contacto protegida",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear dirección independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar dirección independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear referencia independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar referencia independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar referencia libre",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar teléfono independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar dirección independiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar persona independiente libre",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear cuota de simulación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Crear resumen derivado",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen suma interés real de cuotas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Editar cuota de simulación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cambio de cuota sincroniza resumen",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recalcular resumen de borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota aprobada no se edita",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuota aprobada no se borra",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen aprobado no se recalcula",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen aprobado no se borra",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar cuota de simulación",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resumen vacío coherente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Eliminar resumen de borrador",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo exacto al corte 2020-02-28",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo más futuro coincide con contrato 2020-02-28",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cobrado y pendiente concilian 2020-02-28",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Interés cobrado anticipado separado al 2020-02-28",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo exacto al corte 2020-02-29",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo más futuro coincide con contrato 2020-02-29",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cobrado y pendiente concilian 2020-02-29",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Interés cobrado anticipado separado al 2020-02-29",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo exacto al corte 2020-03-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo más futuro coincide con contrato 2020-03-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cobrado y pendiente concilian 2020-03-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Interés cobrado anticipado separado al 2020-03-01",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo exacto al corte 2021-01-31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Devengo más futuro coincide con contrato 2021-01-31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cobrado y pendiente concilian 2021-01-31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Interés cobrado anticipado separado al 2021-01-31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Reporte detecta actualización SQL pendiente",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cuotas bloqueadas sin actualización SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Resúmenes bloqueados sin actualización SQL",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Instantánea incluye 26 tablas",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Las 26 tablas conservan filas y valores previos",
+      "Resultado": "Correcto"
+    }
+  ]
+}

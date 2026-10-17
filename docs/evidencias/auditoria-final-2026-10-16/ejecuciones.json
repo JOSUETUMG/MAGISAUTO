@@ -1,0 +1,77 @@
+[
+  {
+    "Modulo": "Marcas",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Lineas",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Agencias",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Vendedores",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Clientes",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Fiadores",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Vehiculos",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "CatalogosAuxiliares",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "ParametrosCredito",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Creditos",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Pagos",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Reportes",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "Valoraciones",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "ConsultasIntegradas",
+    "Salida": 0,
+    "TablasConservadas": true
+  },
+  {
+    "Modulo": "ExcepcionesFinancieras",
+    "Salida": 0,
+    "TablasConservadas": true
+  }
+]
