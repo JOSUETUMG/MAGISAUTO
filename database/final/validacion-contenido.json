@@ -1,0 +1,22 @@
+{
+  "Estado": "Carga y conexion confirmadas; 20 reportes SQL verificados y cuatro pantallas confirmadas por el usuario",
+  "VersionDatos": "2026-10-16-v1",
+  "SqlSha256": "6fd7a9d3a5afeb3572877f42e20485713c35cc637598f1a8db89a718fa28f7eb",
+  "FilasEsperadas": 350,
+  "CreditoCasos": 6,
+  "Cuotas": 144,
+  "Pagos": 9,
+  "BaseUnica": "MAGISAUTO_Entrega_Final",
+  "AplicadoEnServidor": true,
+  "ConexionCambiada": true,
+  "Nota": "Carga confirmada por captura: 6 creditos, 144 cuotas, 9 pagos, 1 anulado. Conexion verificada antes de cambiar configuracion. Veinte procedimientos de reportes ejecutados en lectura con la cuenta API. Clientes, Creditos y Cartera en mora confirmados por capturas; Pagos anulados por confirmacion textual del usuario. El intento HTTP desde una segunda sesion no termino y no se cuenta como aprobado.",
+  "ReportesEjecutados": 20,
+  "FechaVerificacion": "2026-10-17",
+  "RevisionVisual": {
+    "Clientes": "Captura confirmada",
+    "Creditos": "Captura confirmada",
+    "CarteraEnMora": "Captura confirmada al 2026-10-16",
+    "PagosAnulados": "Confirmacion textual del usuario; sin captura adicional"
+  },
+  "RegistroComprobaciones": "docs/COMPROBACIONES_ENTREGA_FINAL_2026-10-17.md"
+}

@@ -1,0 +1,66 @@
+{
+  "Version": "2026-10-16-v1",
+  "Corte": "2026-10-16",
+  "DatosFicticios": true,
+  "Tablas": {
+    "Agencia": 2,
+    "Credito": 6,
+    "CreditoFiador": 5,
+    "Departamento": 2,
+    "Depreciacion": 6,
+    "DetalleCuota": 144,
+    "DetallePago": 9,
+    "DetalleReferencia": 18,
+    "Deudor": 6,
+    "Direccion": 29,
+    "Fiador": 3,
+    "Garantia": 8,
+    "Linea": 5,
+    "Marca": 5,
+    "Municipio": 2,
+    "ParametroCredito": 1,
+    "Persona": 29,
+    "Referencia": 18,
+    "ResumenCredito": 5,
+    "Telefono": 29,
+    "TipoDireccion": 3,
+    "TipoGarantia": 1,
+    "TipoPago": 5,
+    "TipoReferencia": 4,
+    "TipoTelefono": 3,
+    "Vendedor": 2
+  },
+  "Filas": 350,
+  "Casos": [
+    {
+      "Credito": "MGA-2026-001",
+      "Cliente": "Ana Lucía Morales López",
+      "Caso": "Al día"
+    },
+    {
+      "Credito": "MGA-2026-002",
+      "Cliente": "Carlos Eduardo Méndez Ruiz",
+      "Caso": "Abono parcial"
+    },
+    {
+      "Credito": "MGA-2026-003",
+      "Cliente": "María Fernanda Castillo Paz",
+      "Caso": "En mora"
+    },
+    {
+      "Credito": "MGA-2026-004",
+      "Cliente": "José Antonio Herrera Díaz",
+      "Caso": "Anticipo"
+    },
+    {
+      "Credito": "MGA-2026-005",
+      "Cliente": "Sofía Isabel Ramírez Luna",
+      "Caso": "Pago anulado"
+    },
+    {
+      "Credito": "MGA-2026-006",
+      "Cliente": "Luis Fernando Aguilar Reyes",
+      "Caso": "Borrador"
+    }
+  ]
+}

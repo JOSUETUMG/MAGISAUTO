@@ -1,0 +1,660 @@
+{
+  "Estado": "Correcto",
+  "Sha256": "6fd7a9d3a5afeb3572877f42e20485713c35cc637598f1a8db89a718fa28f7eb",
+  "Analizador": "TSql160Parser",
+  "Comprobaciones": [
+    {
+      "Prueba": "Instalador externo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Carga transaccional desescapada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 1",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 2",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 3",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 4",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 5",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 6",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 7",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 8",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 9",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 10",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 11",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 12",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 13",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 14",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 15",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 16",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 17",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 18",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 19",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 20",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 21",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 22",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 23",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 24",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 25",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 26",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 27",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 28",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 29",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 30",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 31",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 32",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 33",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 34",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 35",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 36",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 37",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 38",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 39",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 40",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 41",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 42",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 43",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 44",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 45",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 46",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 47",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 48",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 49",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 50",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 51",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 52",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 53",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 54",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 55",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 56",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 57",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 58",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 59",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 60",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 61",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 62",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 63",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 64",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 65",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 66",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 67",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 68",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 69",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 70",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 71",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 72",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 73",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 74",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 75",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 76",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 77",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 78",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 79",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 80",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 81",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 82",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 83",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 84",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 85",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 86",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 87",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 88",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 89",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 90",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 91",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 92",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 93",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 94",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 95",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 96",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 97",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 98",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 99",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 100",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 101",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 102",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 103",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 104",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 105",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 106",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 107",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 108",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 109",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 110",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 111",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 112",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 113",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 114",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 115",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 116",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 117",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 118",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 119",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 120",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 121",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 122",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 123",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 124",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 125",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 126",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 127",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 128",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 129",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 130",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 131",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 132",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 133",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 134",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 135",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 136",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 137",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 138",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 139",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 140",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 141",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 142",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 143",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 144",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 145",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 146",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 147",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 148",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 149",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 150",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 151",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 152",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 153",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 154",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 155",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 156",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 157",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 158",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 159",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 160",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Lote interno 161",
+      "Resultado": "Correcto"
+    }
+  ],
+  "Limite": "Validacion sintactica; no equivale a instalacion nueva en SQL Server."
+}

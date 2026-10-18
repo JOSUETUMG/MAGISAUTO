@@ -45,6 +45,19 @@ Orden recomendado para estudiar el proyecto. Las fases 0 y 1 se reconstruyeron e
 - [Evidencias](evidencias): resultados guardados de las pruebas; no representan nuevas ejecuciones cada vez que se leen.
 - [Informes por fase](INFORMES_POR_FASE.md): acuerdo de entregar PDF al cerrar cada fase. Este índice no certifica que ya estén generados todos los PDF.
 - [README del proyecto](../README.md): instrucciones actuales para abrir, ejecutar y configurar otra máquina.
-- [Entrega SQL vigente](../database/v2/entrega/LEEME.md): instalación V2. El paquete de `database/entrega-companero` se conserva como antecedente, no como versión actual.
+- [Entrega SQL vigente](../database/final/LEEME.md): instalador consolidado y muestra de entrega. Los paquetes anteriores se conservan como antecedentes.
 
 Cada documento debe distinguir requisitos del docente, decisiones del equipo, comportamiento implementado y pendientes. Las interpretaciones del equipo no equivalen a aprobación del docente. Los cambios locales solo aparecerán en GitHub después de su publicación.
+
+## Preparación de la entrega final
+
+- [SQL consolidado e instrucciones](../database/final/LEEME.md): modelo con 001 y 002 integradas y muestra coherente de 350 filas. Base única elegida: MAGISAUTO_Entrega_Final. Carga confirmada por captura, conexión cambiada y 20 reportes SQL ejecutados con la cuenta API el 17/10/2026. Cuatro pantallas confirmadas visualmente por Diego; ver el registro de comprobaciones.
+- [Recorrido breve para la demostración](GUION_DEMOSTRACION_FINAL.md): ayuda de 7 a 10 minutos, con datos de referencia y respuestas para la defensa.
+
+- [Comprobaciones de la muestra final del 17 de octubre](COMPROBACIONES_ENTREGA_FINAL_2026-10-17.md): instalación, conexión, 20 reportes SQL y cuatro confirmaciones visuales, con sus evidencias y límites.
+
+## Organización vigente de bases
+
+Solo dos bases de uso activo: **MAGISAUTO_Entrega_Final** (aplicación y entrega) y **MAGISAUTO_ValidacionV2** (ensayos aislados). MAGISAUTO_Proyecto_V2 y otras copias permanecen como antecedentes; no se usan ni se eliminan en este cambio.
+
+Documentación técnica actualizada: [versión resumida, 14 páginas](../output/pdf/DocumentacionSQL_Resumida.pdf) y [consulta completa, 40 páginas](../output/pdf/DocumentacionSQL_Completada.pdf). Ambas usan los nuevos casos de entrega y la organización de dos bases activas.

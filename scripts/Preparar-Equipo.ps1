@@ -1,7 +1,7 @@
 # Preparacion LOCAL para un clon nuevo. No instala SQL ni publica cambios en Git.
 param(
  [string]$Servidor='localhost',
- [ValidatePattern('^MAGISAUTO_[A-Za-z0-9_]{1,90}$')][string]$Base='MAGISAUTO_Equipo',
+ [ValidatePattern('^MAGISAUTO_[A-Za-z0-9_]{1,90}$')][string]$Base='MAGISAUTO_Entrega_Final',
  [ValidatePattern('^[A-Za-z][A-Za-z0-9_]{0,100}$')][string]$Usuario='magis_api_equipo'
 )
 $ErrorActionPreference='Stop'

@@ -1,0 +1,1362 @@
+[
+  {
+    "Tabla": "Agencia",
+    "Columna": "CodigoAgencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Agencia",
+    "Columna": "Nombre",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Agencia",
+    "Columna": "Region",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "NumeroCredito",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "CodigoDeudor",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "CodigoGarantia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "CodigoVendedor",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "CodigoAgencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "CodigoParametro",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "Plazo",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "PrecioContado",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "Enganche",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "EngancheMinimo",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "TasaAnual",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "ManejoMensual",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "TasaSeguroAuto",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "TasaSeguroVida",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "PorcentajeComision",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "FiadoresRequeridos",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "Estado",
+    "Tipo": "varchar",
+    "Longitud": 10,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "FechaAprobacion",
+    "Tipo": "datetime2",
+    "Longitud": 6,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "AprobadoPor",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "FechaAnulacion",
+    "Tipo": "datetime2",
+    "Longitud": 6,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "MotivoAnulacion",
+    "Tipo": "nvarchar",
+    "Longitud": 600,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "AnuladoPor",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "FechaPresentacion",
+    "Tipo": "datetime2",
+    "Longitud": 6,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Credito",
+    "Columna": "PresentadoPor",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "CreditoFiador",
+    "Columna": "NumeroCredito",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "CreditoFiador",
+    "Columna": "CodigoFiador",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Departamento",
+    "Columna": "CodigoDepartamento",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Departamento",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Depreciacion",
+    "Columna": "CodigoDepreciacion",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Depreciacion",
+    "Columna": "CodigoGarantia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Depreciacion",
+    "Columna": "FechaValoracion",
+    "Tipo": "date",
+    "Longitud": 3,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Depreciacion",
+    "Columna": "ValorOriginal",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Depreciacion",
+    "Columna": "Porcentaje",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Depreciacion",
+    "Columna": "Observacion",
+    "Tipo": "nvarchar",
+    "Longitud": 600,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleCuota",
+    "Columna": "NumeroCredito",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleCuota",
+    "Columna": "Cuota",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleCuota",
+    "Columna": "FechaVencimiento",
+    "Tipo": "date",
+    "Longitud": 3,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleCuota",
+    "Columna": "Capital",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleCuota",
+    "Columna": "Interes",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "CodigoPago",
+    "Tipo": "bigint",
+    "Longitud": 8,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "Comprobante",
+    "Tipo": "bigint",
+    "Longitud": 8,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "NumeroCredito",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "Cuota",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "FechaPago",
+    "Tipo": "datetime2",
+    "Longitud": 6,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "CodigoTipoPago",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "ReferenciaBancaria",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "Monto",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "Capital",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "Interes",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "ManejoCuenta",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "SeguroAuto",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "SeguroVida",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "RegistradoPor",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "FechaAnulacion",
+    "Tipo": "datetime2",
+    "Longitud": 6,
+    "Precision": 19,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "MotivoAnulacion",
+    "Tipo": "nvarchar",
+    "Longitud": 600,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "AnuladoPor",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetallePago",
+    "Columna": "Observacion",
+    "Tipo": "nvarchar",
+    "Longitud": 600,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleReferencia",
+    "Columna": "CodigoDeudor",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleReferencia",
+    "Columna": "CodigoReferencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleReferencia",
+    "Columna": "CodigoTipoReferencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "DetalleReferencia",
+    "Columna": "ParentescoRelacion",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Deudor",
+    "Columna": "CodigoDeudor",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Deudor",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Direccion",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Direccion",
+    "Columna": "Correlativo",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Direccion",
+    "Columna": "CodigoTipoDireccion",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Direccion",
+    "Columna": "CodigoDepartamento",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Direccion",
+    "Columna": "CodigoMunicipio",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Direccion",
+    "Columna": "Detalle",
+    "Tipo": "nvarchar",
+    "Longitud": 600,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Fiador",
+    "Columna": "CodigoFiador",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Fiador",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "CodigoGarantia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "VIN",
+    "Tipo": "varchar",
+    "Longitud": 17,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "CodigoMarca",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "CodigoLinea",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "Anio",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "ValorAgencia",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "Placa",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "CodigoTipoGarantia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Garantia",
+    "Columna": "EsNuevo",
+    "Tipo": "bit",
+    "Longitud": 1,
+    "Precision": 1,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Linea",
+    "Columna": "CodigoMarca",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Linea",
+    "Columna": "CodigoLinea",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Linea",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Marca",
+    "Columna": "CodigoMarca",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Marca",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Municipio",
+    "Columna": "CodigoDepartamento",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Municipio",
+    "Columna": "CodigoMunicipio",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Municipio",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "CodigoParametro",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "Nombre",
+    "Tipo": "nvarchar",
+    "Longitud": 200,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "Activo",
+    "Tipo": "bit",
+    "Longitud": 1,
+    "Precision": 1,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "TasaAnual",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "ManejoMensual",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "TasaSeguroAuto",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "TasaSeguroVida",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "EngancheMinimo",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "ComisionPredeterminada",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ParametroCredito",
+    "Columna": "DepreciacionInicial",
+    "Tipo": "decimal",
+    "Longitud": 5,
+    "Precision": 9,
+    "Escala": 6,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "DPI",
+    "Tipo": "varchar",
+    "Longitud": 13,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "NIT",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "PrimerNombre",
+    "Tipo": "nvarchar",
+    "Longitud": 128,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "SegundoNombre",
+    "Tipo": "nvarchar",
+    "Longitud": 128,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "PrimerApellido",
+    "Tipo": "nvarchar",
+    "Longitud": 128,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "SegundoApellido",
+    "Tipo": "nvarchar",
+    "Longitud": 128,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "FechaNacimiento",
+    "Tipo": "date",
+    "Longitud": 3,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "Genero",
+    "Tipo": "char",
+    "Longitud": 1,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Persona",
+    "Columna": "CorreoElectronico",
+    "Tipo": "nvarchar",
+    "Longitud": 508,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": true,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Referencia",
+    "Columna": "CodigoReferencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Referencia",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Referencia",
+    "Columna": "LugarTrabajo",
+    "Tipo": "nvarchar",
+    "Longitud": 400,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ResumenCredito",
+    "Columna": "NumeroCredito",
+    "Tipo": "varchar",
+    "Longitud": 20,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ResumenCredito",
+    "Columna": "TotalIntereses",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "ResumenCredito",
+    "Columna": "TotalNetoRecaudable",
+    "Tipo": "decimal",
+    "Longitud": 9,
+    "Precision": 18,
+    "Escala": 2,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Telefono",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Telefono",
+    "Columna": "Correlativo",
+    "Tipo": "smallint",
+    "Longitud": 2,
+    "Precision": 5,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Telefono",
+    "Columna": "CodigoTipoTelefono",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Telefono",
+    "Columna": "Numero",
+    "Tipo": "varchar",
+    "Longitud": 32,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoDireccion",
+    "Columna": "CodigoTipoDireccion",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoDireccion",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoGarantia",
+    "Columna": "CodigoTipoGarantia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoGarantia",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoPago",
+    "Columna": "CodigoTipoPago",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoPago",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoPago",
+    "Columna": "RequiereReferencia",
+    "Tipo": "bit",
+    "Longitud": 1,
+    "Precision": 1,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoReferencia",
+    "Columna": "CodigoTipoReferencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoReferencia",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoTelefono",
+    "Columna": "CodigoTipoTelefono",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "TipoTelefono",
+    "Columna": "Descripcion",
+    "Tipo": "nvarchar",
+    "Longitud": 256,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Vendedor",
+    "Columna": "CodigoVendedor",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": true
+  },
+  {
+    "Tabla": "Vendedor",
+    "Columna": "CodigoEmpleado",
+    "Tipo": "varchar",
+    "Longitud": 30,
+    "Precision": 0,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Vendedor",
+    "Columna": "CodigoPersona",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  },
+  {
+    "Tabla": "Vendedor",
+    "Columna": "CodigoAgencia",
+    "Tipo": "int",
+    "Longitud": 4,
+    "Precision": 10,
+    "Escala": 0,
+    "Nulo": false,
+    "Identidad": false
+  }
+]

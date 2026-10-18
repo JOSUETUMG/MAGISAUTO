@@ -1,6 +1,6 @@
-﻿param(
+param(
  [string]$Servidor='tcp:127.0.0.1,1433',
- [ValidatePattern('^[A-Za-z][A-Za-z0-9_]{0,100}$')][string]$Base='MAGISAUTO_Proyecto_V2',
+ [ValidatePattern('^[A-Za-z][A-Za-z0-9_]{0,100}$')][string]$Base='MAGISAUTO_Entrega_Final',
  [ValidatePattern('^[A-Za-z][A-Za-z0-9_]{0,100}$')][string]$Usuario='magis_api_diego'
 )
 $ErrorActionPreference='Stop'

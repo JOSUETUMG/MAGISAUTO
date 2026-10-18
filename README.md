@@ -1,4 +1,4 @@
-﻿# MAGIS-AUTO
+# MAGIS-AUTO
 
 Proyecto universitario de financiamiento de vehículos. Trabajo individual de Diego en **pruebas-diego**, conservando los acuerdos del equipo.
 
@@ -10,7 +10,7 @@ API en C# / ASP.NET Core .NET 10 y SQL Server, con interfaz HTML/CSS/JavaScript.
 
 Vendedores permite administrar código de empleado, DPI, nombres y agencia. El registro guarda Persona y Vendedor en una transacción; al eliminar conserva la ficha personal y protege vendedores con créditos. Ver [alcance y pruebas](docs/FASE_6_Vendedores.md).
 
-Clientes guarda el expediente completo en una transacción y muestra lo que falta para tener contactos y tres referencias completas. La presentación de solicitudes mediante validación SQL se incorpora en Créditos y requiere instalar su parche SQL. Ver [alcance, límites y pruebas](docs/FASE_6_Clientes.md).
+Clientes guarda el expediente completo en una transacción y muestra lo que falta para tener contactos y tres referencias completas. La presentación de solicitudes mediante validación SQL se incorpora en Créditos y ya está incluida en el SQL final consolidado. Ver [alcance, límites y pruebas](docs/FASE_6_Clientes.md).
 
 Fiadores permite registrar, buscar y editar personas y contactos, reutilizar una Persona existente por DPI y eliminar el rol solo si no tiene créditos vinculados. La asignación de fiadores se realiza desde el módulo Créditos. Ver [alcance, pruebas y guía manual](docs/FASE_6_Fiadores.md).
 
@@ -20,7 +20,7 @@ Vehículos permite administrar VIN, marca, línea, año, precio al contado y pla
 
 1. Abrir MAGISAUTO.sln en Visual Studio 2026 con desarrollo ASP.NET y SDK .NET 10.
 2. Esperar la restauración y seleccionar MAGISAUTO.API como proyecto de inicio.
-3. En la máquina de Diego, MAGISAUTO_Proyecto_V2 y la configuración local ya están preparadas.
+3. En la máquina de Diego, MAGISAUTO_Entrega_Final y la configuración local ya están preparadas.
 4. Si estaba ejecutándose, detenerla y volver a iniciar. Elegir **http** y pulsar **Ctrl+F5**.
 5. El navegador abre http://localhost:5164/ con la pantalla de marcas.
 6. Probar http://localhost:5164/api/salud/base-datos.
@@ -86,25 +86,14 @@ El código de una nueva marca es un entero positivo proporcionado por el usuario
 
 ## Otra máquina
 
-**Para los compañeros con los mismos datos de prueba:** seguir [Instalación del equipo](docs/INSTALACION_EQUIPO.md). El paquete [database/equipo](database/equipo/LEEME.md) incluye estructura y registros actuales; usarlo en lugar del instalador vacío descrito abajo. Cada equipo genera su propia cuenta y configuración. [Guía de tareas y Git en PDF](docs/equipo/MAGISAUTO_Guia_de_trabajo_equipo_y_Git.pdf).
+Usar [Instalación del equipo](docs/INSTALACION_EQUIPO.md) y el único instalador vigente [database/final/MAGISAUTO_Final.sql](database/final/MAGISAUTO_Final.sql), que incluye estructura, actualizaciones 001 y 002 y datos ficticios coherentes. Cada computadora configura su propia instancia y cuenta limitada.
 
-### Alternativa: instalación vacía sin operaciones de prueba
+## Dos bases de uso activo
 
-Cada equipo necesita su propia base y credencial; Git no las instala.
+- **MAGISAUTO_Entrega_Final:** aplicación, demostración y entrega, con la muestra 2026-10-16-v1.
+- **MAGISAUTO_ValidacionV2:** pruebas automatizadas aisladas. No es la conexión de la aplicación de presentación ni el archivo que se entrega.
 
-1. Instalar database/v2/entrega/MAGISAUTO_Proyecto_Completo.sql según su LEEME.md, con un nombre nuevo.
-2. Desde la raíz del repositorio:
-
-    powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/Preparar-ConexionLocal.ps1 -Usuario magis_api_local
-
-   También acepta -Servidor y -Base. No reemplaza una configuración ya existente.
-3. Se generan una contraseña aleatoria y dos archivos privados:
-   - src/MAGISAUTO.API/appsettings.Local.json: conexión local.
-   - artifacts/acceso-local/HABILITAR_API_LOCAL.sql: creación administrativa de la cuenta.
-4. Abrir el segundo en SSMS con cuenta administradora y ejecutarlo completo una vez. Crea la cuenta e incorpora el usuario al rol magis_api, sin cambiar datos de negocio.
-5. Reiniciar la API.
-
-Ambos archivos privados están excluidos de Git y no se comparten. Si la cuenta existe, el script se detiene sin restablecer su contraseña: revisar si ya se ejecutó. appsettings.Local.example.json contiene solo un ejemplo sin clave real.
+MAGISAUTO_Proyecto_V2, MAGISAUTO_Equipo y las copias de ensayo son antecedentes. No crearlas para este recorrido ni borrarlas automáticamente. Las referencias en informes antiguos describen pruebas históricas. Esta organización limita el uso activo a dos bases; no afirma que se hayan eliminado las demás del servidor.
 
 ## Configuración y permisos
 
@@ -160,7 +149,7 @@ Al cerrar cada fase se entregará un informe PDF acumulado con cambios, explicac
 
 ### Créditos — fase 6
 
-[Créditos](docs/FASE_6_Creditos.md) incorpora borradores, asignación de fiadores, presentación, aprobación con cuotas y anulación. Abrir `/creditos.html`. Antes de usarlo en la base del proyecto, instalar [el parche aditivo](database/v2/migraciones/001_Presentacion_Creditos.sql) con la cuenta administradora y reiniciar la API. No ejecutar el instalador completo sobre una base existente.
+[Créditos](docs/FASE_6_Creditos.md) incorpora borradores, asignación de fiadores, presentación, aprobación con cuotas y anulación. Abrir `/creditos.html`. El SQL final ya integra las actualizaciones 001 y 002; no volver a aplicarlas. No ejecutar el instalador completo sobre una base existente.
 
 La API expone GET/POST `/api/creditos`, GET/PUT/DELETE `/api/creditos/{numero}`, GET `/api/creditos/catalogos` y POST a `/{numero}/presentar`, `/{numero}/aprobar`, `/{numero}/anular`. La documentación contiene cuerpos, reglas y pruebas. La cuenta API sigue limitada a procedimientos almacenados.
 
