@@ -86,7 +86,7 @@ El código de una nueva marca es un entero positivo proporcionado por el usuario
 
 ## Otra máquina
 
-Usar [Instalación del equipo](docs/INSTALACION_EQUIPO.md) y el único instalador vigente [database/final/MAGISAUTO_Final.sql](database/final/MAGISAUTO_Final.sql), que incluye estructura, actualizaciones 001 y 002 y datos ficticios coherentes. Cada computadora configura su propia instancia y cuenta limitada.
+Usar [Instalación del equipo](docs/INSTALACION_EQUIPO.md) y el único instalador vigente [database/final/MAGISAUTO_Final.sql](database/final/MAGISAUTO_Final.sql), que incluye estructura, actualizaciones 001, 002 y 003 y datos ficticios coherentes. Cada computadora configura su propia instancia y cuenta limitada.
 
 ## Dos bases de uso activo
 
@@ -149,7 +149,7 @@ Al cerrar cada fase se entregará un informe PDF acumulado con cambios, explicac
 
 ### Créditos — fase 6
 
-[Créditos](docs/FASE_6_Creditos.md) incorpora borradores, asignación de fiadores, presentación, aprobación con cuotas y anulación. Abrir `/creditos.html`. El SQL final ya integra las actualizaciones 001 y 002; no volver a aplicarlas. No ejecutar el instalador completo sobre una base existente.
+[Créditos](docs/FASE_6_Creditos.md) incorpora borradores, asignación de fiadores, presentación, aprobación con cuotas y anulación. Abrir `/creditos.html`. El SQL final ya integra las actualizaciones 001, 002 y 003; no volver a aplicarlas. No ejecutar el instalador completo sobre una base existente.
 
 La API expone GET/POST `/api/creditos`, GET/PUT/DELETE `/api/creditos/{numero}`, GET `/api/creditos/catalogos` y POST a `/{numero}/presentar`, `/{numero}/aprobar`, `/{numero}/anular`. La documentación contiene cuerpos, reglas y pruebas. La cuenta API sigue limitada a procedimientos almacenados.
 
@@ -171,3 +171,7 @@ La fase 6 sigue abierta. Próximo trabajo: consultas y reportes mediante SP, con
 [Consultas y reportes](docs/FASE_6_Reportes.md) integra las 20 consultas SQL existentes con filtros, propósito y secciones de resultados. Abrir `/reportes.html` tras reiniciar la API. Incluye estado de cuenta, cortes históricos, planes, comisiones, recaudo, mora y cartas de cumpleaños con vista previa de impresión. No requiere otro parche SQL ni envía correos.
 
 Rutas de solo lectura: `GET /api/reportes`, `GET /api/reportes/catalogos` y `GET /api/reportes/{id}?filtros`. Las consultas conservan todas las tablas de cada SP; no permiten nombres de procedimientos proporcionados por el usuario. Verificadas 134 comprobaciones HTTP/SQL en la base aislada y 15 de formato. Revisión visual y pruebas manuales pendientes. Tener estas consultas no sustituye la auditoría de Listar/Buscar/CRUD de las demás entidades ni cierra la fase 6.
+
+## Actualización CRUD del 18/10/2026
+
+La migración `database/v2/migraciones/003_CRUD_Entrega.sql` ya fue instalada por Diego en MAGISAUTO_Entrega_Final, según la captura de SSMS. No repetirla en esa copia. Las pruebas manuales de valoraciones y cancelación del borrado del recibo 9 fueron confirmadas el 18/10/2026. Solo cambia tres procedimientos; no vuelve a cargar datos. Para instalación nueva, el SQL final ya la incluye. Ver `docs/CRUD_ENTREGA_2026-10-18.md`: valoraciones previas editables y eliminación física de pagos anulados, con efecto en los reportes históricos.

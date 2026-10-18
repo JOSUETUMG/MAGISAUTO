@@ -1,7 +1,7 @@
 {
   "archivo": "MAGISAUTO_Final.sql",
-  "sha256": "6fd7a9d3a5afeb3572877f42e20485713c35cc637598f1a8db89a718fa28f7eb",
-  "commitCodigo": "b8c44aab3976a5facf6ed6d9ced2ea1205eaedd2",
+  "sha256": "930e520f20b71527e5ca335107b1b0c6d9bc43b4b8431240f779ec0940817a69",
+  "commitCodigo": "9ba22da6a734443dc29b92c3d2886e88e5c0d33a",
   "destinoPredeterminado": "MAGISAUTO_Entrega_Final",
   "tablas": {
     "Agencia": 2,
@@ -40,13 +40,15 @@
   "reportes": 20,
   "migracionesIntegradas": [
     "001",
-    "002"
+    "002",
+    "003"
   ],
   "fuentes": {
     "database\\equipo\\MAGISAUTO_Equipo_2026-10-13.sql": "3ffb46fe7a42c9bd468c7fb703c3a9476285afbcd2242d7de418e3ebdbc61a3a",
-    "database\\v2\\migraciones\\002_Cierre_Tecnico.sql": "21fb2baa5aefca3de185db38fc6877d50ba22a570a282ff676de550709c297c4"
+    "database\\v2\\migraciones\\002_Cierre_Tecnico.sql": "21fb2baa5aefca3de185db38fc6877d50ba22a570a282ff676de550709c297c4",
+    "database\\v2\\migraciones\\003_CRUD_Entrega.sql": "299d1e980c831c36ed32765e0f76682a0afa052bc10cef53a816363a01f79d64"
   },
   "credencialesIncluidas": false,
   "datosSha256": "611b909b1e72ddd8e19db8c4a4a3521264b5222f24ce8e69558f6ed53b93fe80",
-  "estado": "Carga y conexion confirmadas; 20 reportes SQL ejecutados; Clientes, Creditos, Cartera en mora y Pagos anulados confirmados por el usuario"
+  "estado": "003 integrada y validada en base aislada; instalada en base final segun captura SSMS y pruebas manuales del usuario"
 }

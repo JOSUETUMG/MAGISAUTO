@@ -1,3 +1,5 @@
+> Documento histórico. Para el cambio vigente de CRUD consultar [actualización del 18/10/2026](CRUD_ENTREGA_2026-10-18.md). Las limitaciones descritas abajo corresponden al ensayo original.
+
 # Fase 6 - Valoraciones de vehículos
 
 Avance local en `pruebas-diego`. La fase 6 continúa abierta.

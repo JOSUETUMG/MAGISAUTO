@@ -21,7 +21,7 @@ Usar la copia completa y actualizada de la rama pruebas-diego. No descartar camb
 3. Esperar **Instalacion final completada**: 26 tablas, 154 procedimientos API, cuatro vistas, dos funciones, 20 reportes y 350 filas de muestra.
 4. Seleccionar MAGISAUTO_Entrega_Final y ejecutar completo `database/final/VERIFICAR_INSTALACION.sql`. Espera la muestra inicial sin movimientos adicionales.
 
-Las actualizaciones 001 y 002 ya están integradas: no ejecutarlas otra vez ni instalar el paquete histórico del equipo. Si la base final ya existe, el instalador se detiene. Comprobar su versión, sin crear una tercera base ni borrar datos. En Diego la nueva muestra ya se cargó y verificó; no repetir la carga. En otra computadora con una copia antigua, revisar su contenido y respaldarla antes de preparar una actualización específica.
+Las actualizaciones 001, 002 y 003 ya están integradas: no ejecutarlas otra vez ni instalar el paquete histórico del equipo. Si la base final ya existe, el instalador se detiene. Comprobar su versión, sin crear una tercera base ni borrar datos. En Diego la nueva muestra ya se cargó y verificó; no repetir la carga. En otra computadora con una copia antigua, revisar su contenido y respaldarla antes de preparar una actualización específica.
 
 ## 4. Configurar una computadora nueva
 
@@ -70,3 +70,7 @@ Muestra inicial: seis clientes, ocho vehículos, seis créditos (cinco vigentes 
 ## 8. Evidencias y publicación
 
 Ver `COMPROBACIONES_ENTREGA_FINAL_2026-10-17.md`: instalación, conexión, 20 reportes SQL y cuatro confirmaciones visuales. No equivale a una prueba visual de todos los reportes. Git no publica cambios de SQL Server automáticamente. Las instrucciones históricas de database/equipo y el PDF antiguo de tareas no son el instalador vigente.
+
+## Actualización CRUD del 18/10/2026
+
+La migración `database/v2/migraciones/003_CRUD_Entrega.sql` ya fue instalada por Diego en MAGISAUTO_Entrega_Final, según la captura de SSMS. No repetirla en esa copia. Las pruebas manuales de valoraciones y cancelación del borrado del recibo 9 fueron confirmadas el 18/10/2026. Solo cambia tres procedimientos; no vuelve a cargar datos. Para instalación nueva, el SQL final ya la incluye. Ver `docs/CRUD_ENTREGA_2026-10-18.md`: valoraciones previas editables y eliminación física de pagos anulados, con efecto en los reportes históricos.

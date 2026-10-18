@@ -90,8 +90,8 @@ function abrirValoraciones(vehiculo) {
   vehiculoValoraciones = vehiculo; $("criterio-valoracion").value = ""; mensaje("aviso-valoraciones", "");
   $("titulo-valoraciones").textContent = `Valoraciones del vehículo ${vehiculo.codigoGarantia}`;
   $("detalle-valoraciones").textContent = `${vehiculo.marca} · ${vehiculo.linea} · VIN ${vehiculo.vin}`;
-  $("nueva-valoracion").disabled = !vehiculo.tieneHistorialContractual;
-  if (!vehiculo.tieneHistorialContractual) mensaje("aviso-valoraciones", "La valoración inicial se genera al aprobar el crédito. Aún no hay un contrato aprobado para este vehículo.");
+  $("nueva-valoracion").disabled = false;
+  if (!vehiculo.tieneHistorialContractual) mensaje("aviso-valoraciones", "Puedes registrar valoraciones previas, editarlas y eliminarlas. Al aprobar el crédito se genera la valoración contractual y se protege el historial.");
   $("historial-valoraciones").showModal(); cargarValoraciones();
 }
 function abrirEditorValoracion(valoracion = null) {

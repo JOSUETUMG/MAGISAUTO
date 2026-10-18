@@ -13,4 +13,5 @@ public sealed class PagosController(PagoRepositorio pagos):ControllerBase
     [HttpPost] public async Task<IActionResult> Registrar(PagoSolicitud s,CancellationToken ct)=>StatusCode(201,await pagos.Registrar(s,ct));
     [HttpPut("{codigo:long}/observacion")] public async Task<IActionResult> Actualizar([Range(1,long.MaxValue)]long codigo,PagoObservacion s,CancellationToken ct){await pagos.Actualizar(codigo,s,ct);return NoContent();}
     [HttpPost("{codigo:long}/anular")] public async Task<IActionResult> Anular([Range(1,long.MaxValue)]long codigo,PagoAnulacion s,CancellationToken ct){await pagos.Anular(codigo,s,ct);return NoContent();}
+    [HttpDelete("{codigo:long}")] public async Task<IActionResult> Eliminar([Range(1,long.MaxValue)]long codigo,CancellationToken ct){await pagos.Eliminar(codigo,ct);return NoContent();}
 }

@@ -1,3 +1,5 @@
+> Documento histórico. Para el cambio vigente de CRUD consultar [actualización del 18/10/2026](CRUD_ENTREGA_2026-10-18.md). Las limitaciones descritas abajo corresponden al ensayo original.
+
 # Fase 6 — Pagos y abonos
 
 Implementación local del 13 de octubre de 2026, rama `pruebas-diego`. La fase 6 sigue abierta; esta entrega añade recaudación a los créditos aprobados y no implica publicación en GitHub.

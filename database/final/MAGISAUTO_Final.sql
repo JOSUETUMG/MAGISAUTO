@@ -2,7 +2,7 @@
 Codigo de referencia: b8c44aa, rama pruebas-diego.
 INSTALACION NUEVA COMPLETA: 26 tablas, 154 procedimientos API, 4 vistas,
 2 funciones, 20 reportes y 350 filas ficticias coherentes de demostracion.
-Incluye las funcionalidades de las migraciones 001 y 002. NO ejecutarlas despues.
+Incluye las funcionalidades de las migraciones 001, 002 y 003. NO ejecutarlas despues.
 Corte de demostracion: 16/10/2026. Seis casos: al dia, parcial, mora, anticipo, anulacion y borrador.
 
 INSTRUCCIONES: abrir TODO el archivo en SSMS y ejecutar con F5, sin seleccionar
@@ -2405,43 +2405,89 @@ END;'');
 
 -- api.Depreciacion_Actualizar
 EXEC(N''CREATE PROCEDURE api.[Depreciacion_Actualizar] @CodigoDepreciacion int,
+
  @CodigoGarantia int,
+
  @FechaValoracion date,
+
  @ValorOriginal decimal(18,2),
+
  @Porcentaje decimal(9,6),
+
  @Observacion nvarchar(300)
+
 AS
+
 BEGIN
+
  SET NOCOUNT ON;
+
  SET XACT_ABORT ON;
+
  BEGIN TRY
+
   BEGIN TRANSACTION;
+  DECLARE @VehiculoActual int,@VehiculoBloqueado int;
+  SELECT @VehiculoActual=CodigoGarantia FROM dbo.Depreciacion WHERE CodigoDepreciacion=@CodigoDepreciacion;
+  IF @VehiculoActual IS NULL THROW 51008,''''Registro no encontrado.'''',1;
+  -- Mismo bloqueo que la aprobacion: no permitir editar mientras se aprueba.
+  SELECT @VehiculoBloqueado=CodigoGarantia FROM dbo.Garantia WITH(UPDLOCK,HOLDLOCK) WHERE CodigoGarantia=@VehiculoActual;
+  IF @CodigoGarantia<>@VehiculoActual THROW 51014,''''No se puede trasladar una valoracion a otro vehiculo.'''',1;
+
   IF @FechaValoracion>CONVERT(date,dbo.fn_AhoraGuatemala()) THROW 51006,''''La valoracion no puede estar en el futuro.'''',1;IF EXISTS(SELECT 1 FROM dbo.Depreciacion d JOIN dbo.Credito c ON c.CodigoGarantia=d.CodigoGarantia WHERE d.CodigoDepreciacion=@CodigoDepreciacion AND c.FechaAprobacion IS NOT NULL) THROW 51014,''''La valoracion forma parte del historial; registre una nueva valoracion.'''',1;
+
 UPDATE dbo.[Depreciacion] SET [CodigoGarantia]=@CodigoGarantia,[FechaValoracion]=@FechaValoracion,[ValorOriginal]=@ValorOriginal,[Porcentaje]=@Porcentaje,[Observacion]=@Observacion WHERE [CodigoDepreciacion]=@CodigoDepreciacion; IF @@ROWCOUNT=0 THROW 51008,''''Registro no encontrado.'''',1;
+
   COMMIT TRANSACTION;
+
  END TRY
+
  BEGIN CATCH
+
   IF XACT_STATE() <> 0 ROLLBACK TRANSACTION;
+
   THROW;
+
  END CATCH;
+
 END;'');
 
 -- api.Depreciacion_Eliminar
 EXEC(N''CREATE PROCEDURE api.[Depreciacion_Eliminar] @CodigoDepreciacion int
+
 AS
+
 BEGIN
+
  SET NOCOUNT ON;
+
  SET XACT_ABORT ON;
+
  BEGIN TRY
+
   BEGIN TRANSACTION;
+  DECLARE @VehiculoActual int,@VehiculoBloqueado int;
+  SELECT @VehiculoActual=CodigoGarantia FROM dbo.Depreciacion WHERE CodigoDepreciacion=@CodigoDepreciacion;
+  IF @VehiculoActual IS NULL THROW 51008,''''Registro no encontrado.'''',1;
+  -- Mismo bloqueo que la aprobacion: no permitir editar mientras se aprueba.
+  SELECT @VehiculoBloqueado=CodigoGarantia FROM dbo.Garantia WITH(UPDLOCK,HOLDLOCK) WHERE CodigoGarantia=@VehiculoActual;
+
   IF EXISTS(SELECT 1 FROM dbo.Depreciacion d JOIN dbo.Credito c ON c.CodigoGarantia=d.CodigoGarantia WHERE d.CodigoDepreciacion=@CodigoDepreciacion AND c.FechaAprobacion IS NOT NULL) THROW 51014,''''La valoracion forma parte del historial; registre una nueva valoracion.'''',1;
+
 DELETE dbo.[Depreciacion] WHERE [CodigoDepreciacion]=@CodigoDepreciacion; IF @@ROWCOUNT=0 THROW 51008,''''Registro no encontrado.'''',1;
+
   COMMIT TRANSACTION;
+
  END TRY
+
  BEGIN CATCH
+
   IF XACT_STATE() <> 0 ROLLBACK TRANSACTION;
+
   THROW;
+
  END CATCH;
+
 END;'');
 
 -- api.DetalleCuota_Listar
@@ -3054,19 +3100,24 @@ BEGIN
 END;'');
 
 -- api.DetallePago_Eliminar
--- PROTECCION: la correccion financiera se realiza por anulacion, no borrado fisico.
-EXEC(N''CREATE PROCEDURE api.[DetallePago_Eliminar] @CodigoPago bigint,@Motivo nvarchar(300),@Responsable nvarchar(100)
+-- BORRADO FISICO: solo pagos ya anulados; elimina tambien evidencia de cortes historicos.
+EXEC(N''CREATE PROCEDURE api.DetallePago_Eliminar @CodigoPago bigint
 AS
 BEGIN
- SET NOCOUNT ON;
- SET XACT_ABORT ON;
+ SET NOCOUNT ON; SET XACT_ABORT ON;
  BEGIN TRY
   BEGIN TRANSACTION;
-  EXEC api.DetallePago_Anular @CodigoPago=@CodigoPago,@Motivo=@Motivo,@Responsable=@Responsable;
-  COMMIT TRANSACTION;
+  DECLARE @Anulado datetime2(0), @Existe bit=0;
+  SELECT @Existe=1,@Anulado=FechaAnulacion FROM dbo.DetallePago WITH(UPDLOCK,HOLDLOCK) WHERE CodigoPago=@CodigoPago;
+  IF @Existe=0 THROW 51213,''''El pago no existe.'''',1;
+  IF @Anulado IS NULL THROW 51219,''''Anule primero el pago. No se puede eliminar un pago efectivo.'''',1;
+  -- El borrado fisico elimina tambien la evidencia para cortes historicos.
+  -- No cambia saldos efectivos ni estado: el movimiento ya estaba anulado.
+  DELETE dbo.DetallePago WHERE CodigoPago=@CodigoPago;
+  COMMIT;
  END TRY
  BEGIN CATCH
-  IF XACT_STATE() <> 0 ROLLBACK TRANSACTION;
+  IF XACT_STATE()<>0 ROLLBACK;
   THROW;
  END CATCH;
 END;'');

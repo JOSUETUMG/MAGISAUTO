@@ -1,0 +1,58 @@
+{
+  "Estado": "Correcto",
+  "Alcance": "DOM con API simulada; no certifica renderizado ni reemplaza HTTP/SQL",
+  "Pruebas": [
+    {
+      "Prueba": "Anulado muestra eliminar y oculta anular",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cancelar no envia DELETE",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Confirmacion explica perdida historica",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Identificador bigint intacto",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Envio unico y controles bloqueados",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Recibo cerrado y lista actualizada",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Mensaje de borrado historico",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Pago efectivo oculta eliminar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Guardia impide borrar efectivo",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Vehiculo libre permite registrar valoracion",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Ayuda distingue valoracion previa y contractual",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Formulario previo abre y tiene cancelar",
+      "Resultado": "Correcto"
+    },
+    {
+      "Prueba": "Cancelar valoracion cierra",
+      "Resultado": "Correcto"
+    }
+  ]
+}

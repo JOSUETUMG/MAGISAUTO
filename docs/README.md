@@ -61,3 +61,5 @@ Cada documento debe distinguir requisitos del docente, decisiones del equipo, co
 Solo dos bases de uso activo: **MAGISAUTO_Entrega_Final** (aplicación y entrega) y **MAGISAUTO_ValidacionV2** (ensayos aislados). MAGISAUTO_Proyecto_V2 y otras copias permanecen como antecedentes; no se usan ni se eliminan en este cambio.
 
 Documentación técnica actualizada: [versión resumida, 14 páginas](../output/pdf/DocumentacionSQL_Resumida.pdf) y [consulta completa, 40 páginas](../output/pdf/DocumentacionSQL_Completada.pdf). Ambas usan los nuevos casos de entrega y la organización de dos bases activas.
+
+- [CRUD de valoraciones y pagos anulados](CRUD_ENTREGA_2026-10-18.md): 75 pruebas HTTP/SQL y 13 DOM; migración 003 instalada en la base final y pruebas manuales confirmadas.

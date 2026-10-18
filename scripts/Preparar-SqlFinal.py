@@ -32,6 +32,14 @@ for match in literal.finditer(migration.read_text(encoding='utf-8-sig')):
  if found:
   key=found.group(2)+'.'+found.group(3);modules[key]=text;changed.append(key)
 assert len(changed)==9 and len(modules)==160
+crud=ROOT/'database/v2/migraciones/003_CRUD_Entrega.sql'
+crud_changed=[]
+for match in literal.finditer(crud.read_text(encoding='utf-8-sig')):
+ text=match.group(1).replace("''", "'");found=kind.match(text)
+ if found:
+  key=found.group(2)+'.'+found.group(3);modules[key]=text;crud_changed.append(key)
+assert len(crud_changed)==3 and len(modules)==160
+
 notes={
  'api.Credito_Presentar':'EXPEDIENTE: exige datos y tres referencias completas antes de presentar.',
  'api.Credito_Aprobar':'APROBACION: valida requisitos; sustituye simulaciones por cuotas y resumen definitivos.',
@@ -39,7 +47,7 @@ notes={
  'api.Credito_Anular':'HISTORIAL: exige resolver pagos efectivos antes de anular el contrato.',
  'api.DetallePago_Insertar':'PAGO: valida saldo y medio, desglosa componentes y asigna un recibo unico.',
  'api.DetallePago_Anular':'ANULACION: conserva el pago y registra fecha, motivo y responsable.',
- 'api.DetallePago_Eliminar':'PROTECCION: la correccion financiera se realiza por anulacion, no borrado fisico.',
+ 'api.DetallePago_Eliminar':'BORRADO FISICO: solo pagos ya anulados; elimina tambien evidencia de cortes historicos.',
  'api.Reporte10_Intereses':'DEVENGO ACADEMICO: interes completo al vencimiento; anticipos separados, sin prorrateo diario.',
  'dbo.fn_Saldos':'CORTE HISTORICO: considera fecha de pago y fecha de anulacion al reconstruir los saldos.',
  'dbo.vw_CuotaDesglosada':'CUOTA TOTAL: capital, interes, manejo y seguros; el enganche queda fuera.',
@@ -86,7 +94,7 @@ header="""/* MAGIS-AUTO - SQL FINAL DE ENTREGA - 16/10/2026
 Codigo de referencia: b8c44aa, rama pruebas-diego.
 INSTALACION NUEVA COMPLETA: 26 tablas, 154 procedimientos API, 4 vistas,
 2 funciones, 20 reportes y 350 filas ficticias coherentes de demostracion.
-Incluye las funcionalidades de las migraciones 001 y 002. NO ejecutarlas despues.
+Incluye las funcionalidades de las migraciones 001, 002 y 003. NO ejecutarlas despues.
 Corte de demostracion: 16/10/2026. Seis casos: al dia, parcial, mora, anticipo, anulacion y borrador.
 
 INSTRUCCIONES: abrir TODO el archivo en SSMS y ejecutar con F5, sin seleccionar
@@ -121,6 +129,6 @@ work=ROOT/'artifacts/sql-final';work.mkdir(parents=True,exist_ok=True)
 (work/'carga.sql').write_text(body,encoding='utf-8')
 (work/'modulos.json').write_text(json.dumps(modules,ensure_ascii=False,indent=2),encoding='utf-8')
 manifest=json.loads((ROOT/'database/equipo/manifest.json').read_text(encoding='utf-8-sig'))
-meta={'archivo':target.name,'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'commitCodigo':'b8c44aab3976a5facf6ed6d9ced2ea1205eaedd2','destinoPredeterminado':'MAGISAUTO_Entrega_Final','tablas':demo['Tablas'],'filasMuestra':demo['Filas'],'fechaDatosMuestra':demo['Corte'],'versionDatos':demo['Version'],'procedimientosApi':154,'vistas':4,'funciones':2,'reportes':20,'migracionesIntegradas':['001','002'],'fuentes':{str(source.relative_to(ROOT)):hashlib.sha256(source_bytes).hexdigest(),str(migration.relative_to(ROOT)):hashlib.sha256(migration.read_bytes()).hexdigest()},'credencialesIncluidas':False,'datosSha256':hashlib.sha256(demo_file.read_bytes()).hexdigest(),'estado':'Preparado; pendiente carga y comprobacion en SSMS'}
+meta={'archivo':target.name,'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'commitCodigo':'9ba22da6a734443dc29b92c3d2886e88e5c0d33a','destinoPredeterminado':'MAGISAUTO_Entrega_Final','tablas':demo['Tablas'],'filasMuestra':demo['Filas'],'fechaDatosMuestra':demo['Corte'],'versionDatos':demo['Version'],'procedimientosApi':154,'vistas':4,'funciones':2,'reportes':20,'migracionesIntegradas':['001','002','003'],'fuentes':{str(source.relative_to(ROOT)):hashlib.sha256(source_bytes).hexdigest(),str(migration.relative_to(ROOT)):hashlib.sha256(migration.read_bytes()).hexdigest(),str(crud.relative_to(ROOT)):hashlib.sha256(crud.read_bytes()).hexdigest()},'credencialesIncluidas':False,'datosSha256':hashlib.sha256(demo_file.read_bytes()).hexdigest(),'estado':'Preparado; pendiente carga y comprobacion en SSMS'}
 (OUT/'manifest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('SQL final generado: 160 objetos programables, 26 tablas y 350 filas de demostracion.')

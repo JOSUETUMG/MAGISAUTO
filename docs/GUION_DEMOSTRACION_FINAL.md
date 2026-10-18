@@ -28,8 +28,10 @@ Ayuda opcional de 7 a 10 minutos; no es un requisito adicional atribuido al doce
 - **Procesamiento:** procedimientos almacenados; la API valida entradas y usa permisos limitados.
 - **Cuota:** amortización sobre saldo, tasa mensual y plazo; se agregan manejo y seguros. La última cuota ajusta capital restante.
 - **Devengo:** criterio académico mensual al vencimiento, sin prorrateo diario. Cobros previos aparecen como anticipos.
-- **Anulación:** conserva recibo, motivo, fecha y responsable; no borra historial.
+- **Anulación:** conserva recibo, motivo, fecha y responsable; conserva historial. Eliminar definitivamente un pago anulado sí lo retira de reportes históricos.
 - **Migración 002:** actualización para instalaciones anteriores; el SQL final integra su funcionalidad.
 - **Inventario:** 26 tablas, 154 procedimientos API, cuatro vistas, dos funciones y 20 reportes. Muestra inicial: 350 filas.
 
 Ensayar en la computadora de presentación después de cargar los datos y reiniciar la aplicación. Las decisiones del equipo no equivalen a aprobación expresa del docente.
+
+Actualización CRUD 003: ya instalada en la copia final de Diego, según evidencia de SSMS. Para demostrar valoraciones previas usar un vehículo libre y una fila temporal. Conservar el pago anulado de Sofía; el borrado físico se verificó con datos aislados.

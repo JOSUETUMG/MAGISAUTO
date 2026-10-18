@@ -5,6 +5,7 @@ IF DB_NAME()<>N'MAGISAUTO_Entrega_Final' THROW 52600,'Seleccione MAGISAUTO_Entre
 IF NOT EXISTS(SELECT 1 FROM sys.extended_properties WHERE class=0 AND name=N'MAGISAUTO_DatosEntrega' AND CONVERT(nvarchar(100),value)=N'2026-10-16-v1') THROW 52600,'Falta instalar la muestra coherente.',1;
 IF (SELECT COUNT(*) FROM sys.procedures WHERE schema_id=SCHEMA_ID(N'api'))<>154 THROW 52601,'Inventario de procedimientos incorrecto.',1;
 IF EXISTS(SELECT 1 FROM sys.foreign_keys WHERE is_disabled=1 OR is_not_trusted=1) OR EXISTS(SELECT 1 FROM sys.check_constraints WHERE is_disabled=1 OR is_not_trusted=1) THROW 52601,'Restricciones sin validar.',1;
+IF COALESCE(OBJECT_DEFINITION(OBJECT_ID(N'api.DetallePago_Eliminar')),N'') NOT LIKE N'%DELETE dbo.DetallePago%' THROW 52601,'Falta la actualizacion CRUD 003.',1;
 IF (SELECT COUNT_BIG(*) FROM dbo.[Agencia])<>2 THROW 52701,'Conteo inesperado en Agencia.',1;
 IF (SELECT COUNT_BIG(*) FROM dbo.[Credito])<>6 THROW 52701,'Conteo inesperado en Credito.',1;
 IF (SELECT COUNT_BIG(*) FROM dbo.[CreditoFiador])<>5 THROW 52701,'Conteo inesperado en CreditoFiador.',1;

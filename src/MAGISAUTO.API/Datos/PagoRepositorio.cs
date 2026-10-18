@@ -95,4 +95,5 @@ public sealed class PagoRepositorio(ConexionSqlFactory conexiones)
         ["Responsable"]=s.Responsable.Trim(),["ReferenciaBancaria"]=Limpiar(s.ReferenciaBancaria),["Observacion"]=Limpiar(s.Observacion)},ct);
     public Task<Fila?> Actualizar(long codigo,PagoObservacion s,CancellationToken ct)=>Escribir("DetallePago_Actualizar",new(){["CodigoPago"]=codigo,["Observacion"]=Limpiar(s.Observacion)},ct);
     public Task<Fila?> Anular(long codigo,PagoAnulacion s,CancellationToken ct)=>Escribir("DetallePago_Anular",new(){["CodigoPago"]=codigo,["Responsable"]=s.Responsable.Trim(),["Motivo"]=s.Motivo.Trim()},ct);
+    public Task<Fila?> Eliminar(long codigo,CancellationToken ct)=>Escribir("DetallePago_Eliminar",new(){["CodigoPago"]=codigo},ct);
 }

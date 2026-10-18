@@ -54,12 +54,6 @@ public sealed class ValoracionRepositorio(ConexionSqlFactory conexiones)
 
     public async Task<int> Guardar(int? codigo, ValoracionSolicitud solicitud, CancellationToken ct)
     {
-        if (codigo is null)
-        {
-            var existeContrato = (await Listar(solicitud.CodigoGarantia, null, ct)).Any(v => v.ProtegidaPorContrato);
-            if (!existeContrato)
-                throw new OperacionCatalogoException(409, "Registra valoraciones posteriores únicamente para vehículos con un crédito aprobado.");
-        }
         await using var cn = conexiones.Crear();
         await cn.OpenAsync(ct);
         await using var cmd = cn.CreateCommand();

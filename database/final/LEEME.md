@@ -6,7 +6,7 @@ La base elegida para la aplicación y la entrega es **MAGISAUTO_Entrega_Final**.
 
 ## Contenido
 
-`MAGISAUTO_Final.sql` instala desde cero el modelo con 001 y 002 integradas: 26 tablas, 154 procedimientos API, cuatro vistas, dos funciones y 20 reportes. Incluye 350 filas ficticias coherentes, seis clientes, ocho vehículos, seis créditos, 144 cuotas y nueve pagos; uno anulado.
+`MAGISAUTO_Final.sql` instala desde cero el modelo con 001, 002 y 003 integradas: 26 tablas, 154 procedimientos API, cuatro vistas, dos funciones y 20 reportes. Incluye 350 filas ficticias coherentes, seis clientes, ocho vehículos, seis créditos, 144 cuotas y nueve pagos; uno anulado.
 
 Nombres, documentos, contactos y vehículos son ficticios. Los correos usan example.invalid. Los planes y pagos se generan con los procedimientos del sistema. Las fechas históricas de presentación y anulación de esta muestra se fijan explícitamente, como explican los comentarios SQL.
 
@@ -54,3 +54,7 @@ Recorrido: `docs/GUION_DEMOSTRACION_FINAL.md`. Los ejemplos PRUEBA-CREDITO-01 y 
 ## Organización vigente de bases
 
 Solo dos bases de uso activo: **MAGISAUTO_Entrega_Final** (aplicación y entrega) y **MAGISAUTO_ValidacionV2** (ensayos aislados). MAGISAUTO_Proyecto_V2 y otras copias permanecen como antecedentes; no se usan ni se eliminan en este cambio.
+
+## Actualización CRUD del 18/10/2026
+
+La migración `database/v2/migraciones/003_CRUD_Entrega.sql` ya fue instalada por Diego en MAGISAUTO_Entrega_Final, según la captura de SSMS. No repetirla en esa copia. Las pruebas manuales de valoraciones y cancelación del borrado del recibo 9 fueron confirmadas el 18/10/2026. Solo cambia tres procedimientos; no vuelve a cargar datos. Para instalación nueva, el SQL final ya la incluye. Ver `docs/CRUD_ENTREGA_2026-10-18.md`: valoraciones previas editables y eliminación física de pagos anulados, con efecto en los reportes históricos.

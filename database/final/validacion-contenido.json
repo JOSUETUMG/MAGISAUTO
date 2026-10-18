@@ -1,7 +1,7 @@
 {
-  "Estado": "Carga y conexion confirmadas; 20 reportes SQL verificados y cuatro pantallas confirmadas por el usuario",
+  "Estado": "Datos y conexion confirmados previamente; migracion 003 instalada por el usuario y pruebas manuales confirmadas",
   "VersionDatos": "2026-10-16-v1",
-  "SqlSha256": "6fd7a9d3a5afeb3572877f42e20485713c35cc637598f1a8db89a718fa28f7eb",
+  "SqlSha256": "930e520f20b71527e5ca335107b1b0c6d9bc43b4b8431240f779ec0940817a69",
   "FilasEsperadas": 350,
   "CreditoCasos": 6,
   "Cuotas": 144,
@@ -18,5 +18,12 @@
     "CarteraEnMora": "Captura confirmada al 2026-10-16",
     "PagosAnulados": "Confirmacion textual del usuario; sin captura adicional"
   },
-  "RegistroComprobaciones": "docs/COMPROBACIONES_ENTREGA_FINAL_2026-10-17.md"
+  "RegistroComprobaciones": "docs/COMPROBACIONES_ENTREGA_FINAL_2026-10-17.md",
+  "ActualizacionCRUD003": {
+    "Estado": "Instalada en base final segun captura SSMS; CRUD valoraciones y cancelacion de borrado confirmados manualmente",
+    "PruebasHttpSql": 75,
+    "PruebasDom": 13,
+    "DatosMuestraConservados": true,
+    "EvidenciaManual": "docs/evidencias/crud-entrega-2026-10-18/manual"
+  }
 }
