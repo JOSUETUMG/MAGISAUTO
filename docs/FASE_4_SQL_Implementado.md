@@ -1,4 +1,4 @@
-﻿# Fase 4 — Implementación SQL de MAGIS-AUTO
+# Fase 4 — Implementación SQL de MAGIS-AUTO
 
 Fecha: 8 de octubre de 2026. Rama: pruebas-diego.
 
@@ -362,5 +362,5 @@ PK: [NumeroCredito].
 - [ ] Interfaz y aceptación de usuarios.
 - [ ] Confirmar las interpretaciones académicas pendientes con el ingeniero.
 
-No se certifican todos los casos posibles, rendimiento masivo ni una interfaz no conectada. El paquete actualizado es database/v2/entrega; database/entrega-companero conserva v1 como antecedente.
+No se certifican todos los casos posibles, rendimiento masivo ni una interfaz no conectada. El paquete actualizado es database/v2/entrega; la primera entrega v1 se conserva en el historial de Git, no en la copia actual.
 

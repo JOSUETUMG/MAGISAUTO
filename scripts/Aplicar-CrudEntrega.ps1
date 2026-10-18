@@ -1,8 +1,8 @@
-﻿# Actualización local, con copia de procedimientos y comparación de las 26 tablas.
+# Actualización local, con copia de procedimientos y comparación de las 26 tablas.
 # Para otros equipos: ejecutar el SQL 003 completo en la base elegida en SSMS.
 param(
  [Parameter(Mandatory)][ValidateSet('MAGISAUTO_ValidacionV2','MAGISAUTO_Entrega_Final')][string]$Base,
- [string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml'
+ [Parameter(Mandatory)][string]$Credencial
 )
 $ErrorActionPreference='Stop';$repo=Split-Path $PSScriptRoot -Parent
 $salida=Join-Path $repo ('artifacts/crud-entrega-'+$Base+'-'+(Get-Date -Format yyyyMMdd-HHmmss))

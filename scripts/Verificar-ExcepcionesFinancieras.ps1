@@ -1,5 +1,5 @@
 # Ensayo exclusivamente en MAGISAUTO_ValidacionV2. Comprueba bloqueos financieros; revierte cada intento.
-param([string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml',[string]$SalidaCompilacion='bin\ConsultasIntegradas')
+param([Parameter(Mandatory)][string]$Credencial,[string]$SalidaCompilacion='bin\ConsultasIntegradas')
 $ErrorActionPreference='Stop'
 $repo=Split-Path $PSScriptRoot -Parent;$api=Join-Path $repo 'src\MAGISAUTO.API';$salida=Join-Path $repo 'artifacts\verificacion-excepciones-financieras'
 [void](New-Item -ItemType Directory -Force $salida)

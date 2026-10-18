@@ -73,7 +73,7 @@ Este mapa orienta al lector sobre la versión actual; no afirma que todas las ca
 | Ubicación | Contenido y finalidad |
 | --- | --- |
 | `src/MAGISAUTO.API` | Aplicación, controladores, acceso a datos y archivos web. |
-| `database/entrega-companero` | Primera entrega ampliada, conservada como antecedente de 25 tablas. |
+| Historial de Git | Primera entrega ampliada de 25 tablas; retirada de la copia actual por estar sustituida. |
 | `database/v2` | Fuentes, entrega y auditoría de la versión de 26 tablas. |
 | `scripts` | Preparación y verificaciones reproducibles; revisar el alcance de cada script antes de ejecutarlo. |
 | `docs` | Explicaciones de fases, decisiones, limitaciones y evidencias de pruebas. |

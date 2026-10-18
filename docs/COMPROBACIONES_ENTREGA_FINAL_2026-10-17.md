@@ -29,9 +29,9 @@ Resultados detallados locales: `artifacts/datos-entrega/reportes-verificados.jso
 
 | Pantalla | Resultado confirmado | Tipo de evidencia |
 | --- | --- | --- |
-| Clientes | 6 clientes con nombres nuevos y expediente indicado como completo para revisión | Captura `codex-clipboard-ea83b07e-931e-47c0-bdd6-ab650e58fba3.png` |
-| Créditos | MGA-2026-001 a MGA-2026-006; cinco vigentes y uno en borrador. Montos financiados: Q120,000, Q100,000, Q88,000, Q108,000, Q84,000 y Q128,000 | Captura `codex-clipboard-9b1dcba2-7378-4e29-a556-7d58449dd2fd.png` |
-| Cartera en mora | Al 16/10/2026: María, MGA-2026-003, 62 días, 3 cuotas, Q7,620.12; Carlos, MGA-2026-002, 11 días, 1 cuota, Q1,785.18 | Captura `codex-clipboard-b87701e8-6be0-4b46-a5d3-d879abe21089.png` |
+| Clientes | 6 clientes con nombres nuevos y expediente indicado como completo para revisión | [Captura de clientes](evidencias/entrega-final-2026-10-17/clientes.png) |
+| Créditos | MGA-2026-001 a MGA-2026-006; cinco vigentes y uno en borrador. Montos financiados: Q120,000, Q100,000, Q88,000, Q108,000, Q84,000 y Q128,000 | [Captura de creditos](evidencias/entrega-final-2026-10-17/creditos.png) |
+| Cartera en mora | Al 16/10/2026: María, MGA-2026-003, 62 días, 3 cuotas, Q7,620.12; Carlos, MGA-2026-002, 11 días, 1 cuota, Q1,785.18 | [Captura de cartera en mora](evidencias/entrega-final-2026-10-17/cartera-en-mora.png) |
 | Pagos anulados | Aparece el pago de Q1,000 de MGA-2026-005 (Sofía), consultado para 01/06/2026 a 16/10/2026 | Confirmación textual de Diego: «si aparece»; sin captura adicional |
 
 Queda completada la revisión visual de **estas cuatro pantallas**. No se extiende esta confirmación a otras pantallas u operaciones no revisadas.

@@ -1,6 +1,6 @@
 # Requiere PowerShell 7 y una compilación previa. Solo escribe en MAGISAUTO_ValidacionV2.
 param(
- [string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml',
+ [Parameter(Mandatory)][string]$Credencial,
  [string]$SalidaCompilacion='bin\Auxiliares',
  [switch]$ConexionLocalSinCifrado,
  [string]$Node,

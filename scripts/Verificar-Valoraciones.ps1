@@ -1,5 +1,5 @@
 # Ensayo exclusivamente en MAGISAUTO_ValidacionV2. Inserta una valoración temporal y la retira al finalizar.
-param([string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml',[string]$SalidaCompilacion='bin\Valoraciones')
+param([Parameter(Mandatory)][string]$Credencial,[string]$SalidaCompilacion='bin\Valoraciones')
 $ErrorActionPreference='Stop'
 $repo=Split-Path $PSScriptRoot -Parent;$api=Join-Path $repo 'src\MAGISAUTO.API';$salida=Join-Path $repo 'artifacts\verificacion-valoraciones'
 [void](New-Item -ItemType Directory -Force $salida)

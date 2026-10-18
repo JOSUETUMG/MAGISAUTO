@@ -2,7 +2,7 @@
 # Para otros equipos: ejecutar el SQL 002 completo en la base elegida en SSMS.
 param(
  [Parameter(Mandatory)][ValidateSet('MAGISAUTO_ValidacionV2','MAGISAUTO_Proyecto_V2')][string]$Base,
- [string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml'
+ [Parameter(Mandatory)][string]$Credencial
 )
 $ErrorActionPreference='Stop';$repo=Split-Path $PSScriptRoot -Parent
 $salida=Join-Path $repo ('artifacts/cierre-tecnico-'+$Base+'-'+(Get-Date -Format yyyyMMdd-HHmmss))

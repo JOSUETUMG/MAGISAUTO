@@ -78,7 +78,7 @@ La conversación contiene propuestas numeradas cuyo texto original completo no e
 ## 7. Fuentes y continuidad
 
 - Enunciado PDF y conversación del proyecto: requisitos, decisiones de Diego y revisiones posteriores.
-- [Primera entrega SQL: reglas y limitaciones](../database/entrega-companero/LEEME.md): evidencia histórica de los acuerdos implementados; no es la versión recomendada para nuevas instalaciones.
+- Primera entrega SQL: antecedente de 25 tablas disponible en el historial de Git; retirado de la copia actual para evitar confundirlo con el instalador final.
 - [Entrega SQL V2](../database/v2/entrega/LEEME.md): instalación vigente.
 - [Fase 1](FASE_1_Preparacion_del_Proyecto.md): entorno y forma de trabajo.
 - [Modelo ER](FASE_2_Modelo_ER.md) y [SQL implementado](FASE_4_SQL_Implementado.md): evolución posterior.

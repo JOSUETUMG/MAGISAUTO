@@ -176,7 +176,7 @@ phase+='''## Validación y pendientes
 - [ ] Interfaz y aceptación de usuarios.
 - [ ] Confirmar las interpretaciones académicas pendientes con el ingeniero.
 
-No se certifican todos los casos posibles, rendimiento masivo ni una interfaz no conectada. El paquete actualizado es database/v2/entrega; database/entrega-companero conserva v1 como antecedente.
+No se certifican todos los casos posibles, rendimiento masivo ni una interfaz no conectada. El paquete actualizado es database/v2/entrega; la primera entrega v1 se conserva en el historial de Git, no en la copia actual.
 '''
 (repo/'docs'/'FASE_4_SQL_Implementado.md').write_text(phase,encoding='utf-8-sig')
 hashes=[]
@@ -184,7 +184,8 @@ for file in sorted(out.iterdir()):
     if file.is_file() and file.name!='SHA256SUMS.txt':
         hashes.append(hashlib.sha256(file.read_bytes()).hexdigest().upper()+'  '+file.name)
 (out/'SHA256SUMS.txt').write_text('\n'.join(hashes)+'\n',encoding='ascii')
-target=Path(r'C:\Users\dfern\Documents\Codex\2026-09-12\hol\output\MAGISAUTO_SQL_Proyecto_v2.zip')
+target=repo/'artifacts'/'historico'/'MAGISAUTO_SQL_Proyecto_v2.zip'
+target.parent.mkdir(parents=True,exist_ok=True)
 with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED) as z:
     for file in sorted(out.iterdir()):
         if file.is_file():z.write(file,file.name)

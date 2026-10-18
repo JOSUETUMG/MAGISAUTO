@@ -1,8 +1,0 @@
-{
-  "motor": "SQL Server local",
-  "planes_verificados": 75,
-  "distribuciones_abonos_verificadas": 1000,
-  "operaciones_persistidas": false,
-  "instalacion_completa_probada": false,
-  "motivo": "Cuenta disponible sin permiso CREATE DATABASE; autenticacion integrada no disponible en herramientas."
-}

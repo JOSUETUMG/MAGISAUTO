@@ -1,5 +1,4 @@
 # Conservar los bytes de los paquetes SQL y sus sumas SHA256 al clonar.
-database/entrega-companero/** -text
 database/v2/entrega/** -text
 database/equipo/** -text
 # El SQL exportado conserva espacios de las definiciones originales dentro de literales.

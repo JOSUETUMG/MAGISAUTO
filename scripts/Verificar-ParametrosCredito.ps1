@@ -1,5 +1,5 @@
 # Ensayo exclusivamente en MAGISAUTO_ValidacionV2. Conserva los datos anteriores.
-param([string]$Credencial='C:\Users\dfern\Documents\Codex\2026-09-12\hol\work\sql-credential.xml',[string]$SalidaCompilacion='bin\Parametros',[switch]$ConexionLocalSinCifrado)
+param([Parameter(Mandatory)][string]$Credencial,[string]$SalidaCompilacion='bin\Parametros',[switch]$ConexionLocalSinCifrado)
 $ErrorActionPreference='Stop'
 $repo=Split-Path $PSScriptRoot -Parent
 $api=Join-Path $repo 'src\MAGISAUTO.API'

@@ -99,7 +99,7 @@ MAGISAUTO_Proyecto_V2, MAGISAUTO_Equipo y las copias de ensayo son antecedentes.
 
 En desarrollo se carga appsettings.Local.json desde la carpeta de la API. Variables de entorno y argumentos tienen prioridad. Fuera de desarrollo se configura ConnectionStrings__MagisAuto en el entorno. La configuración privada no se copia a nuevas salidas de compilación ni publicación.
 
-La cuenta magis_api_diego pertenece a magis_api: ejecuta procedimientos api.*, con SELECT/INSERT/UPDATE/DELETE directo en dbo denegados; no es sysadmin ni db_owner. Es distinta de codex_lectura, utilizada para revisiones.
+La cuenta magis_api_diego pertenece a magis_api: ejecuta procedimientos api.*, con SELECT/INSERT/UPDATE/DELETE directo en dbo denegados; no es sysadmin ni db_owner. Es distinta de la cuenta técnica utilizada para revisiones.
 
 La conexión técnica no es inicio de sesión del personal, que sigue opcional/pendiente. Esta fase se ejecuta localmente y no publica en Internet.
 
@@ -175,3 +175,13 @@ Rutas de solo lectura: `GET /api/reportes`, `GET /api/reportes/catalogos` y `GET
 ## Actualización CRUD del 18/10/2026
 
 La migración `database/v2/migraciones/003_CRUD_Entrega.sql` ya fue instalada por Diego en MAGISAUTO_Entrega_Final, según la captura de SSMS. No repetirla en esa copia. Las pruebas manuales de valoraciones y cancelación del borrado del recibo 9 fueron confirmadas el 18/10/2026. Solo cambia tres procedimientos; no vuelve a cargar datos. Para instalación nueva, el SQL final ya la incluye. Ver `docs/CRUD_ENTREGA_2026-10-18.md`: valoraciones previas editables y eliminación física de pagos anulados, con efecto en los reportes históricos.
+
+## Archivos de entrega y mantenimiento
+
+- Aplicación: `src/MAGISAUTO.API` y `MAGISAUTO.sln`.
+- Instalador vigente con datos: `database/final/MAGISAUTO_Final.sql`.
+- Documentación de entrega: `output/pdf`, `docs/INSTALACION_EQUIPO.md` y `docs/GUION_DEMOSTRACION_FINAL.md`.
+- Pruebas y evidencia: `scripts` y `docs/evidencias`.
+- `database/equipo` y `database/v2` contienen fuentes que todavía utilizan los generadores o las pruebas; no son instaladores alternativos para la entrega.
+
+Se retiró el paquete inicial de 25 tablas, sustituido por el final. Puede recuperarse desde el historial de Git. No se eliminaron bases ni configuraciones privadas. Los scripts de ensayo que necesitan credenciales ahora requieren `-Credencial` con la ruta del XML privado del equipo; ya no incorporan una ruta personal de otra computadora. El archivo se mantiene fuera de Git.
