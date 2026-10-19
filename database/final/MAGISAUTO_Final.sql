@@ -3594,25 +3594,15 @@ END;'');
 
 
 
-INSERT dbo.Departamento VALUES(21,N''Jalapa''),(22,N''Jutiapa''); INSERT dbo.Municipio VALUES(21,1,N''Jalapa''),(22,1,N''Jutiapa'');
 
-INSERT dbo.TipoTelefono VALUES(1,N''Celular''),(2,N''Casa''),(3,N''Trabajo'');
 
-INSERT dbo.TipoDireccion VALUES(1,N''Particular''),(2,N''Trabajo''),(3,N''Otra'');
 
-INSERT dbo.TipoGarantia VALUES(1,N''Vehiculo nuevo de agencia'');
 
-INSERT dbo.TipoReferencia VALUES(1,N''Familiar''),(2,N''Amistad''),(3,N''Laboral''),(4,N''Otra'');
 
-INSERT dbo.Marca VALUES(1,N''Toyota''),(2,N''Hyundai''),(3,N''Kia''),(4,N''Nissan''),(5,N''Suzuki'');
 
-INSERT dbo.Linea VALUES(1,1,N''Corolla''),(2,1,N''Accent''),(3,1,N''Soluto''),(4,1,N''Versa''),(5,1,N''Swift'');
 
-INSERT dbo.TipoPago VALUES(1,N''Deposito bancario'',1),(2,N''Transferencia ACH'',1),(3,N''Tarjeta de credito'',1),(4,N''Tarjeta de debito'',1),(5,N''Efectivo en ventanilla'',0);
 
-INSERT dbo.Agencia(Nombre,Region) VALUES(N''Agencia academica Jalapa'',N''Oriente'');
 
-INSERT dbo.ParametroCredito(Nombre,Activo,TasaAnual,ManejoMensual,TasaSeguroAuto,TasaSeguroVida,EngancheMinimo,ComisionPredeterminada,DepreciacionInicial) VALUES(N''Condiciones academicas iniciales'',1,0.125,25,0.0015,0.0005,0.20,0.02,0.15);
 
 
 

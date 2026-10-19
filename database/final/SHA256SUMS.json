@@ -1,12 +1,12 @@
 {
   "datos-demostracion.json": "a5b6f2255c65d44016420732c6f83b0ddb3b048077583debf1c9aa486a173045",
   "DATOS_DEMOSTRACION.sql": "611b909b1e72ddd8e19db8c4a4a3521264b5222f24ce8e69558f6ed53b93fe80",
-  "LEEME.md": "1ffdf714ef53fbddab003fbe5f14128175daa8f4d7e8942aa7163e60d7215950",
-  "MAGISAUTO_Final.sql": "930e520f20b71527e5ca335107b1b0c6d9bc43b4b8431240f779ec0940817a69",
-  "manifest.json": "d9291d356c97dc3b3334db9e6a6b498fa315eca6e9bfe2699b6c0089d25c3be8",
+  "LEEME.md": "e6bab9c632c6775048ec429947bc46b62c95b0e81569cbd0afd6c46fde813041",
+  "MAGISAUTO_Final.sql": "d1787a4ac0515b462ae543496c1aec5b07fe00d19ef40c95a7a9adec07dbc484",
+  "manifest.json": "07dd7b85499b14554ffbdcccccb37e3907bfc1449eda5bd3f7470b49cce3d4e5",
   "modelo-columnas.json": "e6795b55adc376996ec5f90589f2a78cfd52c351850da8497414ad253c90fc84",
   "PREPARAR_DEMOSTRACION.sql": "9c269d9583e2d56cec6aaf69046221cf119d930fa939f4a0a211e6e44f43c786",
-  "validacion-contenido.json": "7f6e6b29bce6de5b6826ab90b37e2fcc022a1df0f3c86fc596d391d3f1f7bd64",
-  "validacion-sintaxis.json": "b754012f8875e919b48b6220cc191256d84dd7fcc98aa949702d58688ce10fbb",
+  "validacion-contenido.json": "be9756376fa736fb6e2e6067d9605d51112fcc998a166d41188a58a53a19c62c",
+  "validacion-sintaxis.json": "37990ec6c3f620ff58e4e903be71b7767e41fc5c66e740491744ee323d6cf74e",
   "VERIFICAR_INSTALACION.sql": "f2eada51120937a6d376c874ff200ed2fb2a0edf04a7915674d4330b91ac2f9a"
 }

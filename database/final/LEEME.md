@@ -58,3 +58,7 @@ Solo dos bases de uso activo: **MAGISAUTO_Entrega_Final** (aplicación y entrega
 ## Actualización CRUD del 18/10/2026
 
 La migración `database/v2/migraciones/003_CRUD_Entrega.sql` ya fue instalada por Diego en MAGISAUTO_Entrega_Final, según la captura de SSMS. No repetirla en esa copia. Las pruebas manuales de valoraciones y cancelación del borrado del recibo 9 fueron confirmadas el 18/10/2026. Solo cambia tres procedimientos; no vuelve a cargar datos. Para instalación nueva, el SQL final ya la incluye. Ver `docs/CRUD_ENTREGA_2026-10-18.md`: valoraciones previas editables y eliminación física de pagos anulados, con efecto en los reportes históricos.
+
+## Correccion de instalacion nueva (18/10/2026)
+
+El SQL definitivo retira la carga inicial duplicada que provocaba errores de clave en Departamento y Agencia. Su carga de objetos y datos coincide con R3, instalado correctamente por Josue con 350 filas y conexion de la aplicacion comprobada. Para nuevas instalaciones usar este MAGISAUTO_Final.sql; no usar los archivos temporales R2/R3 ni reinstalar las bases que ya funcionan. Evidencia detallada en `docs/CORRECCION_INSTALADOR_2026-10-18.md`.

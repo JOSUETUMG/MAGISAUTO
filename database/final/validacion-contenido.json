@@ -25,5 +25,21 @@
     "PruebasDom": 13,
     "DatosMuestraConservados": true,
     "EvidenciaManual": "docs/evidencias/crud-entrega-2026-10-18/manual"
+  },
+  "InstalacionJosue": {
+    "FechaEjecucion": "2026-10-18",
+    "Fuente": "Capturas aportadas por el usuario y confirmacion de apertura de la aplicacion",
+    "ArchivoEjecutado": "MAGISAUTO_Instalar_Josue_R3.sql",
+    "CargaIdenticaAlSqlFinal": true,
+    "SqlFinalSha256": "d1787a4ac0515b462ae543496c1aec5b07fe00d19ef40c95a7a9adec07dbc484",
+    "Tablas": 26,
+    "ProcedimientosAPI": 154,
+    "Vistas": 4,
+    "Funciones": 2,
+    "Reportes": 20,
+    "FilasMuestra": 350,
+    "ConexionLimitadaComprobada": true,
+    "Evidencia": "docs/evidencias/instalacion-josue-2026-10-18",
+    "Limite": "R3 recupero la base vacia; no es otro ensayo local del instalador definitivo. SqlSha256 original corresponde a la evidencia historica previa."
   }
 }

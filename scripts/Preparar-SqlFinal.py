@@ -26,6 +26,11 @@ def collect(m):
  return '\n-- OBJETOS_FINALES --\n' if len(modules)==1 else ''
 body=literal.sub(collect,payload)
 assert len(modules)==157,len(modules)
+# Los modulos ya se extrajeron: estos INSERT son SOLO semillas de la fuente.
+# Retirar el bloque completo, incluyendo Agencia y ParametroCredito.
+body, semillas_retiradas = re.subn(r'^INSERT dbo\.[^\r\n]+;\r?\n', '', body, flags=re.M)
+assert semillas_retiradas == 10, semillas_retiradas
+
 changed=[]
 for match in literal.finditer(migration.read_text(encoding='utf-8-sig')):
  text=match.group(1).replace("''", "'");found=kind.match(text)
@@ -89,6 +94,10 @@ demo=json.loads((OUT/'datos-demostracion.json').read_text(encoding='utf-8'))
 first=body.index('-- 5. DATOS FICTICIOS:')
 last=body.index('-- 6. VALIDACION FINAL:')
 body=body[:first]+'-- 5. DATOS DE DEMOSTRACION COHERENTES; CORTE 16/10/2026.\n'+demo_file.read_text(encoding='utf-8')+'\n'+body[last:]
+# No puede quedar carga de datos fuera de los procedimientos antes de la muestra.
+prefijo = body.split('-- 5. DATOS DE DEMOSTRACION', 1)[0]
+prefijo = literal.sub('', prefijo)
+assert not re.search(r'\b(?:INSERT|DELETE|UPDATE|MERGE)\s+(?:INTO\s+|FROM\s+)?dbo\.', prefijo, re.I), 'Carga inicial residual'
 body=body.replace('81 FilasDeMuestra',str(demo['Filas'])+' FilasDeMuestra').replace('datos de muestra 2026-10-13','datos coherentes 2026-10-16-v1')
 header="""/* MAGIS-AUTO - SQL FINAL DE ENTREGA - 16/10/2026
 Codigo de referencia: b8c44aa, rama pruebas-diego.

@@ -1,6 +1,6 @@
 {
   "archivo": "MAGISAUTO_Final.sql",
-  "sha256": "930e520f20b71527e5ca335107b1b0c6d9bc43b4b8431240f779ec0940817a69",
+  "sha256": "d1787a4ac0515b462ae543496c1aec5b07fe00d19ef40c95a7a9adec07dbc484",
   "commitCodigo": "9ba22da6a734443dc29b92c3d2886e88e5c0d33a",
   "destinoPredeterminado": "MAGISAUTO_Entrega_Final",
   "tablas": {
@@ -46,9 +46,9 @@
   "fuentes": {
     "database\\equipo\\MAGISAUTO_Equipo_2026-10-13.sql": "3ffb46fe7a42c9bd468c7fb703c3a9476285afbcd2242d7de418e3ebdbc61a3a",
     "database\\v2\\migraciones\\002_Cierre_Tecnico.sql": "21fb2baa5aefca3de185db38fc6877d50ba22a570a282ff676de550709c297c4",
-    "database\\v2\\migraciones\\003_CRUD_Entrega.sql": "299d1e980c831c36ed32765e0f76682a0afa052bc10cef53a816363a01f79d64"
+    "database\\v2\\migraciones\\003_CRUD_Entrega.sql": "a048e5ba7806ddb933c7ef721101ae84f02f330d40bc4a20c8741081160b272f"
   },
   "credencialesIncluidas": false,
   "datosSha256": "611b909b1e72ddd8e19db8c4a4a3521264b5222f24ce8e69558f6ed53b93fe80",
-  "estado": "003 integrada y validada en base aislada; instalada en base final segun captura SSMS y pruebas manuales del usuario"
+  "estado": "Carga corregida identica a R3 instalado por Josue; generacion reproducible y sintaxis verificadas"
 }

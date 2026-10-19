@@ -19,3 +19,6 @@ sql-credential.xml
 
 # Dependencias futuras de la interfaz
 node_modules/
+
+# Instaladores temporales de recuperacion; entregar solo database/final
+/output/recuperacion-josue/
